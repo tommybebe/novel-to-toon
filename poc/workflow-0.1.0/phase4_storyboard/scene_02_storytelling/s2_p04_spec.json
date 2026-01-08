@@ -1,0 +1,31 @@
+{
+  "id": "s2_p04",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 4,
+  "panel_type": "close-up",
+  "aspect_ratio": "1:1",
+  "shot_type": "extreme close-up",
+  "camera_angle": "straight on",
+  "scene_description": "Dokma's eyes widening with intense interest at the mention of rare snake",
+  "narrative_moment": "The poison master's fascination with the rare creature",
+  "characters": [
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "center",
+      "expression": "eyes wide, intense interest",
+      "pose": "eyes focus",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "fascinated, greedy interest",
+  "dialogue_space": "bottom",
+  "special_effects": [
+    "eye_highlight"
+  ],
+  "prompt_template_id": "closeup_emotional",
+  "source_text": "독마가 놀랐다. 희귀한 뱀이라면 사족을 못 쓰는 사람이었으니까."
+}

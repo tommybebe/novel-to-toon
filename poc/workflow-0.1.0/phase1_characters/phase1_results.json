@@ -1,0 +1,157 @@
+{
+  "phase": "Phase 1: Character Design",
+  "workflow": "reference_image_based_consistency",
+  "timestamp": "2025-12-30T16:45:23.386221",
+  "characters": {
+    "jin_sohan": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png",
+        "size_bytes": 552910,
+        "prompt": "Korean webtoon style character portrait:\n- Character: Jin Sohan (진소한 (眞昭悍)), 26 years old, Main protagonist, former member of Sword Dance Troupe\n- Key Features: Cloudy, murky eye color (from poison ex...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_neutral.png",
+          "size_bytes": 480128,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Background: Simple neutral gradient\n\nMAIN...",
+          "used_reference": true,
+          "variation": "neutral"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_angry.png",
+          "size_bytes": 428288,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Angry, intense expression with furrowed brows\n- Pose: 3/4 view, tense posture\n- Background: Dramatic dark...",
+          "used_reference": true,
+          "variation": "angry"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_smile.png",
+          "size_bytes": 499553,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Subtle smile, relaxed expression\n- Pose: Side profile view\n- Background: Warm gradient\n\nMAINTAIN EXACTLY ...",
+          "used_reference": true,
+          "variation": "smile"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_action.png",
+          "size_bytes": 719448,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Focused, battle-ready\n- Pose: Dynamic action pose, martial arts stance\n- Background: Action-oriented, mot...",
+          "used_reference": true,
+          "variation": "action"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 4,
+      "total_variations": 4
+    },
+    "dokma": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png",
+        "size_bytes": 523504,
+        "prompt": "Korean webtoon style character portrait:\n- Character: Dokma (Poison Demon) (독마 (毒魔)), Middle-aged (appears 50s), One of the twin masters, Poison Master\n- Key Features: Dark complexion, Identical twin ...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/variation_neutral.png",
+          "size_bytes": 461141,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Background: Simple neutral gradient\n\nMAIN...",
+          "used_reference": true,
+          "variation": "neutral"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/variation_angry.png",
+          "size_bytes": 443854,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Angry, intense expression with furrowed brows\n- Pose: 3/4 view, tense posture\n- Background: Dramatic dark...",
+          "used_reference": true,
+          "variation": "angry"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/variation_smile.png",
+          "size_bytes": 508561,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Subtle smile, relaxed expression\n- Pose: Side profile view\n- Background: Warm gradient\n\nMAINTAIN EXACTLY ...",
+          "used_reference": true,
+          "variation": "smile"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/variation_action.png",
+          "size_bytes": 651760,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Focused, battle-ready\n- Pose: Dynamic action pose, martial arts stance\n- Background: Action-oriented, mot...",
+          "used_reference": true,
+          "variation": "action"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 4,
+      "total_variations": 4
+    },
+    "uiseon": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png",
+        "size_bytes": 501336,
+        "prompt": "Korean webtoon style character portrait:\n- Character: Uiseon (Medicine Sage) (의선 (醫仙)), Middle-aged (appears 50s), One of the twin masters, Medicine Sage\n- Key Features: Fair, scholarly complexion, Id...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/variation_neutral.png",
+          "size_bytes": 383243,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Background: Simple neutral gradient\n\nMAIN...",
+          "used_reference": true,
+          "variation": "neutral"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/variation_angry.png",
+          "size_bytes": 437426,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Angry, intense expression with furrowed brows\n- Pose: 3/4 view, tense posture\n- Background: Dramatic dark...",
+          "used_reference": true,
+          "variation": "angry"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/variation_smile.png",
+          "size_bytes": 439933,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Subtle smile, relaxed expression\n- Pose: Side profile view\n- Background: Warm gradient\n\nMAINTAIN EXACTLY ...",
+          "used_reference": true,
+          "variation": "smile"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/variation_action.png",
+          "size_bytes": 729905,
+          "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Focused, battle-ready\n- Pose: Dynamic action pose, martial arts stance\n- Background: Action-oriented, mot...",
+          "used_reference": true,
+          "variation": "action"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 4,
+      "total_variations": 4
+    }
+  },
+  "test_cases": {
+    "test_1_3_1": "Base Character Generation (Step 1)",
+    "test_1_3_2": "Reference-Based Variation Generation (Step 2)",
+    "test_1_3_3": "Twin Character Differentiation"
+  },
+  "test_1_3_3_twin_differentiation": {
+    "success": true,
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/twin_comparison/uiseon_from_dokma_face.png",
+    "size_bytes": 747949,
+    "prompt": "Generate the SAME face from the reference image as a full character:\n- Character: Uiseon (Medicine Sage) (의선 (醫仙))\n- Expression: Warm, wise gentle smile\n- Attire: White traditional robes (백의), pristin...",
+    "used_reference": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "total_calls": 18,
+  "successful_calls": 18,
+  "failed_calls": 0,
+  "estimated_cost_usd": 2.6999999999999997,
+  "calls": [
+    {
+      "timestamp": "2025-12-30T18:34:03.095159",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p01",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:34:47.173285",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p02",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:35:12.863994",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p03",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:35:49.754020",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p04",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:36:18.086690",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p05",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:36:45.383465",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s1_p06",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:37:20.588468",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p01",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:37:55.027711",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p02",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:38:22.695286",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p03",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:38:55.447990",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p04",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:39:33.370731",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p05",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:39:59.236623",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s2_p06",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:40:29.918746",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p01",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:41:21.224580",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p02",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:41:48.727032",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p03",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:42:40.161023",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p04",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:43:32.728749",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p05",
+      "success": true
+    },
+    {
+      "timestamp": "2025-12-30T18:44:03.346234",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "s3_p06",
+      "success": true
+    }
+  ]
+}

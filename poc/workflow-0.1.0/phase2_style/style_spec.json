@@ -1,0 +1,239 @@
+{
+  "style_name": "Disciple of the Villain - Wuxia Dark",
+  "novel_title": {
+    "korean": "악인의 제자",
+    "english": "Disciple of the Villain"
+  },
+  "base_style": {
+    "genre": "Korean webtoon",
+    "sub_genre": "wuxia/martial arts",
+    "influences": ["manhwa", "traditional ink painting", "wuxia comics"],
+    "target_audience": "adult readers",
+    "tone": "dark, dramatic, mature"
+  },
+  "visual_elements": {
+    "line_work": {
+      "weight": "varied",
+      "primary_weight": "medium (2-3px at 2K resolution)",
+      "quality": "clean with intentional roughness for action scenes",
+      "emphasis_technique": "thicker lines for foreground elements and emotional emphasis",
+      "contour_style": "defined but not harsh",
+      "detail_lines": "thin (1px) for texture and secondary details"
+    },
+    "shading": {
+      "style": "cel-shaded with gradient accents",
+      "shadow_type": "layered (2-3 levels)",
+      "shadow_color_base": "#1a1a2e",
+      "highlight_approach": "selective, dramatic",
+      "ambient_occlusion": "subtle",
+      "rim_lighting": "used for dramatic emphasis"
+    },
+    "color_palette": {
+      "primary": {
+        "dark_base": "#1a1a2e",
+        "mid_tone": "#4a4a6a",
+        "light_accent": "#8b8ba3"
+      },
+      "accent": {
+        "gold": "#c9a227",
+        "blood_red": "#8b0000",
+        "poison_green": "#2d5a27",
+        "mystical_purple": "#4a2d6a"
+      },
+      "atmospheric": {
+        "fog_light": "#b8c5d6",
+        "fog_mid": "#8a9eb5",
+        "fog_dark": "#5a6f8a",
+        "night_sky": "#0d1117"
+      },
+      "character_specific": {
+        "jin_sohan": {
+          "primary": "#2d2d44",
+          "secondary": "#6b6b8a",
+          "accent": "#4a4a6a",
+          "eye_color": "#7a8599",
+          "notes": "Muted, cloudy tones reflecting cloudy eyes from poison"
+        },
+        "dokma": {
+          "primary": "#0d0d0d",
+          "secondary": "#1a1a1a",
+          "accent": "#333333",
+          "skin_tone": "#8a7a6a",
+          "notes": "Pure black robes, darker skin complexion, sinister aura"
+        },
+        "uiseon": {
+          "primary": "#f5f5f5",
+          "secondary": "#e0e0e0",
+          "accent": "#cccccc",
+          "skin_tone": "#f0e6dc",
+          "notes": "Pure white robes, fair scholarly complexion, gentle aura"
+        }
+      }
+    },
+    "texture": {
+      "fabric": "subtle silk texture for traditional robes",
+      "skin": "smooth with minimal texture",
+      "hair": "flowing strands with gradient shading",
+      "environment": "weathered stone, aged wood, fog particles"
+    }
+  },
+  "atmosphere": {
+    "lighting": {
+      "default": "dramatic, high contrast",
+      "shadow_intensity": "strong (60-70% coverage in dark scenes)",
+      "light_source_preference": "single directional with ambient fill"
+    },
+    "mood": {
+      "primary": "mysterious, tense",
+      "secondary": "melancholic, determined",
+      "action": "explosive, controlled violence",
+      "emotional": "restrained, subtle expressions"
+    },
+    "effects": {
+      "fog": {
+        "usage": "frequent, signature element",
+        "density": "thick, obscuring",
+        "color_range": ["#b8c5d6", "#8a9eb5", "#5a6f8a"]
+      },
+      "mystical": {
+        "poison_aura": "subtle green-purple glow",
+        "healing_aura": "soft white-gold luminescence"
+      },
+      "action": {
+        "speed_lines": "traditional manga style",
+        "impact_effects": "bold, angular",
+        "motion_blur": "selective on weapons and strikes"
+      }
+    }
+  },
+  "composition_guidelines": {
+    "panel_layouts": {
+      "dialogue": {
+        "framing": "medium shots with breathing room",
+        "character_placement": "rule of thirds",
+        "background_detail": "moderate, supportive"
+      },
+      "action": {
+        "framing": "dynamic angles, diagonal compositions",
+        "motion_emphasis": "speed lines, motion blur",
+        "impact_panels": "close-up, high contrast"
+      },
+      "emotional": {
+        "framing": "close-ups for expressions, wide shots for isolation",
+        "color_emphasis": "muted or desaturated for melancholy",
+        "negative_space": "strategic use for emphasis"
+      },
+      "establishing": {
+        "framing": "wide shots, atmospheric",
+        "detail_level": "high for landmarks, fog-softened for distance",
+        "scale_reference": "characters small against environment"
+      }
+    },
+    "camera_angles": {
+      "neutral": "eye level, straight on",
+      "power": "low angle looking up",
+      "vulnerability": "high angle looking down",
+      "dramatic": "dutch angle for tension",
+      "intimate": "close-up, shallow depth"
+    }
+  },
+  "scene_specific_guidelines": {
+    "magic_tower": {
+      "atmosphere": "perpetual fog, mysterious isolation",
+      "lighting": "diffused, soft shadows",
+      "color_emphasis": "blue-gray fog tones",
+      "architecture": "traditional East Asian tower, weathered"
+    },
+    "black_road_territory": {
+      "atmosphere": "dangerous, seedy",
+      "lighting": "harsh contrasts, shadows",
+      "color_emphasis": "darker palette, blood red accents",
+      "environment": "crowded streets, dark alleys"
+    },
+    "inn_tavern": {
+      "atmosphere": "tense undercurrent, public space",
+      "lighting": "warm interior, lamp light",
+      "color_emphasis": "warm wood tones",
+      "environment": "traditional Korean inn aesthetic"
+    },
+    "combat_scenes": {
+      "atmosphere": "explosive, controlled violence",
+      "lighting": "high contrast, dramatic",
+      "color_emphasis": "blood red, steel gray",
+      "effects": ["speed_lines", "impact_bursts", "motion_blur"]
+    }
+  },
+  "character_expression_guidelines": {
+    "jin_sohan": {
+      "default": "calm, composed, calculating",
+      "angry": "cold fury, not hot rage",
+      "smile": "subtle, knowing",
+      "action": "focused, deadly efficient",
+      "emotional": "restrained, hinted rather than shown"
+    },
+    "dokma": {
+      "default": "cynical smirk, knowing",
+      "amused": "dark humor",
+      "serious": "intimidating, piercing gaze",
+      "teaching": "tough love, gruff"
+    },
+    "uiseon": {
+      "default": "warm, scholarly",
+      "amused": "gentle smile",
+      "serious": "calm wisdom",
+      "teaching": "patient, encouraging"
+    }
+  },
+  "technical_specs": {
+    "resolution": {
+      "character_reference": "2048x2048",
+      "panel_generation": "1024-2048 depending on detail",
+      "background": "2048x2048"
+    },
+    "aspect_ratios": {
+      "character_portrait": "1:1",
+      "panel_vertical": "9:16",
+      "panel_wide": "16:9",
+      "panel_standard": "4:3",
+      "full_page": "2:3"
+    },
+    "file_format": "PNG",
+    "color_space": "sRGB"
+  },
+  "prompt_keywords": {
+    "style": [
+      "Korean webtoon style",
+      "manhwa style",
+      "wuxia genre",
+      "martial arts",
+      "clean detailed linework",
+      "cel-shaded with gradient accents"
+    ],
+    "atmosphere": [
+      "mysterious",
+      "dark",
+      "foggy",
+      "dramatic lighting",
+      "high contrast"
+    ],
+    "quality": [
+      "high detail",
+      "publication ready",
+      "professional illustration",
+      "no text"
+    ],
+    "avoid": [
+      "anime style",
+      "chibi",
+      "cartoonish",
+      "overly bright colors",
+      "western comic style"
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-12-30",
+    "phase": "Phase 2: Art Style Definition",
+    "source_material": "source/001/ (chapters 1-10)"
+  }
+}

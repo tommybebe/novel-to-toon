@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Sword Dance Troupe Headquarters",
+    "korean_name": "검무단 (劍舞團)",
+    "description": "Performance troupe headquarters where Jin Sohan grew up",
+    "visual_elements": [
+      "Training grounds with practice equipment",
+      "Peach tree in the courtyard (significant to story)",
+      "Living quarters for troupe members",
+      "Performance stage area",
+      "Traditional Korean architecture",
+      "Warm, lived-in atmosphere"
+    ],
+    "atmosphere": "Homely, nostalgic, bittersweet, artistic",
+    "lighting_default": "emotional_soft",
+    "color_emphasis": [
+      "#c9a227",
+      "#8b8ba3",
+      "#4a4a6a",
+      "#f0e6dc"
+    ]
+  },
+  "variation": {
+    "name": "courtyard_day",
+    "time": "day",
+    "view": "exterior",
+    "description": "Training courtyard with peach tree"
+  },
+  "generation": {
+    "timestamp": "2025-12-30T17:13:51.167040",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Training courtyard with peach tree\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for troupe members, Performance stage area, Traditional Korean architecture, Warm, lived-in atmosphere\n\nATMOSPHERE:\n- Mood: Homely, nostalgic, bittersweet, artistic\n- Lighting: Gentle lighting for intimate scenes\n- Color Temperature: 3500K (warm)\n- Shadow Intensity: Low\n\nSTYLE REQUIREMENTS:\n- Art style: Korean webtoon (manhwa), wuxia genre\n- Clean detailed linework, cel-shaded with gradient accents\n- Color emphasis: #c9a227, #8b8ba3, #4a4a6a, #f0e6dc\n- High detail environment art, publication ready\n- No characters, environment only\n- No text or UI elements\n\nCOMPOSITION:\n- Wide establishing shot\n- Depth and atmosphere emphasized\n- Appropriate atmospheric effects\n\nQUALITY: High detail, 2K resolution quality, professional illustration",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/sword_dance_troupe/base_reference.png",
+      "size_bytes": 948739,
+      "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Training courtyard with peach tree\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for trou...",
+      "used_reference": false
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "character": {
+    "name": "Uiseon (Medicine Sage)",
+    "korean_name": "의선 (醫仙)",
+    "age": "Middle-aged (appears 50s)",
+    "role": "One of the twin masters, Medicine Sage",
+    "visual_features": [
+      "Fair, scholarly complexion",
+      "Identical twin face with Dokma",
+      "Gentle, wise eyes",
+      "Warm, knowing smile",
+      "Clean, refined appearance"
+    ],
+    "clothing": "White traditional robes (백의), pristine and elegant",
+    "atmosphere": "Clean, healing, serene, scholarly",
+    "color_palette": [
+      "#f5f5f5",
+      "#e0e0e0",
+      "#cccccc",
+      "#b8b8b8"
+    ]
+  },
+  "step": "1_base_reference",
+  "generation": {
+    "timestamp": "2025-12-30T16:48:48.500008",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Korean webtoon style character portrait:\n- Character: Uiseon (Medicine Sage) (의선 (醫仙)), Middle-aged (appears 50s), One of the twin masters, Medicine Sage\n- Key Features: Fair, scholarly complexion, Identical twin face with Dokma, Gentle, wise eyes, Warm, knowing smile, Clean, refined appearance\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Attire: White traditional robes (백의), pristine and elegant\n- Atmosphere: Clean, healing, serene, scholarly\n- Style: Korean webtoon (manhwa), clean detailed linework, cel-shaded with gradient accents\n- Composition: Upper body portrait, centered\n- Background: Simple neutral gradient\n- Quality: High detail, publication ready, no text\n\nIMPORTANT STYLE ELEMENTS TO ESTABLISH:\n- Line weight: Medium with varied thickness for emphasis\n- Shading: Cel-shaded with soft gradients\n- Color palette: #f5f5f5, #e0e0e0, #cccccc, #b8b8b8",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png",
+      "size_bytes": 501336,
+      "prompt": "Korean webtoon style character portrait:\n- Character: Uiseon (Medicine Sage) (의선 (醫仙)), Middle-aged (appears 50s), One of the twin masters, Medicine Sage\n- Key Features: Fair, scholarly complexion, Id...",
+      "used_reference": false
+    }
+  }
+}

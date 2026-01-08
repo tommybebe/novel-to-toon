@@ -1,0 +1,31 @@
+{
+  "id": "s1_p06",
+  "scene_id": "scene_01_request",
+  "sequence_number": 6,
+  "panel_type": "reaction",
+  "aspect_ratio": "4:3",
+  "shot_type": "medium close-up",
+  "camera_angle": "slightly low angle",
+  "scene_description": "Jin Sohan's face showing unwavering determination",
+  "narrative_moment": "Jin Sohan's resolve is clear - he will not be deterred",
+  "characters": [
+    {
+      "name": "Jin Sohan",
+      "korean": "진소한",
+      "position": "center",
+      "expression": "determined, calm resolve",
+      "pose": "looking up at masters",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "determined, resolute",
+  "dialogue_space": "bottom",
+  "special_effects": [
+    "dramatic_lighting"
+  ],
+  "prompt_template_id": "reaction_shot",
+  "source_text": "진소한은 끝까지 고집을 부렸다. '예. 한 명이라도 있다면 제자가 받았던 은혜, 갚겠습니다.'"
+}

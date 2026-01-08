@@ -1,0 +1,98 @@
+{
+  "panel_id": "s1_p04",
+  "scene_id": "scene_01_request",
+  "generation": {
+    "timestamp": "2025-12-30T18:35:49.755450",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s1_p04",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p04.png",
+      "size_bytes": 2573278,
+      "generation_time_ms": 36887,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "1:1",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "2048x2048",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "1:1",
+            "actual_ratio": "1.00",
+            "target_ratio": "1.00"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "2048x2048",
+        "file_size_bytes": 2573278
+      }
+    }
+  },
+  "specifications": {
+    "id": "s1_p04",
+    "scene_id": "scene_01_request",
+    "sequence_number": 4,
+    "panel_type": "close-up",
+    "aspect_ratio": "1:1",
+    "shot_type": "close-up",
+    "camera_angle": "straight on",
+    "scene_description": "Uiseon's face showing scholarly concern",
+    "narrative_moment": "Uiseon adds his wisdom about the dangers of the Black Road territory",
+    "characters": [
+      {
+        "name": "Uiseon",
+        "korean": "의선",
+        "position": "center",
+        "expression": "thoughtful, gentle concern",
+        "pose": "face only",
+        "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+      }
+    ],
+    "location": "Magic Tower interior",
+    "background_reference": null,
+    "lighting_preset": "indoor_lamp",
+    "mood": "wise, concerned",
+    "dialogue_space": "bottom",
+    "special_effects": [
+      "soft_light"
+    ],
+    "prompt_template_id": "closeup_emotional",
+    "source_text": "잠자코 있던 의선이 한마디를 보탰다. '차라리 명문정파가 지배하는 지역이라면 보내주겠다만...'"
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "2048x2048",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "1:1",
+        "actual_ratio": "1.00",
+        "target_ratio": "1.00"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "2048x2048",
+    "file_size_bytes": 2573278
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p04.png",
+    "size_bytes": 2573278,
+    "dimensions": "2048x2048"
+  }
+}

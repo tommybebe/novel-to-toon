@@ -1,0 +1,23 @@
+{
+  "id": "s3_p01",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 1,
+  "panel_type": "object_focus",
+  "aspect_ratio": "16:9",
+  "shot_type": "close-up",
+  "camera_angle": "top-down slight angle",
+  "scene_description": "Twin crescent moon blades (Ssangwol) laid on a wooden table",
+  "narrative_moment": "Dokma's precious weapon, now passed to his disciple",
+  "characters": [],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "reverent, meaningful",
+  "dialogue_space": "none",
+  "special_effects": [
+    "metallic_gleam",
+    "warm_light"
+  ],
+  "prompt_template_id": "object_focus",
+  "source_text": "독마가 두 자루의 칼을 탁자 위에 내밀었다. '쌍월(雙月)은 네가 앞으로 써라.'"
+}

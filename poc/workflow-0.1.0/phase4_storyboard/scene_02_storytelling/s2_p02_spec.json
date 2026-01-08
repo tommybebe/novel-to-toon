@@ -1,0 +1,33 @@
+{
+  "id": "s2_p02",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 2,
+  "panel_type": "fantasy_insert",
+  "aspect_ratio": "9:16",
+  "shot_type": "medium shot",
+  "camera_angle": "low angle looking up",
+  "scene_description": "Flashback/story visualization: Young Jin Sohan looking up at a golden peach on a tree",
+  "narrative_moment": "The discovery of the mystical golden peach in the courtyard",
+  "characters": [
+    {
+      "name": "Young Jin Sohan",
+      "korean": "어린 진소한",
+      "position": "bottom-center",
+      "expression": "wonder, curiosity",
+      "pose": "looking up at tree",
+      "reference_path": null
+    }
+  ],
+  "location": "Sword Dance Troupe courtyard with peach tree",
+  "background_reference": null,
+  "lighting_preset": "emotional_soft",
+  "mood": "nostalgic, wondrous",
+  "dialogue_space": "none",
+  "special_effects": [
+    "golden_glow",
+    "dreamy_filter",
+    "vignette"
+  ],
+  "prompt_template_id": "emotional_farewell",
+  "source_text": "그 나무에 다른 복숭아와 빛깔이 전혀 다른 황금 복숭아가 높은 곳에 달려있었는데..."
+}

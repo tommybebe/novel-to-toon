@@ -1,0 +1,21 @@
+{
+  "material": {
+    "name": "Black Silk Robe Fabric",
+    "description": "Traditional Korean silk hanbok fabric for Dokma's robes",
+    "color": "Deep black with subtle purple undertones",
+    "pattern": "Subtle cloud motif, barely visible",
+    "usage": "Clothing texture for dark-robed characters"
+  },
+  "generation": {
+    "timestamp": "2025-12-30T17:17:49.063303",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Black Silk Robe Fabric\n- Description: Traditional Korean silk hanbok fabric for Dokma's robes\n- Color: Deep black with subtle purple undertones\n- Pattern: Subtle cloud motif, barely visible\n- Usage: Clothing texture for dark-robed characters\n\nREQUIREMENTS:\n- Style: Suitable for Korean webtoon (manhwa) art\n- Format: Tileable/seamless texture\n- Detail level: Medium, not photorealistic\n- Clean, stylized appearance matching cel-shaded art style\n- No text, no watermarks\n- Square format\n\nQUALITY: High detail, professional texture asset",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/black_silk_robe.png",
+      "size_bytes": 409376,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Black Silk Robe Fabric\n- Description: Traditional Korean silk hanbok fabric for Dokma's robes\n- Color: Deep black with subtle purple undertones\n- Pattern: Subtle cloud motif, barely visible\n- Usage: Clothing texture for dark-robed...",
+      "used_reference": false
+    }
+  }
+}

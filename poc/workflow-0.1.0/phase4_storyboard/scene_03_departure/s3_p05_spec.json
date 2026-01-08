@@ -1,0 +1,39 @@
+{
+  "id": "s3_p05",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 5,
+  "panel_type": "two-shot",
+  "aspect_ratio": "16:9",
+  "shot_type": "close-up",
+  "camera_angle": "eye level",
+  "scene_description": "Close-up of both masters' faces showing hidden emotion behind stoic exteriors",
+  "narrative_moment": "The masters hide their sadness behind composure",
+  "characters": [
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "left",
+      "expression": "stoic but eyes betray emotion",
+      "pose": "facing forward",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    },
+    {
+      "name": "Uiseon",
+      "korean": "의선",
+      "position": "right",
+      "expression": "gentle sadness in eyes",
+      "pose": "facing forward",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "restrained emotion, bittersweet",
+  "dialogue_space": "bottom",
+  "special_effects": [
+    "subtle_vignette"
+  ],
+  "prompt_template_id": "dialogue_two_shot",
+  "source_text": "'가서, 잘해라. 목덜미 잘 간수하고.' '네 소식은 강호에 퍼지는 위명으로 대신 듣겠다.'"
+}

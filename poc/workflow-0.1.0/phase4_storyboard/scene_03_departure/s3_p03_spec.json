@@ -1,0 +1,31 @@
+{
+  "id": "s3_p03",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 3,
+  "panel_type": "object_focus",
+  "aspect_ratio": "4:3",
+  "shot_type": "close-up",
+  "camera_angle": "slight angle",
+  "scene_description": "Elegant white fan (Baekseon) being offered by Uiseon's hands",
+  "narrative_moment": "Uiseon's gift - the fan Jin Sohan always admired",
+  "characters": [
+    {
+      "name": "Uiseon",
+      "korean": "의선",
+      "position": "partial-hands only",
+      "expression": "gentle offering",
+      "pose": "extending fan",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "gentle, meaningful",
+  "dialogue_space": "bottom",
+  "special_effects": [
+    "soft_light"
+  ],
+  "prompt_template_id": "object_focus",
+  "source_text": "의선이 자신의 쥘부채를 내밀면서 말했다. '백선(白扇)도 챙겨라.'"
+}

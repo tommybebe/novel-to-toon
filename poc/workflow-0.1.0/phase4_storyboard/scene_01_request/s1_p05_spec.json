@@ -1,0 +1,37 @@
+{
+  "id": "s1_p05",
+  "scene_id": "scene_01_request",
+  "sequence_number": 5,
+  "panel_type": "two-shot",
+  "aspect_ratio": "16:9",
+  "shot_type": "medium close-up",
+  "camera_angle": "eye level",
+  "scene_description": "The twin masters look at each other, sharing unspoken communication",
+  "narrative_moment": "Silent understanding between the twins about their disciple's determination",
+  "characters": [
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "left",
+      "expression": "subtle acknowledgment",
+      "pose": "slight turn toward brother",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    },
+    {
+      "name": "Uiseon",
+      "korean": "의선",
+      "position": "right",
+      "expression": "knowing look",
+      "pose": "slight turn toward brother",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_hall.png",
+  "lighting_preset": "indoor_lamp",
+  "mood": "unspoken understanding",
+  "dialogue_space": "none",
+  "special_effects": [],
+  "prompt_template_id": "dialogue_two_shot",
+  "source_text": "독마와 의선이 동시에 혀를 찼다. '쯧……'"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "s2_p05",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 5,
+  "panel_type": "fantasy_insert",
+  "aspect_ratio": "9:16",
+  "shot_type": "close-up",
+  "camera_angle": "slightly low angle",
+  "scene_description": "Young Jin Sohan making a fateful decision, holding the two glowing inner cores",
+  "narrative_moment": "The moment of transformation - consuming the snake's inner cores",
+  "characters": [
+    {
+      "name": "Young Jin Sohan",
+      "korean": "어린 진소한",
+      "position": "center",
+      "expression": "determined, nervous",
+      "pose": "holding two glowing orbs near mouth",
+      "reference_path": null
+    }
+  ],
+  "location": "Kitchen of Sword Dance Troupe",
+  "background_reference": null,
+  "lighting_preset": "dramatic",
+  "mood": "fateful, tense",
+  "dialogue_space": "none",
+  "special_effects": [
+    "dual_glow_red_gold",
+    "dramatic_lighting"
+  ],
+  "prompt_template_id": "closeup_action",
+  "source_text": "저는 눈을 딱 감고 먹기로 결심했습니다... 저는 그 두 개를 즉시 꿀꺽 삼켰습니다."
+}

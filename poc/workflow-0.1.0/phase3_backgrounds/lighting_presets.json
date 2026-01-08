@@ -1,0 +1,52 @@
+{
+  "fog_day": {
+    "name": "Daytime Fog",
+    "description": "Diffused daylight through thick fog",
+    "color_temperature": "5500K (neutral)",
+    "shadow_intensity": "Low (soft, diffused)",
+    "key_light_direction": "overhead, scattered",
+    "ambient_level": "high",
+    "mood": "mysterious, ethereal",
+    "usage": "Magic Tower exterior, mysterious locations"
+  },
+  "fog_night": {
+    "name": "Moonlit Fog",
+    "description": "Cool moonlight filtering through fog",
+    "color_temperature": "4000K (cool)",
+    "shadow_intensity": "Medium",
+    "key_light_direction": "overhead, lunar",
+    "ambient_level": "low",
+    "mood": "eerie, tense",
+    "usage": "Night scenes at Magic Tower, outdoor night"
+  },
+  "indoor_lamp": {
+    "name": "Traditional Lamp Light",
+    "description": "Warm oil lamp or candle lighting",
+    "color_temperature": "2700K (warm)",
+    "shadow_intensity": "High (dramatic)",
+    "key_light_direction": "multiple point sources",
+    "ambient_level": "low",
+    "mood": "intimate, tense, warm",
+    "usage": "Inn interiors, taverns, indoor scenes"
+  },
+  "combat_intense": {
+    "name": "Combat Lighting",
+    "description": "High contrast action scene lighting",
+    "color_temperature": "6500K (cool white)",
+    "shadow_intensity": "Very high",
+    "key_light_direction": "dramatic side lighting",
+    "ambient_level": "very low",
+    "mood": "explosive, dangerous",
+    "usage": "Fight scenes, action sequences"
+  },
+  "emotional_soft": {
+    "name": "Soft Emotional",
+    "description": "Gentle lighting for intimate scenes",
+    "color_temperature": "3500K (warm)",
+    "shadow_intensity": "Low",
+    "key_light_direction": "diffused, frontal",
+    "ambient_level": "medium",
+    "mood": "melancholic, tender",
+    "usage": "Emotional moments, flashbacks, farewells"
+  }
+}

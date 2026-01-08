@@ -1,0 +1,14 @@
+{
+  "scene_id": "scene_01_request",
+  "total_panels": 6,
+  "panel_ids": [
+    "s1_p01",
+    "s1_p02",
+    "s1_p03",
+    "s1_p04",
+    "s1_p05",
+    "s1_p06"
+  ],
+  "generated_at": "2025-12-30T18:22:22.273345",
+  "phase": "Phase 4: Storyboarding"
+}

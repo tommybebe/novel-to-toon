@@ -1,0 +1,41 @@
+{
+  "character": "jin_sohan",
+  "step": "2_reference_variations",
+  "base_reference_used": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png",
+  "timestamp": "2025-12-30T16:46:56.717917",
+  "variations": [
+    {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_neutral.png",
+      "size_bytes": 480128,
+      "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Background: Simple neutral gradient\n\nMAIN...",
+      "used_reference": true,
+      "variation": "neutral"
+    },
+    {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_angry.png",
+      "size_bytes": 428288,
+      "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Angry, intense expression with furrowed brows\n- Pose: 3/4 view, tense posture\n- Background: Dramatic dark...",
+      "used_reference": true,
+      "variation": "angry"
+    },
+    {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_smile.png",
+      "size_bytes": 499553,
+      "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Subtle smile, relaxed expression\n- Pose: Side profile view\n- Background: Warm gradient\n\nMAINTAIN EXACTLY ...",
+      "used_reference": true,
+      "variation": "smile"
+    },
+    {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/variation_action.png",
+      "size_bytes": 719448,
+      "prompt": "Generate the SAME character from the reference image with the following changes:\n- Expression: Focused, battle-ready\n- Pose: Dynamic action pose, martial arts stance\n- Background: Action-oriented, mot...",
+      "used_reference": true,
+      "variation": "action"
+    }
+  ],
+  "success_rate": 100.0
+}

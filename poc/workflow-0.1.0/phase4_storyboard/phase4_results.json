@@ -1,0 +1,68 @@
+{
+  "phase": "Phase 4: Storyboarding",
+  "timestamp": "2025-12-30T18:22:22.272442",
+  "scenes": {
+    "scene_01_request": {
+      "title": "The Request to Leave",
+      "title_korean": "하산 요청",
+      "description": "Jin Sohan asks his masters for permission to return to his hometown",
+      "panel_count": 6,
+      "manifest": {
+        "scene_id": "scene_01_request",
+        "total_panels": 6,
+        "panel_ids": [
+          "s1_p01",
+          "s1_p02",
+          "s1_p03",
+          "s1_p04",
+          "s1_p05",
+          "s1_p06"
+        ],
+        "generated_at": "2025-12-30T18:22:22.273345",
+        "phase": "Phase 4: Storyboarding"
+      }
+    },
+    "scene_02_storytelling": {
+      "title": "The Storytelling",
+      "title_korean": "허언신공",
+      "description": "Jin Sohan performs his art of storytelling, telling the tale of the golden peach",
+      "panel_count": 6,
+      "manifest": {
+        "scene_id": "scene_02_storytelling",
+        "total_panels": 6,
+        "panel_ids": [
+          "s2_p01",
+          "s2_p02",
+          "s2_p03",
+          "s2_p04",
+          "s2_p05",
+          "s2_p06"
+        ],
+        "generated_at": "2025-12-30T18:22:22.274122",
+        "phase": "Phase 4: Storyboarding"
+      }
+    },
+    "scene_03_departure": {
+      "title": "The Departure",
+      "title_korean": "이별",
+      "description": "Masters give Jin Sohan parting gifts and final words of wisdom",
+      "panel_count": 6,
+      "manifest": {
+        "scene_id": "scene_03_departure",
+        "total_panels": 6,
+        "panel_ids": [
+          "s3_p01",
+          "s3_p02",
+          "s3_p03",
+          "s3_p04",
+          "s3_p05",
+          "s3_p06"
+        ],
+        "generated_at": "2025-12-30T18:22:22.274992",
+        "phase": "Phase 4: Storyboarding"
+      }
+    }
+  },
+  "total_panels": 18,
+  "success": true
+}

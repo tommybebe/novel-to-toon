@@ -1,0 +1,270 @@
+{
+  "phase": "Phase 3: Background and Material Settings",
+  "timestamp": "2025-12-30T17:10:41.962013",
+  "locations": {
+    "magic_tower": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/base_reference.png",
+        "size_bytes": 656973,
+        "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower (마선루 (魔仙樓))\n- Setting: Tower exterior shrouded in daytime fog\n- View: exterior view\n\nVISUAL ELEMENTS:\nAncient multi-story tower structure, Dense, perpetual fog surrounding the area, Traditional East Asian architecture with weathered sto...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/exterior_night.png",
+          "size_bytes": 573210,
+          "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower (마선루 (魔仙樓))\n- Setting: Tower under moonlight with fog\n- View: exterior view\n\nVISUAL ELEMENTS:\nAncient multi-story tower structure, Dense, perpetual fog surrounding the area, Traditional East Asian architecture with weathered stone, Isol...",
+          "used_reference": true,
+          "variation": "exterior_night"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_hall.png",
+          "size_bytes": 804524,
+          "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower (마선루 (魔仙樓))\n- Setting: Main hall interior where masters receive guests\n- View: interior view\n\nVISUAL ELEMENTS:\nAncient multi-story tower structure, Dense, perpetual fog surrounding the area, Traditional East Asian architecture with weat...",
+          "used_reference": true,
+          "variation": "interior_hall"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_quarters.png",
+          "size_bytes": 772016,
+          "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower (마선루 (魔仙樓))\n- Setting: Private quarters with subtle furnishings\n- View: interior view\n\nVISUAL ELEMENTS:\nAncient multi-story tower structure, Dense, perpetual fog surrounding the area, Traditional East Asian architecture with weathered s...",
+          "used_reference": true,
+          "variation": "interior_quarters"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "black_path": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/black_path/base_reference.png",
+        "size_bytes": 729096,
+        "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Dark alleyway during daytime, still shadowy\n- View: exterior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with s...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/black_path/alley_night.png",
+          "size_bytes": 639107,
+          "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Dangerous night scene in the alleys\n- View: exterior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with shadowy f...",
+          "used_reference": true,
+          "variation": "alley_night"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/black_path/tavern_interior.png",
+          "size_bytes": 676423,
+          "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Seedy tavern interior\n- View: interior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with shadowy figures, Tradit...",
+          "used_reference": true,
+          "variation": "tavern_interior"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/black_path/market_street.png",
+          "size_bytes": 626157,
+          "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Black market street scene\n- View: exterior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with shadowy figures, Tr...",
+          "used_reference": true,
+          "variation": "market_street"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "sword_dance_troupe": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/sword_dance_troupe/base_reference.png",
+        "size_bytes": 948739,
+        "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Training courtyard with peach tree\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for trou...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/sword_dance_troupe/training_ground.png",
+          "size_bytes": 809827,
+          "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Practice area with weapons\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for troupe membe...",
+          "used_reference": true,
+          "variation": "training_ground"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/sword_dance_troupe/living_quarters.png",
+          "size_bytes": 777315,
+          "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Shared living space\n- View: interior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for troupe members, Per...",
+          "used_reference": true,
+          "variation": "living_quarters"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/sword_dance_troupe/stage_area.png",
+          "size_bytes": 786323,
+          "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters (검무단 (劍舞團))\n- Setting: Performance stage\n- View: interior view\n\nVISUAL ELEMENTS:\nTraining grounds with practice equipment, Peach tree in the courtyard (significant to story), Living quarters for troupe members, Perfo...",
+          "used_reference": true,
+          "variation": "stage_area"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "inn": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/inn/base_reference.png",
+        "size_bytes": 947757,
+        "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn (객잔)\n- Setting: Inn exterior with traditional signage\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraditional Korean inn architecture, Dining area with low tables, Wooden interior with warm tones, Paper screen doors (hanji), Lantern l...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/inn/dining_area.png",
+          "size_bytes": 810420,
+          "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn (객잔)\n- Setting: Main dining hall with patrons\n- View: interior view\n\nVISUAL ELEMENTS:\nTraditional Korean inn architecture, Dining area with low tables, Wooden interior with warm tones, Paper screen doors (hanji), Lantern lighting,...",
+          "used_reference": true,
+          "variation": "dining_area"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/inn/private_room.png",
+          "size_bytes": 896397,
+          "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn (객잔)\n- Setting: Private guest room\n- View: interior view\n\nVISUAL ELEMENTS:\nTraditional Korean inn architecture, Dining area with low tables, Wooden interior with warm tones, Paper screen doors (hanji), Lantern lighting, Kitchen ar...",
+          "used_reference": true,
+          "variation": "private_room"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/inn/kitchen_view.png",
+          "size_bytes": 827395,
+          "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn (객잔)\n- Setting: View from kitchen area\n- View: interior view\n\nVISUAL ELEMENTS:\nTraditional Korean inn architecture, Dining area with low tables, Wooden interior with warm tones, Paper screen doors (hanji), Lantern lighting, Kitche...",
+          "used_reference": true,
+          "variation": "kitchen_view"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "wolya_pavilion": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/wolya_pavilion/base_reference.png",
+        "size_bytes": 908362,
+        "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Pavilion exterior with red lanterns\n- View: exterior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, ...",
+        "used_reference": false
+      },
+      "variations": [
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/wolya_pavilion/main_hall.png",
+          "size_bytes": 911255,
+          "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Main entertainment hall\n- View: interior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, Multiple lev...",
+          "used_reference": true,
+          "variation": "main_hall"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/wolya_pavilion/private_room.png",
+          "size_bytes": 785919,
+          "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Luxurious private room\n- View: interior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, Multiple leve...",
+          "used_reference": true,
+          "variation": "private_room"
+        },
+        {
+          "success": true,
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/wolya_pavilion/garden_courtyard.png",
+          "size_bytes": 793367,
+          "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Inner garden at night\n- View: exterior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, Multiple level...",
+          "used_reference": true,
+          "variation": "garden_courtyard"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    }
+  },
+  "materials": {
+    "black_silk_robe": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/black_silk_robe.png",
+      "size_bytes": 409376,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Black Silk Robe Fabric\n- Description: Traditional Korean silk hanbok fabric for Dokma's robes\n- Color: Deep black with subtle purple undertones\n- Pattern: Subtle cloud motif, barely visible\n- Usage: Clothing texture for dark-robed...",
+      "used_reference": false
+    },
+    "white_silk_robe": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/white_silk_robe.png",
+      "size_bytes": 843470,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: White Silk Robe Fabric\n- Description: Traditional Korean silk fabric for Uiseon's pristine robes\n- Color: Pure white with subtle cream undertones\n- Pattern: Faint floral pattern\n- Usage: Clothing texture for light-robed characters...",
+      "used_reference": false
+    },
+    "weathered_stone": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/weathered_stone.png",
+      "size_bytes": 868154,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Ancient Weathered Stone\n- Description: Stone texture for tower and traditional architecture\n- Color: Gray with moss and age marks\n- Pattern: Natural stone grain with weathering\n- Usage: Architecture, walls, floors\n\nREQUIREMENTS:\n-...",
+      "used_reference": false
+    },
+    "aged_wood": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/aged_wood.png",
+      "size_bytes": 599433,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Aged Wood\n- Description: Traditional wooden structures texture\n- Color: Dark brown with warm undertones\n- Pattern: Wood grain with age patina\n- Usage: Inn interiors, traditional buildings\n\nREQUIREMENTS:\n- Style: Suitable for Korea...",
+      "used_reference": false
+    },
+    "fog_atmosphere": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/fog_atmosphere.png",
+      "size_bytes": 622244,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: Atmospheric Fog\n- Description: Dense fog effect for Magic Tower scenes\n- Color: Blue-gray gradient\n- Pattern: Wispy, layered fog particles\n- Usage: Atmospheric overlay for mysterious scenes\n\nREQUIREMENTS:\n- Style: Suitable for Kor...",
+      "used_reference": false
+    }
+  },
+  "lighting_tests": {
+    "magic_tower_fog_day": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/lighting_tests/magic_tower_fog_day.png",
+      "size_bytes": 614813,
+      "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower interior scene\n- Purpose: Lighting test demonstration\n\nLIGHTING SETTINGS:\n- Preset: Daytime Fog\n- Diffused daylight through thick fog\n- Color Temperature: 5500K (neutral)\n- Shadow Intensity: Low (soft, diffused)\n- Light Direction: overh...",
+      "used_reference": false
+    },
+    "magic_tower_fog_night": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/lighting_tests/magic_tower_fog_night.png",
+      "size_bytes": 802136,
+      "prompt": "Korean webtoon background illustration:\n- Location: Magic Tower interior scene\n- Purpose: Lighting test demonstration\n\nLIGHTING SETTINGS:\n- Preset: Moonlit Fog\n- Cool moonlight filtering through fog\n- Color Temperature: 4000K (cool)\n- Shadow Intensity: Medium\n- Light Direction: overhead, lunar\n- Amb...",
+      "used_reference": false
+    },
+    "inn_indoor_lamp": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/lighting_tests/inn_indoor_lamp.png",
+      "size_bytes": 749543,
+      "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn interior scene\n- Purpose: Lighting test demonstration\n\nLIGHTING SETTINGS:\n- Preset: Traditional Lamp Light\n- Warm oil lamp or candle lighting\n- Color Temperature: 2700K (warm)\n- Shadow Intensity: High (dramatic)\n- Light Direction:...",
+      "used_reference": false
+    },
+    "black_path_combat_intense": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/lighting_tests/black_path_combat_intense.png",
+      "size_bytes": 740275,
+      "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory interior scene\n- Purpose: Lighting test demonstration\n\nLIGHTING SETTINGS:\n- Preset: Combat Lighting\n- High contrast action scene lighting\n- Color Temperature: 6500K (cool white)\n- Shadow Intensity: Very high\n- Light Direction: ...",
+      "used_reference": false
+    },
+    "sword_dance_troupe_emotional_soft": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/lighting_tests/sword_dance_troupe_emotional_soft.png",
+      "size_bytes": 764619,
+      "prompt": "Korean webtoon background illustration:\n- Location: Sword Dance Troupe Headquarters interior scene\n- Purpose: Lighting test demonstration\n\nLIGHTING SETTINGS:\n- Preset: Soft Emotional\n- Gentle lighting for intimate scenes\n- Color Temperature: 3500K (warm)\n- Shadow Intensity: Low\n- Light Direction: di...",
+      "used_reference": false
+    }
+  }
+}

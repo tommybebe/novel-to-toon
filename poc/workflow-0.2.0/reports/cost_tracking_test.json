@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "session_id": "poc-v2-test-001",
+    "start_time": "2025-12-30T16:11:07.183953",
+    "end_time": "2025-12-30T16:11:07.184336",
+    "total_calls": 9,
+    "total_cost_usd": 0.597,
+    "by_model": {
+      "gemini-3-pro-image-preview": {
+        "count": 3,
+        "cost": 0.402
+      },
+      "gemini-2.5-flash-image": {
+        "count": 6,
+        "cost": 0.195
+      }
+    },
+    "by_phase": {
+      "character_generation": {
+        "count": 2,
+        "cost": 0.268
+      },
+      "artifact_generation": {
+        "count": 1,
+        "cost": 0.134
+      },
+      "panel_generation": {
+        "count": 6,
+        "cost": 0.195
+      }
+    },
+    "by_status": {
+      "success": 8,
+      "failed": 1,
+      "retried": 0
+    },
+    "total_tokens": {
+      "prompt": 895,
+      "output": 8175,
+      "cached": 200
+    },
+    "total_generation_time_ms": 21600,
+    "average_generation_time_ms": 2400.0
+  },
+  "calls": [
+    {
+      "timestamp": "2025-12-30T16:11:07.184261Z",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "jin_sohan_base",
+      "scene_id": null,
+      "prompt_tokens": 150,
+      "output_tokens": 1290,
+      "cached_tokens": 0,
+      "cost_usd": 0.134,
+      "generation_time_ms": 3200,
+      "status": "success",
+      "phase": "character_generation",
+      "resolution": "2K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184265Z",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "dokma_base",
+      "scene_id": null,
+      "prompt_tokens": 145,
+      "output_tokens": 1285,
+      "cached_tokens": 0,
+      "cost_usd": 0.134,
+      "generation_time_ms": 3100,
+      "status": "success",
+      "phase": "character_generation",
+      "resolution": "2K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184268Z",
+      "model": "gemini-3-pro-image-preview",
+      "panel_id": "twin_blades_base",
+      "scene_id": null,
+      "prompt_tokens": 120,
+      "output_tokens": 1100,
+      "cached_tokens": 0,
+      "cost_usd": 0.134,
+      "generation_time_ms": 2800,
+      "status": "success",
+      "phase": "artifact_generation",
+      "resolution": "2K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184271Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p01",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 900,
+      "cached_tokens": 0,
+      "cost_usd": 0.039,
+      "generation_time_ms": 2000,
+      "status": "success",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184273Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p02",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 900,
+      "cached_tokens": 50,
+      "cost_usd": 0.039,
+      "generation_time_ms": 2100,
+      "status": "success",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184275Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p03",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 900,
+      "cached_tokens": 50,
+      "cost_usd": 0.039,
+      "generation_time_ms": 2200,
+      "status": "success",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184276Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p04",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 900,
+      "cached_tokens": 50,
+      "cost_usd": 0.039,
+      "generation_time_ms": 2300,
+      "status": "success",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184280Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p05",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 900,
+      "cached_tokens": 50,
+      "cost_usd": 0.039,
+      "generation_time_ms": 2400,
+      "status": "success",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": null
+    },
+    {
+      "timestamp": "2025-12-30T16:11:07.184282Z",
+      "model": "gemini-2.5-flash-image",
+      "panel_id": "s1_p06_failed",
+      "scene_id": "scene_01_request",
+      "prompt_tokens": 80,
+      "output_tokens": 0,
+      "cached_tokens": 0,
+      "cost_usd": 0.0,
+      "generation_time_ms": 1500,
+      "status": "failed",
+      "phase": "panel_generation",
+      "resolution": "1K",
+      "error_message": "Content filter triggered"
+    }
+  ]
+}

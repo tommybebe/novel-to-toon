@@ -1,0 +1,99 @@
+{
+  "panel_id": "s2_p05",
+  "scene_id": "scene_02_storytelling",
+  "generation": {
+    "timestamp": "2025-12-30T18:39:33.371409",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s2_p05",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p05.png",
+      "size_bytes": 2826954,
+      "generation_time_ms": 37919,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "9:16",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "1536x2752",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "9:16",
+            "actual_ratio": "0.56",
+            "target_ratio": "0.56"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "1536x2752",
+        "file_size_bytes": 2826954
+      }
+    }
+  },
+  "specifications": {
+    "id": "s2_p05",
+    "scene_id": "scene_02_storytelling",
+    "sequence_number": 5,
+    "panel_type": "fantasy_insert",
+    "aspect_ratio": "9:16",
+    "shot_type": "close-up",
+    "camera_angle": "slightly low angle",
+    "scene_description": "Young Jin Sohan making a fateful decision, holding the two glowing inner cores",
+    "narrative_moment": "The moment of transformation - consuming the snake's inner cores",
+    "characters": [
+      {
+        "name": "Young Jin Sohan",
+        "korean": "어린 진소한",
+        "position": "center",
+        "expression": "determined, nervous",
+        "pose": "holding two glowing orbs near mouth",
+        "reference_path": null
+      }
+    ],
+    "location": "Kitchen of Sword Dance Troupe",
+    "background_reference": null,
+    "lighting_preset": "dramatic",
+    "mood": "fateful, tense",
+    "dialogue_space": "none",
+    "special_effects": [
+      "dual_glow_red_gold",
+      "dramatic_lighting"
+    ],
+    "prompt_template_id": "closeup_action",
+    "source_text": "저는 눈을 딱 감고 먹기로 결심했습니다... 저는 그 두 개를 즉시 꿀꺽 삼켰습니다."
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "1536x2752",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "9:16",
+        "actual_ratio": "0.56",
+        "target_ratio": "0.56"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "1536x2752",
+    "file_size_bytes": 2826954
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p05.png",
+    "size_bytes": 2826954,
+    "dimensions": "1536x2752"
+  }
+}

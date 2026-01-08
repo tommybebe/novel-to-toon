@@ -1,0 +1,16 @@
+{
+  "test": "1.3.3_twin_character_differentiation",
+  "timestamp": "2025-12-30T16:50:19.532314",
+  "method": "single_face_reference_two_characters",
+  "base_reference": "dokma/base_reference.png",
+  "dokma_already_generated": true,
+  "uiseon_from_reference": {
+    "success": true,
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/twin_comparison/uiseon_from_dokma_face.png",
+    "size_bytes": 747949,
+    "prompt": "Generate the SAME face from the reference image as a full character:\n- Character: Uiseon (Medicine Sage) (의선 (醫仙))\n- Expression: Warm, wise gentle smile\n- Attire: White traditional robes (백의), pristin...",
+    "used_reference": true
+  },
+  "success": true,
+  "notes": "Both twins should have identical faces but different clothing and atmosphere"
+}

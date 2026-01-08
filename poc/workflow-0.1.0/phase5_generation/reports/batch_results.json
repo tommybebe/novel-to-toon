@@ -1,0 +1,736 @@
+{
+  "phase": "Phase 5: Panel Image Generation",
+  "timestamp": "2025-12-30T18:33:28.425433",
+  "model": "gemini-3-pro-image-preview",
+  "scenes": {
+    "scene_01_request": {
+      "scene_id": "scene_01_request",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "quality_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s1_p01",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p01.png",
+          "size_bytes": 2688767,
+          "generation_time_ms": 34669,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2688767
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p02",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p02.png",
+          "size_bytes": 2805904,
+          "generation_time_ms": 44062,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2805904
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p03",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p03.png",
+          "size_bytes": 2166415,
+          "generation_time_ms": 25687,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "1:1",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2048x2048",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "1:1",
+                "actual_ratio": "1.00",
+                "target_ratio": "1.00"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2048x2048",
+            "file_size_bytes": 2166415
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p04",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p04.png",
+          "size_bytes": 2573278,
+          "generation_time_ms": 36887,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "1:1",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2048x2048",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "1:1",
+                "actual_ratio": "1.00",
+                "target_ratio": "1.00"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2048x2048",
+            "file_size_bytes": 2573278
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p05",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p05.png",
+          "size_bytes": 2693449,
+          "generation_time_ms": 28329,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2693449
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p06",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_01_request/panels/s1_p06.png",
+          "size_bytes": 2456370,
+          "generation_time_ms": 27294,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "4:3",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2400x1792",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "4:3",
+                "actual_ratio": "1.34",
+                "target_ratio": "1.33"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2400x1792",
+            "file_size_bytes": 2456370
+          }
+        }
+      ]
+    },
+    "scene_02_storytelling": {
+      "scene_id": "scene_02_storytelling",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "quality_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s2_p01",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p01.png",
+          "size_bytes": 2884904,
+          "generation_time_ms": 35201,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2884904
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p02",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p02.png",
+          "size_bytes": 2792531,
+          "generation_time_ms": 34436,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "9:16",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "1536x2752",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "9:16",
+                "actual_ratio": "0.56",
+                "target_ratio": "0.56"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "1536x2752",
+            "file_size_bytes": 2792531
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p03",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p03.png",
+          "size_bytes": 3085186,
+          "generation_time_ms": 27665,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "1:1",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2048x2048",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "1:1",
+                "actual_ratio": "1.00",
+                "target_ratio": "1.00"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2048x2048",
+            "file_size_bytes": 3085186
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p04",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p04.png",
+          "size_bytes": 2611068,
+          "generation_time_ms": 32750,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "1:1",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2048x2048",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "1:1",
+                "actual_ratio": "1.00",
+                "target_ratio": "1.00"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2048x2048",
+            "file_size_bytes": 2611068
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p05",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p05.png",
+          "size_bytes": 2826954,
+          "generation_time_ms": 37919,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "9:16",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "1536x2752",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "9:16",
+                "actual_ratio": "0.56",
+                "target_ratio": "0.56"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "1536x2752",
+            "file_size_bytes": 2826954
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p06",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p06.png",
+          "size_bytes": 2562604,
+          "generation_time_ms": 25863,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "4:3",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2400x1792",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "4:3",
+                "actual_ratio": "1.34",
+                "target_ratio": "1.33"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2400x1792",
+            "file_size_bytes": 2562604
+          }
+        }
+      ]
+    },
+    "scene_03_departure": {
+      "scene_id": "scene_03_departure",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "quality_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s3_p01",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p01.png",
+          "size_bytes": 2677625,
+          "generation_time_ms": 30678,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2677625
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p02",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p02.png",
+          "size_bytes": 3020468,
+          "generation_time_ms": 51300,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 3020468
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p03",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p03.png",
+          "size_bytes": 2895647,
+          "generation_time_ms": 27499,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "4:3",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2400x1792",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "4:3",
+                "actual_ratio": "1.34",
+                "target_ratio": "1.33"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2400x1792",
+            "file_size_bytes": 2895647
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p04",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p04.png",
+          "size_bytes": 2675482,
+          "generation_time_ms": 51432,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2675482
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p05",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p05.png",
+          "size_bytes": 2688291,
+          "generation_time_ms": 52565,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "16:9",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "2752x1536",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "16:9",
+                "actual_ratio": "1.79",
+                "target_ratio": "1.78"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "2752x1536",
+            "file_size_bytes": 2688291
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p06",
+          "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p06.png",
+          "size_bytes": 2454402,
+          "generation_time_ms": 30614,
+          "character_refs_used": true,
+          "background_ref_used": false,
+          "aspect_ratio": "2:3",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "resolution": {
+                "passed": true,
+                "actual": "1696x2528",
+                "minimum": "1024px on shortest side"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "2:3",
+                "actual_ratio": "0.67",
+                "target_ratio": "0.67"
+              },
+              "file_valid": {
+                "passed": true,
+                "details": "Image file is valid"
+              }
+            },
+            "dimensions": "1696x2528",
+            "file_size_bytes": 2454402
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_panels": 18,
+    "total_generated": 18,
+    "total_quality_passed": 18,
+    "generation_success_rate": 100.0,
+    "quality_pass_rate": 100.0
+  },
+  "cost_summary": {
+    "total_calls": 18,
+    "successful_calls": 18,
+    "failed_calls": 0,
+    "estimated_cost_usd": 2.6999999999999997,
+    "calls": [
+      {
+        "timestamp": "2025-12-30T18:34:03.095159",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p01",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:34:47.173285",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p02",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:35:12.863994",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p03",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:35:49.754020",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p04",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:36:18.086690",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p05",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:36:45.383465",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s1_p06",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:37:20.588468",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p01",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:37:55.027711",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p02",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:38:22.695286",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p03",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:38:55.447990",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p04",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:39:33.370731",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p05",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:39:59.236623",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s2_p06",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:40:29.918746",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p01",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:41:21.224580",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p02",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:41:48.727032",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p03",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:42:40.161023",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p04",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:43:32.728749",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p05",
+        "success": true
+      },
+      {
+        "timestamp": "2025-12-30T18:44:03.346234",
+        "model": "gemini-3-pro-image-preview",
+        "panel_id": "s3_p06",
+        "success": true
+      }
+    ]
+  }
+}

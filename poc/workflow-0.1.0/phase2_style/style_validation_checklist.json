@@ -1,0 +1,319 @@
+{
+  "version": "1.0",
+  "created": "2025-12-30",
+  "description": "Style consistency validation checklist for novel-to-webtoon generation",
+  "validation_categories": {
+    "line_work": {
+      "weight": 10,
+      "checks": [
+        {
+          "id": "line_weight_consistency",
+          "name": "Line Weight Consistency",
+          "description": "Line weight should be consistent with established style (medium with varied thickness)",
+          "criteria": [
+            "Primary contours use medium weight (2-3px at 2K)",
+            "Detail lines are thinner (1px)",
+            "Emphasis lines are thicker for foreground elements",
+            "No inconsistent thin/thick areas"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "line_quality",
+          "name": "Line Quality",
+          "description": "Lines should be clean with intentional variation",
+          "criteria": [
+            "Clean, professional linework",
+            "No unintended rough edges",
+            "Appropriate roughness only in action scenes",
+            "Consistent line style throughout"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "color_palette": {
+      "weight": 15,
+      "checks": [
+        {
+          "id": "palette_adherence",
+          "name": "Color Palette Adherence",
+          "description": "Colors should match the defined style palette",
+          "criteria": [
+            "Primary colors within defined range",
+            "Accent colors used appropriately",
+            "Character-specific colors maintained",
+            "No jarring off-palette colors"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "color_temperature",
+          "name": "Color Temperature",
+          "description": "Color temperature appropriate for scene mood",
+          "criteria": [
+            "Dark/mysterious scenes use cool tones",
+            "Warm scenes use appropriate warm accents",
+            "Fog scenes use blue-gray palette",
+            "Action scenes maintain contrast"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "shading": {
+      "weight": 15,
+      "checks": [
+        {
+          "id": "shading_style",
+          "name": "Shading Style Consistency",
+          "description": "Shading should be cel-shaded with gradient accents",
+          "criteria": [
+            "Cel-shaded base shadows",
+            "Soft gradient accents where appropriate",
+            "2-3 shadow levels maintained",
+            "No photorealistic shading"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "shadow_placement",
+          "name": "Shadow Placement",
+          "description": "Shadows should be consistent with lighting",
+          "criteria": [
+            "Light source consistent within panel",
+            "Shadow direction matches light",
+            "Dramatic contrast in appropriate scenes",
+            "Soft shadows in fog/diffused light"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "character_consistency": {
+      "weight": 25,
+      "checks": [
+        {
+          "id": "facial_features",
+          "name": "Facial Feature Consistency",
+          "description": "Character faces should match reference",
+          "criteria": [
+            "Face shape matches reference",
+            "Eye shape and color consistent",
+            "Hair style and color maintained",
+            "Distinctive features preserved (e.g., cloudy eyes)"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "attire_consistency",
+          "name": "Attire Consistency",
+          "description": "Character clothing should match design",
+          "criteria": [
+            "Clothing colors correct",
+            "Clothing style matches character",
+            "Accessories present and correct",
+            "Fabric rendering consistent"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "character_proportions",
+          "name": "Character Proportions",
+          "description": "Body proportions should be consistent",
+          "criteria": [
+            "Height proportions maintained",
+            "Body build consistent",
+            "Limb proportions appropriate",
+            "Hand/face ratio consistent"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "atmosphere": {
+      "weight": 15,
+      "checks": [
+        {
+          "id": "mood_conveyance",
+          "name": "Mood Conveyance",
+          "description": "Image should convey intended mood",
+          "criteria": [
+            "Overall mood matches scene description",
+            "Color choices support mood",
+            "Lighting enhances atmosphere",
+            "Composition reinforces emotional tone"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "fog_effects",
+          "name": "Fog/Atmospheric Effects",
+          "description": "Fog and atmospheric effects should be consistent",
+          "criteria": [
+            "Fog density appropriate for scene",
+            "Fog color within palette",
+            "Depth perception through fog correct",
+            "Fog doesn't obscure important elements"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "composition": {
+      "weight": 10,
+      "checks": [
+        {
+          "id": "framing",
+          "name": "Panel Framing",
+          "description": "Composition should follow webtoon conventions",
+          "criteria": [
+            "Subject placement follows rule of thirds",
+            "Appropriate negative space",
+            "Focus point clear",
+            "Space for dialogue bubbles if needed"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "aspect_ratio",
+          "name": "Aspect Ratio Compliance",
+          "description": "Image should match specified aspect ratio",
+          "criteria": [
+            "Correct aspect ratio for panel type",
+            "No awkward cropping",
+            "Important elements within frame"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    },
+    "technical_quality": {
+      "weight": 10,
+      "checks": [
+        {
+          "id": "resolution",
+          "name": "Resolution Quality",
+          "description": "Image should meet resolution requirements",
+          "criteria": [
+            "Minimum dimension meets spec",
+            "No visible compression artifacts",
+            "Details crisp at full size",
+            "Suitable for publication"
+          ],
+          "score_range": [0, 10]
+        },
+        {
+          "id": "artifacts",
+          "name": "Artifact Check",
+          "description": "No unwanted AI generation artifacts",
+          "criteria": [
+            "No distorted hands/fingers",
+            "No text or watermarks",
+            "No blurry/undefined areas",
+            "No anatomical errors"
+          ],
+          "score_range": [0, 10]
+        }
+      ]
+    }
+  },
+  "scoring_guide": {
+    "pass_threshold": 75,
+    "excellence_threshold": 90,
+    "score_interpretation": {
+      "0-4": "Significant issues, requires regeneration",
+      "5-6": "Below standard, consider regeneration",
+      "7-8": "Acceptable, minor adjustments may help",
+      "9-10": "Excellent, meets or exceeds standards"
+    },
+    "overall_calculation": "Sum of (category_score * category_weight) / 100"
+  },
+  "validation_workflow": {
+    "steps": [
+      {
+        "step": 1,
+        "name": "Automated Checks",
+        "actions": [
+          "Verify resolution meets requirements",
+          "Check aspect ratio compliance",
+          "Extract dominant colors for palette comparison"
+        ]
+      },
+      {
+        "step": 2,
+        "name": "Reference Comparison",
+        "actions": [
+          "Compare character faces against reference images",
+          "Verify attire matches character design",
+          "Check for character-specific features"
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Style Analysis",
+        "actions": [
+          "Evaluate line work consistency",
+          "Check shading style adherence",
+          "Verify color palette compliance"
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Composition Review",
+        "actions": [
+          "Assess framing and composition",
+          "Check mood and atmosphere",
+          "Verify dialogue space if required"
+        ]
+      },
+      {
+        "step": 5,
+        "name": "Final Quality Check",
+        "actions": [
+          "Look for AI artifacts",
+          "Check overall coherence",
+          "Make pass/fail determination"
+        ]
+      }
+    ]
+  },
+  "common_issues": {
+    "character_drift": {
+      "description": "Character appearance changes from reference",
+      "solutions": [
+        "Use reference image in API call",
+        "Include explicit 'MAINTAIN EXACTLY' instructions",
+        "Reduce variation in prompt",
+        "Regenerate with base reference first"
+      ]
+    },
+    "style_inconsistency": {
+      "description": "Art style differs from established look",
+      "solutions": [
+        "Include full style block in prompt",
+        "Use consistent style keywords",
+        "Reference previous successful generations",
+        "Avoid conflicting style terms"
+      ]
+    },
+    "color_deviation": {
+      "description": "Colors outside defined palette",
+      "solutions": [
+        "Include hex codes in prompt",
+        "Specify 'color palette' explicitly",
+        "Use color temperature guidance",
+        "Post-process if minor deviation"
+      ]
+    },
+    "mood_mismatch": {
+      "description": "Atmosphere doesn't match scene requirements",
+      "solutions": [
+        "Strengthen mood keywords in prompt",
+        "Adjust lighting descriptions",
+        "Use more specific atmosphere terms",
+        "Include emotional context"
+      ]
+    }
+  }
+}

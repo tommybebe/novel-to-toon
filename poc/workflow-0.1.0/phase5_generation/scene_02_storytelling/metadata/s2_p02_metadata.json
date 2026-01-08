@@ -1,0 +1,100 @@
+{
+  "panel_id": "s2_p02",
+  "scene_id": "scene_02_storytelling",
+  "generation": {
+    "timestamp": "2025-12-30T18:37:55.028404",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s2_p02",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p02.png",
+      "size_bytes": 2792531,
+      "generation_time_ms": 34436,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "9:16",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "1536x2752",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "9:16",
+            "actual_ratio": "0.56",
+            "target_ratio": "0.56"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "1536x2752",
+        "file_size_bytes": 2792531
+      }
+    }
+  },
+  "specifications": {
+    "id": "s2_p02",
+    "scene_id": "scene_02_storytelling",
+    "sequence_number": 2,
+    "panel_type": "fantasy_insert",
+    "aspect_ratio": "9:16",
+    "shot_type": "medium shot",
+    "camera_angle": "low angle looking up",
+    "scene_description": "Flashback/story visualization: Young Jin Sohan looking up at a golden peach on a tree",
+    "narrative_moment": "The discovery of the mystical golden peach in the courtyard",
+    "characters": [
+      {
+        "name": "Young Jin Sohan",
+        "korean": "어린 진소한",
+        "position": "bottom-center",
+        "expression": "wonder, curiosity",
+        "pose": "looking up at tree",
+        "reference_path": null
+      }
+    ],
+    "location": "Sword Dance Troupe courtyard with peach tree",
+    "background_reference": null,
+    "lighting_preset": "emotional_soft",
+    "mood": "nostalgic, wondrous",
+    "dialogue_space": "none",
+    "special_effects": [
+      "golden_glow",
+      "dreamy_filter",
+      "vignette"
+    ],
+    "prompt_template_id": "emotional_farewell",
+    "source_text": "그 나무에 다른 복숭아와 빛깔이 전혀 다른 황금 복숭아가 높은 곳에 달려있었는데..."
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "1536x2752",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "9:16",
+        "actual_ratio": "0.56",
+        "target_ratio": "0.56"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "1536x2752",
+    "file_size_bytes": 2792531
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p02.png",
+    "size_bytes": 2792531,
+    "dimensions": "1536x2752"
+  }
+}

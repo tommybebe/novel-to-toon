@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Wolya Pavilion",
+    "korean_name": "월야루 (月夜樓)",
+    "description": "Pleasure house/entertainment district establishment",
+    "visual_elements": [
+      "Ornate traditional architecture",
+      "Red lanterns throughout",
+      "Entertainment district atmosphere",
+      "Elaborate decorations and silk hangings",
+      "Multiple levels with private rooms",
+      "Garden courtyard"
+    ],
+    "atmosphere": "Luxurious, sensual, mysterious, entertainment",
+    "lighting_default": "indoor_lamp",
+    "color_emphasis": [
+      "#8b0000",
+      "#c9a227",
+      "#4a2d6a",
+      "#1a1a2e"
+    ]
+  },
+  "variation": {
+    "name": "exterior_night",
+    "time": "night",
+    "view": "exterior",
+    "description": "Pavilion exterior with red lanterns"
+  },
+  "generation": {
+    "timestamp": "2025-12-30T17:16:34.921336",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Pavilion exterior with red lanterns\n- View: exterior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, Multiple levels with private rooms, Garden courtyard\n\nATMOSPHERE:\n- Mood: Luxurious, sensual, mysterious, entertainment\n- Lighting: Cool moonlight filtering through fog\n- Color Temperature: 4000K (cool)\n- Shadow Intensity: Medium\n\nSTYLE REQUIREMENTS:\n- Art style: Korean webtoon (manhwa), wuxia genre\n- Clean detailed linework, cel-shaded with gradient accents\n- Color emphasis: #8b0000, #c9a227, #4a2d6a, #1a1a2e\n- High detail environment art, publication ready\n- No characters, environment only\n- No text or UI elements\n\nCOMPOSITION:\n- Wide establishing shot\n- Depth and atmosphere emphasized\n- Appropriate atmospheric effects\n\nQUALITY: High detail, 2K resolution quality, professional illustration",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/wolya_pavilion/base_reference.png",
+      "size_bytes": 908362,
+      "prompt": "Korean webtoon background illustration:\n- Location: Wolya Pavilion (월야루 (月夜樓))\n- Setting: Pavilion exterior with red lanterns\n- View: exterior view\n\nVISUAL ELEMENTS:\nOrnate traditional architecture, Red lanterns throughout, Entertainment district atmosphere, Elaborate decorations and silk hangings, ...",
+      "used_reference": false
+    }
+  }
+}

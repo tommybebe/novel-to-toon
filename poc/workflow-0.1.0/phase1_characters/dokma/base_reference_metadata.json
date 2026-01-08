@@ -1,0 +1,36 @@
+{
+  "character": {
+    "name": "Dokma (Poison Demon)",
+    "korean_name": "독마 (毒魔)",
+    "age": "Middle-aged (appears 50s)",
+    "role": "One of the twin masters, Poison Master",
+    "visual_features": [
+      "Dark complexion",
+      "Identical twin face with Uiseon",
+      "Sinister, knowing eyes",
+      "Cynical smirk",
+      "Weathered appearance from poison work"
+    ],
+    "clothing": "Black traditional robes (흑의), flowing dark fabric",
+    "atmosphere": "Dark, poisonous, mysterious, cynical",
+    "color_palette": [
+      "#0d0d0d",
+      "#1a1a1a",
+      "#333333",
+      "#4a4a4a"
+    ]
+  },
+  "step": "1_base_reference",
+  "generation": {
+    "timestamp": "2025-12-30T16:47:18.044011",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Korean webtoon style character portrait:\n- Character: Dokma (Poison Demon) (독마 (毒魔)), Middle-aged (appears 50s), One of the twin masters, Poison Master\n- Key Features: Dark complexion, Identical twin face with Uiseon, Sinister, knowing eyes, Cynical smirk, Weathered appearance from poison work\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Attire: Black traditional robes (흑의), flowing dark fabric\n- Atmosphere: Dark, poisonous, mysterious, cynical\n- Style: Korean webtoon (manhwa), clean detailed linework, cel-shaded with gradient accents\n- Composition: Upper body portrait, centered\n- Background: Simple neutral gradient\n- Quality: High detail, publication ready, no text\n\nIMPORTANT STYLE ELEMENTS TO ESTABLISH:\n- Line weight: Medium with varied thickness for emphasis\n- Shading: Cel-shaded with soft gradients\n- Color palette: #0d0d0d, #1a1a1a, #333333, #4a4a4a",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png",
+      "size_bytes": 523504,
+      "prompt": "Korean webtoon style character portrait:\n- Character: Dokma (Poison Demon) (독마 (毒魔)), Middle-aged (appears 50s), One of the twin masters, Poison Master\n- Key Features: Dark complexion, Identical twin ...",
+      "used_reference": false
+    }
+  }
+}

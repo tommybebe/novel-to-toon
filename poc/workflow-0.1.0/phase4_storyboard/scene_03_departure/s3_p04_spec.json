@@ -1,0 +1,45 @@
+{
+  "id": "s3_p04",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 4,
+  "panel_type": "wide",
+  "aspect_ratio": "16:9",
+  "shot_type": "wide shot",
+  "camera_angle": "side angle",
+  "scene_description": "Jin Sohan bowing deeply to both masters in formal farewell",
+  "narrative_moment": "The formal farewell after 12 years as their disciple",
+  "characters": [
+    {
+      "name": "Jin Sohan",
+      "korean": "진소한",
+      "position": "center-bottom",
+      "expression": "deep gratitude",
+      "pose": "deep bow, formal",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png"
+    },
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "left-back",
+      "expression": "stoic, hiding emotion",
+      "pose": "standing",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    },
+    {
+      "name": "Uiseon",
+      "korean": "의선",
+      "position": "right-back",
+      "expression": "gentle sadness",
+      "pose": "standing",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior hall",
+  "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_hall.png",
+  "lighting_preset": "indoor_lamp",
+  "mood": "solemn, emotional",
+  "dialogue_space": "none",
+  "special_effects": [],
+  "prompt_template_id": "dialogue_group",
+  "source_text": "얼떨떨한 진소한이 서둘러서 절을 올렸다."
+}

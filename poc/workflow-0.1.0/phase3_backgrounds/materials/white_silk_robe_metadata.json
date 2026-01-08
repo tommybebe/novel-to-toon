@@ -1,0 +1,21 @@
+{
+  "material": {
+    "name": "White Silk Robe Fabric",
+    "description": "Traditional Korean silk fabric for Uiseon's pristine robes",
+    "color": "Pure white with subtle cream undertones",
+    "pattern": "Faint floral pattern",
+    "usage": "Clothing texture for light-robed characters"
+  },
+  "generation": {
+    "timestamp": "2025-12-30T17:18:06.619250",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: White Silk Robe Fabric\n- Description: Traditional Korean silk fabric for Uiseon's pristine robes\n- Color: Pure white with subtle cream undertones\n- Pattern: Faint floral pattern\n- Usage: Clothing texture for light-robed characters\n\nREQUIREMENTS:\n- Style: Suitable for Korean webtoon (manhwa) art\n- Format: Tileable/seamless texture\n- Detail level: Medium, not photorealistic\n- Clean, stylized appearance matching cel-shaded art style\n- No text, no watermarks\n- Square format\n\nQUALITY: High detail, professional texture asset",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/materials/white_silk_robe.png",
+      "size_bytes": 843470,
+      "prompt": "Seamless texture pattern for Korean webtoon illustration:\n- Material: White Silk Robe Fabric\n- Description: Traditional Korean silk fabric for Uiseon's pristine robes\n- Color: Pure white with subtle cream undertones\n- Pattern: Faint floral pattern\n- Usage: Clothing texture for light-robed characters...",
+      "used_reference": false
+    }
+  }
+}

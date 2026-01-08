@@ -1,0 +1,245 @@
+{
+  "version": "1.0",
+  "created": "2025-12-30T18:22:22.275184",
+  "phase": "Phase 4: Storyboarding",
+  "panel_types": {
+    "establishing": {
+      "description": "Wide establishing shot to set the scene",
+      "typical_aspect_ratios": [
+        "16:9",
+        "2:3"
+      ],
+      "shot_types": [
+        "wide shot",
+        "extreme wide shot"
+      ],
+      "character_presence": "none or minimal",
+      "dialogue_space": "none",
+      "use_cases": [
+        "scene introduction",
+        "location reveal",
+        "time passage"
+      ]
+    },
+    "dialogue": {
+      "description": "Conversation panel with character interaction",
+      "typical_aspect_ratios": [
+        "16:9",
+        "4:3"
+      ],
+      "shot_types": [
+        "medium shot",
+        "medium close-up"
+      ],
+      "character_presence": "2-4 characters",
+      "dialogue_space": "top or sides",
+      "use_cases": [
+        "conversation",
+        "exposition",
+        "character interaction"
+      ]
+    },
+    "close-up": {
+      "description": "Focus on character expression or detail",
+      "typical_aspect_ratios": [
+        "1:1",
+        "4:3"
+      ],
+      "shot_types": [
+        "close-up",
+        "extreme close-up"
+      ],
+      "character_presence": "1 character (face focus)",
+      "dialogue_space": "bottom or none",
+      "use_cases": [
+        "emotional moment",
+        "reaction",
+        "emphasis"
+      ]
+    },
+    "two-shot": {
+      "description": "Two characters in frame together",
+      "typical_aspect_ratios": [
+        "16:9",
+        "4:3"
+      ],
+      "shot_types": [
+        "medium shot",
+        "medium close-up"
+      ],
+      "character_presence": "2 characters",
+      "dialogue_space": "top",
+      "use_cases": [
+        "dialogue exchange",
+        "relationship dynamic",
+        "confrontation"
+      ]
+    },
+    "action": {
+      "description": "Dynamic action sequence panel",
+      "typical_aspect_ratios": [
+        "9:16",
+        "1:1"
+      ],
+      "shot_types": [
+        "dynamic",
+        "low angle",
+        "dutch angle"
+      ],
+      "character_presence": "1-2 characters",
+      "dialogue_space": "none",
+      "use_cases": [
+        "combat",
+        "movement",
+        "impact"
+      ],
+      "special_effects": [
+        "speed_lines",
+        "motion_blur",
+        "impact_burst"
+      ]
+    },
+    "reaction": {
+      "description": "Character reaction to event",
+      "typical_aspect_ratios": [
+        "4:3",
+        "1:1"
+      ],
+      "shot_types": [
+        "medium close-up",
+        "close-up"
+      ],
+      "character_presence": "1-3 characters",
+      "dialogue_space": "bottom",
+      "use_cases": [
+        "surprise",
+        "realization",
+        "emotional response"
+      ]
+    },
+    "object_focus": {
+      "description": "Focus on significant object",
+      "typical_aspect_ratios": [
+        "16:9",
+        "4:3",
+        "1:1"
+      ],
+      "shot_types": [
+        "close-up",
+        "macro"
+      ],
+      "character_presence": "none or partial (hands)",
+      "dialogue_space": "none or bottom",
+      "use_cases": [
+        "symbolic item",
+        "plot device",
+        "gift/weapon reveal"
+      ]
+    },
+    "silhouette": {
+      "description": "Dramatic silhouette composition",
+      "typical_aspect_ratios": [
+        "2:3",
+        "9:16"
+      ],
+      "shot_types": [
+        "wide shot",
+        "medium shot"
+      ],
+      "character_presence": "1+ as silhouettes",
+      "dialogue_space": "none",
+      "use_cases": [
+        "dramatic moment",
+        "departure",
+        "mystery"
+      ],
+      "special_effects": [
+        "backlight",
+        "atmospheric_fog"
+      ]
+    },
+    "fantasy_insert": {
+      "description": "Flashback or story visualization panel",
+      "typical_aspect_ratios": [
+        "9:16",
+        "1:1"
+      ],
+      "shot_types": [
+        "varies"
+      ],
+      "character_presence": "varies",
+      "dialogue_space": "none",
+      "use_cases": [
+        "flashback",
+        "memory",
+        "story within story"
+      ],
+      "special_effects": [
+        "dreamy_filter",
+        "vignette",
+        "color_shift"
+      ]
+    }
+  },
+  "camera_angles": {
+    "eye_level": "Neutral, straightforward view",
+    "low_angle": "Looking up, conveys power or importance",
+    "high_angle": "Looking down, conveys vulnerability or smallness",
+    "dutch_angle": "Tilted frame, conveys tension or unease",
+    "top_down": "Bird's eye view, overview perspective",
+    "straight_on": "Direct frontal view"
+  },
+  "lighting_presets": {
+    "fog_day": {
+      "mood": "mysterious",
+      "color_temp": "neutral",
+      "shadows": "soft"
+    },
+    "fog_night": {
+      "mood": "eerie",
+      "color_temp": "cool",
+      "shadows": "medium"
+    },
+    "indoor_lamp": {
+      "mood": "warm",
+      "color_temp": "warm",
+      "shadows": "dramatic"
+    },
+    "emotional_soft": {
+      "mood": "intimate",
+      "color_temp": "warm",
+      "shadows": "minimal"
+    },
+    "combat_intense": {
+      "mood": "intense",
+      "color_temp": "cool",
+      "shadows": "high_contrast"
+    },
+    "mystical": {
+      "mood": "supernatural",
+      "color_temp": "varies",
+      "shadows": "ethereal"
+    }
+  },
+  "special_effects_library": [
+    "dense_fog",
+    "atmospheric_glow",
+    "dark_vignette",
+    "soft_light",
+    "dramatic_lighting",
+    "metallic_gleam",
+    "warm_light",
+    "subtle_vignette",
+    "silhouette_backlight",
+    "golden_glow",
+    "dreamy_filter",
+    "vignette",
+    "dual_glow_red_gold",
+    "eye_highlight",
+    "ethereal_mist",
+    "translucent_body",
+    "speed_lines",
+    "motion_blur",
+    "impact_burst"
+  ]
+}

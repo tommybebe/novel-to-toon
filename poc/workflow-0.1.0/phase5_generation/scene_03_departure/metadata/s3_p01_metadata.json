@@ -1,0 +1,90 @@
+{
+  "panel_id": "s3_p01",
+  "scene_id": "scene_03_departure",
+  "generation": {
+    "timestamp": "2025-12-30T18:40:29.922107",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s3_p01",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p01.png",
+      "size_bytes": 2677625,
+      "generation_time_ms": 30678,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "16:9",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "2752x1536",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "16:9",
+            "actual_ratio": "1.79",
+            "target_ratio": "1.78"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "2752x1536",
+        "file_size_bytes": 2677625
+      }
+    }
+  },
+  "specifications": {
+    "id": "s3_p01",
+    "scene_id": "scene_03_departure",
+    "sequence_number": 1,
+    "panel_type": "object_focus",
+    "aspect_ratio": "16:9",
+    "shot_type": "close-up",
+    "camera_angle": "top-down slight angle",
+    "scene_description": "Twin crescent moon blades (Ssangwol) laid on a wooden table",
+    "narrative_moment": "Dokma's precious weapon, now passed to his disciple",
+    "characters": [],
+    "location": "Magic Tower interior",
+    "background_reference": null,
+    "lighting_preset": "indoor_lamp",
+    "mood": "reverent, meaningful",
+    "dialogue_space": "none",
+    "special_effects": [
+      "metallic_gleam",
+      "warm_light"
+    ],
+    "prompt_template_id": "object_focus",
+    "source_text": "독마가 두 자루의 칼을 탁자 위에 내밀었다. '쌍월(雙月)은 네가 앞으로 써라.'"
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "2752x1536",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "16:9",
+        "actual_ratio": "1.79",
+        "target_ratio": "1.78"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "2752x1536",
+    "file_size_bytes": 2677625
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p01.png",
+    "size_bytes": 2677625,
+    "dimensions": "2752x1536"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "version": "1.0",
+  "created": "2025-12-30",
+  "style_name": "Disciple of the Villain - Wuxia Dark",
+  "base_style_block": "Korean webtoon style, wuxia martial arts genre, clean detailed linework, cel-shaded with gradient accents, dramatic lighting, high contrast",
+  "quality_block": "High detail, publication ready, professional illustration, no text, no speech bubbles",
+  "templates": [
+    {
+      "id": "character_portrait_base",
+      "name": "Character Portrait - Base Reference",
+      "category": "character",
+      "description": "Base reference image for character design",
+      "aspect_ratio": "1:1",
+      "prompt_template": "Korean webtoon style character portrait:\n- Character: {character_name} ({character_korean}), {age}, {role}\n- Key Features: {key_features}\n- Expression: Neutral, calm expression\n- Pose: Front view, straight posture\n- Attire: {attire_description}\n- Style: Korean webtoon (manhwa), clean detailed linework, cel-shaded with gradient accents\n- Composition: Upper body portrait, centered\n- Background: Simple neutral gradient\n- Quality: High detail, publication ready, no text\n\nIMPORTANT STYLE ELEMENTS:\n- Line weight: Medium with varied thickness for emphasis\n- Shading: Cel-shaded with soft gradients\n- Color palette: {color_palette}",
+      "variables": ["character_name", "character_korean", "age", "role", "key_features", "attire_description", "color_palette"]
+    },
+    {
+      "id": "character_variation",
+      "name": "Character Variation - Reference Based",
+      "category": "character",
+      "description": "Generate character variation using base reference",
+      "aspect_ratio": "1:1",
+      "prompt_template": "Generate the SAME character from the reference image with the following changes:\n- Expression: {expression}\n- Pose: {pose}\n- Background: {background}\n\nMAINTAIN EXACTLY from reference:\n- Face shape and all facial features\n- Hair style, length, and color\n- Clothing design and colors\n- Art style, line weight, and shading technique\n- Color palette",
+      "variables": ["expression", "pose", "background"],
+      "requires_reference": true
+    },
+    {
+      "id": "closeup_emotional",
+      "name": "Close-up - Emotional",
+      "category": "panel",
+      "description": "Emotional close-up panel for dialogue or reaction",
+      "aspect_ratio": "1:1",
+      "prompt_template": "Korean webtoon close-up panel:\n- Character: {character_name}\n- Expression: {expression}\n- Emotion conveyed: {emotion}\n- Framing: Face close-up, slight {angle} angle\n- Lighting: {lighting}\n- Background: {background}\n- Style: Korean webtoon, wuxia genre, clean detailed linework\n- Mood: {mood}\n- Quality: High detail, no text\n\nEMPHASIS: Eyes and facial expression should convey {emotion}",
+      "variables": ["character_name", "expression", "emotion", "angle", "lighting", "background", "mood"],
+      "requires_reference": true
+    },
+    {
+      "id": "closeup_action",
+      "name": "Close-up - Action",
+      "category": "panel",
+      "description": "Intense action close-up panel",
+      "aspect_ratio": "1:1",
+      "prompt_template": "Korean webtoon action close-up:\n- Character: {character_name}\n- Expression: {expression}, battle-ready\n- Action: {action_description}\n- Framing: Dynamic close-up, {angle} angle\n- Lighting: High contrast, dramatic shadows\n- Background: {background}, motion effects\n- Style: Korean webtoon, wuxia action, bold linework\n- Effects: {effects}\n- Quality: High detail, dynamic composition, no text",
+      "variables": ["character_name", "expression", "action_description", "angle", "background", "effects"],
+      "requires_reference": true
+    },
+    {
+      "id": "action_attack",
+      "name": "Action Sequence - Attack",
+      "category": "panel",
+      "description": "Dynamic attack action panel",
+      "aspect_ratio": "9:16",
+      "prompt_template": "Korean webtoon action panel:\n- Scene: {scene_description}\n- Character: {character_name} executing {attack_type}\n- Weapon: {weapon}\n- Motion: Dynamic movement, {motion_direction}\n- Composition: Diagonal composition, {camera_angle}\n- Effects: Speed lines, motion blur on {blur_element}\n- Lighting: High contrast, dramatic\n- Style: Korean webtoon action, wuxia martial arts\n- Atmosphere: Intense, controlled violence\n- Quality: High detail, dynamic, no text",
+      "variables": ["scene_description", "character_name", "attack_type", "weapon", "motion_direction", "camera_angle", "blur_element"],
+      "requires_reference": true
+    },
+    {
+      "id": "action_impact",
+      "name": "Action Sequence - Impact",
+      "category": "panel",
+      "description": "Impact moment in action sequence",
+      "aspect_ratio": "1:1",
+      "prompt_template": "Korean webtoon impact panel:\n- Scene: {scene_description}\n- Impact: {impact_description}\n- Victim reaction: {victim_reaction}\n- Composition: Centered on impact point\n- Effects: Impact burst, shock lines, {additional_effects}\n- Lighting: Flash effect, high contrast\n- Style: Korean webtoon, wuxia, bold dramatic\n- Mood: Sudden, lethal, shocking\n- Quality: High detail, impactful composition, no text",
+      "variables": ["scene_description", "impact_description", "victim_reaction", "additional_effects"]
+    },
+    {
+      "id": "dialogue_two_shot",
+      "name": "Dialogue Scene - Two Characters",
+      "category": "panel",
+      "description": "Two character dialogue panel",
+      "aspect_ratio": "16:9",
+      "prompt_template": "Korean webtoon dialogue panel:\n- Scene: {scene_location}\n- Characters: {character_1} ({position_1}) and {character_2} ({position_2})\n- Expressions: {character_1}: {expression_1}, {character_2}: {expression_2}\n- Composition: Two-shot, {framing}\n- Atmosphere: {atmosphere}\n- Lighting: {lighting}\n- Background: {background_detail}\n- Style: Korean webtoon, wuxia genre\n- Space for dialogue: Leave {dialogue_space} for speech bubbles\n- Quality: High detail, no text",
+      "variables": ["scene_location", "character_1", "position_1", "character_2", "position_2", "expression_1", "expression_2", "framing", "atmosphere", "lighting", "background_detail", "dialogue_space"],
+      "requires_reference": true
+    },
+    {
+      "id": "dialogue_group",
+      "name": "Dialogue Scene - Group",
+      "category": "panel",
+      "description": "Multi-character group scene",
+      "aspect_ratio": "16:9",
+      "prompt_template": "Korean webtoon group scene:\n- Scene: {scene_location}\n- Characters present: {characters_list}\n- Focal character: {focal_character}\n- Character arrangement: {arrangement}\n- Expressions: {expressions_description}\n- Composition: {composition}\n- Atmosphere: {atmosphere}\n- Lighting: {lighting}\n- Background: {background}\n- Style: Korean webtoon, wuxia genre\n- Quality: High detail, clear character distinction, no text",
+      "variables": ["scene_location", "characters_list", "focal_character", "arrangement", "expressions_description", "composition", "atmosphere", "lighting", "background"],
+      "requires_reference": true
+    },
+    {
+      "id": "environment_fog",
+      "name": "Environment - Fog/Mysterious",
+      "category": "background",
+      "description": "Foggy mysterious environment establishing shot",
+      "aspect_ratio": "16:9",
+      "prompt_template": "Korean webtoon background illustration:\n- Location: {location_name} ({location_korean})\n- Setting: {setting_description}\n- Architecture: {architecture_style}\n- Atmosphere: Mysterious, isolated, {additional_mood}\n- Weather: Dense fog, {visibility}\n- Time: {time_of_day}\n- Lighting: Diffused light through fog, {lighting_quality}\n- Color palette: Blue-gray fog tones, {accent_colors}\n- Style: Detailed background art, Korean webtoon aesthetic\n- No characters, environment only\n- Quality: High detail, atmospheric, publication ready",
+      "variables": ["location_name", "location_korean", "setting_description", "architecture_style", "additional_mood", "visibility", "time_of_day", "lighting_quality", "accent_colors"]
+    },
+    {
+      "id": "environment_interior",
+      "name": "Environment - Interior",
+      "category": "background",
+      "description": "Interior setting background",
+      "aspect_ratio": "16:9",
+      "prompt_template": "Korean webtoon interior background:\n- Location: {location_type}\n- Setting: {setting_description}\n- Interior style: Traditional Korean/Chinese, {era} period\n- Key elements: {key_elements}\n- Atmosphere: {atmosphere}\n- Lighting: {lighting_type}, {light_sources}\n- Color palette: {color_palette}\n- Detail level: {detail_level}\n- Style: Korean webtoon background art\n- No characters, environment only\n- Quality: High detail, suitable for character compositing",
+      "variables": ["location_type", "setting_description", "era", "key_elements", "atmosphere", "lighting_type", "light_sources", "color_palette", "detail_level"]
+    },
+    {
+      "id": "emotional_farewell",
+      "name": "Emotional Moment - Farewell",
+      "category": "panel",
+      "description": "Bittersweet farewell scene",
+      "aspect_ratio": "2:3",
+      "prompt_template": "Korean webtoon emotional panel:\n- Scene: {scene_description}\n- Character: {departing_character} walking away\n- Composition: {departing_character} from behind, {scale} against environment\n- Watching characters: {watching_characters} in distance/silhouette\n- Atmosphere: Bittersweet, {mood}\n- Lighting: {lighting}, {color_temperature}\n- Environment: {environment}\n- Color emphasis: {color_emphasis}\n- Style: Korean webtoon, atmospheric, emotional\n- Mood: {emotional_tone}\n- Quality: High detail, evocative composition, no text",
+      "variables": ["scene_description", "departing_character", "scale", "watching_characters", "mood", "lighting", "color_temperature", "environment", "color_emphasis", "emotional_tone"],
+      "requires_reference": true
+    },
+    {
+      "id": "establishing_tower",
+      "name": "Establishing Shot - Magic Tower",
+      "category": "background",
+      "description": "Establishing shot of the Magic Tower location",
+      "aspect_ratio": "2:3",
+      "prompt_template": "Korean webtoon establishing shot:\n- Location: Magic Tower (Maseunru / Demon-Sage Tower)\n- Setting: Ancient mystical tower hidden in perpetual dense fog\n- Architecture: Traditional East Asian tower, multi-story, weathered stone and dark wood\n- Atmosphere: Mysterious, otherworldly, isolated from the world\n- Fog: Extremely dense, tower partially obscured\n- Time: {time_of_day}\n- Lighting: Diffused, ethereal glow through fog\n- Scale: Tower imposing, sense of hidden power\n- Color palette: Blue-gray fog (#b8c5d6, #8a9eb5), dark architectural tones\n- Style: Detailed Korean webtoon background, wuxia aesthetic\n- No characters\n- Quality: High detail, atmospheric, publication ready",
+      "variables": ["time_of_day"]
+    },
+    {
+      "id": "object_focus",
+      "name": "Object Focus - Symbolic Item",
+      "category": "panel",
+      "description": "Close-up on significant object",
+      "aspect_ratio": "16:9",
+      "prompt_template": "Korean webtoon object focus panel:\n- Object: {object_name} ({object_korean})\n- Description: {object_description}\n- Symbolism: {symbolic_meaning}\n- Presentation: {presentation_style}\n- Background: {background}\n- Lighting: {lighting}, emphasizing {emphasis}\n- Mood: {mood}\n- Style: Korean webtoon, wuxia aesthetic\n- Detail level: Very high on object\n- Quality: Publication ready, no text",
+      "variables": ["object_name", "object_korean", "object_description", "symbolic_meaning", "presentation_style", "background", "lighting", "emphasis", "mood"]
+    },
+    {
+      "id": "reaction_shot",
+      "name": "Reaction Shot",
+      "category": "panel",
+      "description": "Character reaction to event",
+      "aspect_ratio": "4:3",
+      "prompt_template": "Korean webtoon reaction panel:\n- Character: {character_name}\n- Reaction to: {reaction_trigger}\n- Expression: {expression}\n- Body language: {body_language}\n- Framing: {framing}\n- Background: {background}, possibly blurred\n- Lighting: {lighting}\n- Atmosphere: {atmosphere}\n- Style: Korean webtoon, wuxia genre\n- Emphasis: {emphasis_element}\n- Quality: High detail, expressive, no text",
+      "variables": ["character_name", "reaction_trigger", "expression", "body_language", "framing", "background", "lighting", "atmosphere", "emphasis_element"],
+      "requires_reference": true
+    },
+    {
+      "id": "silhouette_dramatic",
+      "name": "Silhouette - Dramatic",
+      "category": "panel",
+      "description": "Dramatic silhouette composition",
+      "aspect_ratio": "9:16",
+      "prompt_template": "Korean webtoon dramatic silhouette:\n- Character(s): {characters} as silhouette\n- Pose: {pose}\n- Background: {background}, {lighting_source} behind\n- Contrast: Strong backlight, character in shadow\n- Atmosphere: {atmosphere}\n- Color palette: {color_palette}\n- Composition: {composition}\n- Mood: {mood}\n- Style: Korean webtoon, wuxia dramatic\n- Quality: High contrast, atmospheric, no text",
+      "variables": ["characters", "pose", "background", "lighting_source", "atmosphere", "color_palette", "composition", "mood"]
+    }
+  ],
+  "style_modifiers": {
+    "time_of_day": {
+      "dawn": "soft pink-orange light, low shadows",
+      "day": "bright natural light, defined shadows",
+      "twilight": "purple-orange gradient, long shadows",
+      "night": "moonlight, blue tones, deep shadows",
+      "foggy": "diffused light, soft shadows, muted colors"
+    },
+    "mood": {
+      "tense": "high contrast, angular shadows",
+      "peaceful": "soft lighting, warm tones",
+      "melancholic": "desaturated colors, soft focus",
+      "dramatic": "extreme contrast, rim lighting",
+      "mysterious": "fog effects, partial visibility"
+    },
+    "action_intensity": {
+      "calm": "no effects",
+      "building": "subtle motion lines",
+      "intense": "speed lines, motion blur",
+      "explosive": "impact bursts, shockwaves"
+    }
+  },
+  "usage_notes": {
+    "reference_images": "Templates marked requires_reference should be used with character reference images loaded first in the Gemini API call",
+    "variable_substitution": "Replace {variable_name} with appropriate values before using",
+    "aspect_ratio": "Use the specified aspect_ratio in Gemini API image_config",
+    "style_consistency": "Always include base_style_block for consistency",
+    "quality": "Always include quality_block at the end of prompts"
+  }
+}

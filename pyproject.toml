@@ -1,10 +1,12 @@
 [project]
 name = "novel-to-toon"
 version = "0.1.0"
-description = "Add your description here"
+description = "Agentic workflow for converting novels to webtoon panels"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.75.0",
-    "google-generativeai>=0.8.5",
+    "google-genai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pillow>=10.0.0",
 ]

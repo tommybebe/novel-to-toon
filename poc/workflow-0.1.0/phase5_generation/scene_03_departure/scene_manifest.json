@@ -1,0 +1,206 @@
+{
+  "scene_id": "scene_03_departure",
+  "generated_at": "2025-12-30T18:44:03.348434",
+  "results": {
+    "scene_id": "scene_03_departure",
+    "total_panels": 6,
+    "generated": 6,
+    "quality_passed": 6,
+    "success_rate": 100.0,
+    "quality_rate": 100.0,
+    "panels": [
+      {
+        "success": true,
+        "panel_id": "s3_p01",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p01.png",
+        "size_bytes": 2677625,
+        "generation_time_ms": 30678,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "16:9",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "2752x1536",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "16:9",
+              "actual_ratio": "1.79",
+              "target_ratio": "1.78"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "2752x1536",
+          "file_size_bytes": 2677625
+        }
+      },
+      {
+        "success": true,
+        "panel_id": "s3_p02",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p02.png",
+        "size_bytes": 3020468,
+        "generation_time_ms": 51300,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "16:9",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "2752x1536",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "16:9",
+              "actual_ratio": "1.79",
+              "target_ratio": "1.78"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "2752x1536",
+          "file_size_bytes": 3020468
+        }
+      },
+      {
+        "success": true,
+        "panel_id": "s3_p03",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p03.png",
+        "size_bytes": 2895647,
+        "generation_time_ms": 27499,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "4:3",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "2400x1792",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "4:3",
+              "actual_ratio": "1.34",
+              "target_ratio": "1.33"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "2400x1792",
+          "file_size_bytes": 2895647
+        }
+      },
+      {
+        "success": true,
+        "panel_id": "s3_p04",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p04.png",
+        "size_bytes": 2675482,
+        "generation_time_ms": 51432,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "16:9",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "2752x1536",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "16:9",
+              "actual_ratio": "1.79",
+              "target_ratio": "1.78"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "2752x1536",
+          "file_size_bytes": 2675482
+        }
+      },
+      {
+        "success": true,
+        "panel_id": "s3_p05",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p05.png",
+        "size_bytes": 2688291,
+        "generation_time_ms": 52565,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "16:9",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "2752x1536",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "16:9",
+              "actual_ratio": "1.79",
+              "target_ratio": "1.78"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "2752x1536",
+          "file_size_bytes": 2688291
+        }
+      },
+      {
+        "success": true,
+        "panel_id": "s3_p06",
+        "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p06.png",
+        "size_bytes": 2454402,
+        "generation_time_ms": 30614,
+        "character_refs_used": true,
+        "background_ref_used": false,
+        "aspect_ratio": "2:3",
+        "quality_validation": {
+          "passed": true,
+          "checks": {
+            "resolution": {
+              "passed": true,
+              "actual": "1696x2528",
+              "minimum": "1024px on shortest side"
+            },
+            "aspect_ratio": {
+              "passed": true,
+              "target": "2:3",
+              "actual_ratio": "0.67",
+              "target_ratio": "0.67"
+            },
+            "file_valid": {
+              "passed": true,
+              "details": "Image file is valid"
+            }
+          },
+          "dimensions": "1696x2528",
+          "file_size_bytes": 2454402
+        }
+      }
+    ]
+  }
+}

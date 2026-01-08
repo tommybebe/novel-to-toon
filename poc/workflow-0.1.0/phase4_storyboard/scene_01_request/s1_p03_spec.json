@@ -1,0 +1,31 @@
+{
+  "id": "s1_p03",
+  "scene_id": "scene_01_request",
+  "sequence_number": 3,
+  "panel_type": "close-up",
+  "aspect_ratio": "1:1",
+  "shot_type": "close-up",
+  "camera_angle": "straight on",
+  "scene_description": "Dokma's face showing cynical skepticism",
+  "narrative_moment": "Dokma questions Jin Sohan's readiness with dark humor",
+  "characters": [
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "center",
+      "expression": "cynical smirk, narrowed eyes",
+      "pose": "face only",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": null,
+  "lighting_preset": "indoor_lamp",
+  "mood": "intimidating, dark humor",
+  "dialogue_space": "bottom",
+  "special_effects": [
+    "dark_vignette"
+  ],
+  "prompt_template_id": "closeup_emotional",
+  "source_text": "독마가 눈을 가늘게 뜬 채로 말했다. '흑도에 가봤자 강호의 일에 휘말릴 게다.'"
+}

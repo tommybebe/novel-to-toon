@@ -1,0 +1,104 @@
+{
+  "panel_id": "s3_p02",
+  "scene_id": "scene_03_departure",
+  "generation": {
+    "timestamp": "2025-12-30T18:41:21.225858",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s3_p02",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p02.png",
+      "size_bytes": 3020468,
+      "generation_time_ms": 51300,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "16:9",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "2752x1536",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "16:9",
+            "actual_ratio": "1.79",
+            "target_ratio": "1.78"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "2752x1536",
+        "file_size_bytes": 3020468
+      }
+    }
+  },
+  "specifications": {
+    "id": "s3_p02",
+    "scene_id": "scene_03_departure",
+    "sequence_number": 2,
+    "panel_type": "dialogue",
+    "aspect_ratio": "16:9",
+    "shot_type": "medium shot",
+    "camera_angle": "eye level",
+    "scene_description": "Dokma presenting the twin blades to Jin Sohan with gruff affection",
+    "narrative_moment": "The poison master shows his care in his own way",
+    "characters": [
+      {
+        "name": "Dokma",
+        "korean": "독마",
+        "position": "left",
+        "expression": "gruff but caring",
+        "pose": "extending weapons",
+        "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+      },
+      {
+        "name": "Jin Sohan",
+        "korean": "진소한",
+        "position": "right",
+        "expression": "moved, grateful",
+        "pose": "receiving with both hands",
+        "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png"
+      }
+    ],
+    "location": "Magic Tower interior",
+    "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_hall.png",
+    "lighting_preset": "indoor_lamp",
+    "mood": "gruff affection",
+    "dialogue_space": "top",
+    "special_effects": [],
+    "prompt_template_id": "dialogue_two_shot",
+    "source_text": "'내가 사용하는 것보다 네게 더 도움이 될 거다. 잔말 말고 받아라.'"
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "2752x1536",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "16:9",
+        "actual_ratio": "1.79",
+        "target_ratio": "1.78"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "2752x1536",
+    "file_size_bytes": 3020468
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_03_departure/panels/s3_p02.png",
+    "size_bytes": 3020468,
+    "dimensions": "2752x1536"
+  }
+}

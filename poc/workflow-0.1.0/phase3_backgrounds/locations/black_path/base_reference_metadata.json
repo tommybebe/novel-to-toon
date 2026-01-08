@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Black Path Territory",
+    "korean_name": "흑도 (黑道)",
+    "description": "Criminal underworld region where martial artists of the dark path gather",
+    "visual_elements": [
+      "Dark, narrow alleyways",
+      "Seedy establishments and taverns",
+      "Dangerous atmosphere with hidden threats",
+      "Crowded streets with shadowy figures",
+      "Traditional architecture in disrepair",
+      "Dim lantern lighting"
+    ],
+    "atmosphere": "Dangerous, seedy, tense, lawless",
+    "lighting_default": "indoor_lamp",
+    "color_emphasis": [
+      "#1a1a2e",
+      "#4a4a6a",
+      "#8b0000",
+      "#333333"
+    ]
+  },
+  "variation": {
+    "name": "alley_day",
+    "time": "day",
+    "view": "exterior",
+    "description": "Dark alleyway during daytime, still shadowy"
+  },
+  "generation": {
+    "timestamp": "2025-12-30T17:12:34.761760",
+    "model": "gemini-3-pro-image-preview",
+    "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Dark alleyway during daytime, still shadowy\n- View: exterior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with shadowy figures, Traditional architecture in disrepair, Dim lantern lighting\n\nATMOSPHERE:\n- Mood: Dangerous, seedy, tense, lawless\n- Lighting: Warm oil lamp or candle lighting\n- Color Temperature: 2700K (warm)\n- Shadow Intensity: High (dramatic)\n\nSTYLE REQUIREMENTS:\n- Art style: Korean webtoon (manhwa), wuxia genre\n- Clean detailed linework, cel-shaded with gradient accents\n- Color emphasis: #1a1a2e, #4a4a6a, #8b0000, #333333\n- High detail environment art, publication ready\n- No characters, environment only\n- No text or UI elements\n\nCOMPOSITION:\n- Wide establishing shot\n- Depth and atmosphere emphasized\n- Appropriate atmospheric effects\n\nQUALITY: High detail, 2K resolution quality, professional illustration",
+    "result": {
+      "success": true,
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/black_path/base_reference.png",
+      "size_bytes": 729096,
+      "prompt": "Korean webtoon background illustration:\n- Location: Black Path Territory (흑도 (黑道))\n- Setting: Dark alleyway during daytime, still shadowy\n- View: exterior view\n\nVISUAL ELEMENTS:\nDark, narrow alleyways, Seedy establishments and taverns, Dangerous atmosphere with hidden threats, Crowded streets with s...",
+      "used_reference": false
+    }
+  }
+}

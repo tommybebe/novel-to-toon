@@ -1,0 +1,29 @@
+{
+  "id": "s2_p06",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 6,
+  "panel_type": "dialogue",
+  "aspect_ratio": "4:3",
+  "shot_type": "medium shot",
+  "camera_angle": "eye level",
+  "scene_description": "Back to present: Jin Sohan finishing his story with a subtle knowing smile",
+  "narrative_moment": "The storytelling concludes - truth hidden within the tale",
+  "characters": [
+    {
+      "name": "Jin Sohan",
+      "korean": "진소한",
+      "position": "center",
+      "expression": "subtle smile, knowing",
+      "pose": "relaxed storytelling pose",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower interior",
+  "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/interior_hall.png",
+  "lighting_preset": "indoor_lamp",
+  "mood": "satisfied, knowing",
+  "dialogue_space": "top",
+  "special_effects": [],
+  "prompt_template_id": "reaction_shot",
+  "source_text": "'재미있었다. 허언신공이 날이 갈수록 깊어지는구나.'"
+}

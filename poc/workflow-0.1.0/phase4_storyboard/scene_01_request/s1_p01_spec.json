@@ -1,0 +1,23 @@
+{
+  "id": "s1_p01",
+  "scene_id": "scene_01_request",
+  "sequence_number": 1,
+  "panel_type": "establishing",
+  "aspect_ratio": "16:9",
+  "shot_type": "wide shot",
+  "camera_angle": "low angle",
+  "scene_description": "Magic Tower (Maseunru) shrouded in perpetual dense fog",
+  "narrative_moment": "Introduction to the mysterious tower where the masters live in seclusion",
+  "characters": [],
+  "location": "Magic Tower exterior",
+  "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/base_reference.png",
+  "lighting_preset": "fog_day",
+  "mood": "mysterious, isolated",
+  "dialogue_space": "none",
+  "special_effects": [
+    "dense_fog",
+    "atmospheric_glow"
+  ],
+  "prompt_template_id": "establishing_tower",
+  "source_text": "안개가 자욱한 마선루(魔仙樓). 외부에서 보면 사람이 있다는 것조차 보이지 않을 정도로 짙은 안개 속에..."
+}

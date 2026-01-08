@@ -1,0 +1,49 @@
+{
+  "id": "s3_p06",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 6,
+  "panel_type": "silhouette",
+  "aspect_ratio": "2:3",
+  "shot_type": "wide shot",
+  "camera_angle": "low angle",
+  "scene_description": "Jin Sohan's silhouette walking into the dense fog, masters watching from tower entrance",
+  "narrative_moment": "The final departure - a new journey begins",
+  "characters": [
+    {
+      "name": "Jin Sohan",
+      "korean": "진소한",
+      "position": "center-mid",
+      "expression": "walking away, determined",
+      "pose": "silhouette walking into fog",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/jin_sohan/base_reference.png"
+    },
+    {
+      "name": "Dokma",
+      "korean": "독마",
+      "position": "far-left-back",
+      "expression": "watching silhouette",
+      "pose": "standing at tower",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/dokma/base_reference.png"
+    },
+    {
+      "name": "Uiseon",
+      "korean": "의선",
+      "position": "far-right-back",
+      "expression": "watching silhouette",
+      "pose": "standing at tower",
+      "reference_path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase1_characters/uiseon/base_reference.png"
+    }
+  ],
+  "location": "Magic Tower entrance, foggy exterior",
+  "background_reference": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase3_backgrounds/locations/magic_tower/base_reference.png",
+  "lighting_preset": "fog_day",
+  "mood": "bittersweet, hopeful, new beginning",
+  "dialogue_space": "none",
+  "special_effects": [
+    "dense_fog",
+    "silhouette_backlight",
+    "atmospheric"
+  ],
+  "prompt_template_id": "silhouette_dramatic",
+  "source_text": "정말로 사부들을 떠나 고향에 돌아갈 시간이 다가온 것이다. 진소한은 자신의 예상과 다르게 시원섭섭한 감정을 맛보고 있었다."
+}

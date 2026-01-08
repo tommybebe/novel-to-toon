@@ -1,0 +1,91 @@
+{
+  "panel_id": "s2_p03",
+  "scene_id": "scene_02_storytelling",
+  "generation": {
+    "timestamp": "2025-12-30T18:38:22.695855",
+    "model": "gemini-3-pro-image-preview",
+    "result": {
+      "success": true,
+      "panel_id": "s2_p03",
+      "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p03.png",
+      "size_bytes": 3085186,
+      "generation_time_ms": 27665,
+      "character_refs_used": true,
+      "background_ref_used": false,
+      "aspect_ratio": "1:1",
+      "quality_validation": {
+        "passed": true,
+        "checks": {
+          "resolution": {
+            "passed": true,
+            "actual": "2048x2048",
+            "minimum": "1024px on shortest side"
+          },
+          "aspect_ratio": {
+            "passed": true,
+            "target": "1:1",
+            "actual_ratio": "1.00",
+            "target_ratio": "1.00"
+          },
+          "file_valid": {
+            "passed": true,
+            "details": "Image file is valid"
+          }
+        },
+        "dimensions": "2048x2048",
+        "file_size_bytes": 3085186
+      }
+    }
+  },
+  "specifications": {
+    "id": "s2_p03",
+    "scene_id": "scene_02_storytelling",
+    "sequence_number": 3,
+    "panel_type": "fantasy_insert",
+    "aspect_ratio": "1:1",
+    "shot_type": "close-up",
+    "camera_angle": "straight on",
+    "scene_description": "The mystical two-headed snake (ssangdusa) coiled around the golden peach",
+    "narrative_moment": "The strange sight of the yin-yang snake drunk on the golden peach",
+    "characters": [],
+    "location": "Fantasy - peach tree branch",
+    "background_reference": null,
+    "lighting_preset": "mystical",
+    "mood": "mysterious, supernatural",
+    "dialogue_space": "none",
+    "special_effects": [
+      "golden_glow",
+      "ethereal_mist",
+      "translucent_body"
+    ],
+    "prompt_template_id": "object_focus",
+    "source_text": "그 손오공 복숭아에 기이하게 생긴 뱀 한 마리가 머리를 넣은 채로 대롱대롱 매달려 있는 겁니다. 머리가 두 개지 뭡니까?"
+  },
+  "quality_validation": {
+    "passed": true,
+    "checks": {
+      "resolution": {
+        "passed": true,
+        "actual": "2048x2048",
+        "minimum": "1024px on shortest side"
+      },
+      "aspect_ratio": {
+        "passed": true,
+        "target": "1:1",
+        "actual_ratio": "1.00",
+        "target_ratio": "1.00"
+      },
+      "file_valid": {
+        "passed": true,
+        "details": "Image file is valid"
+      }
+    },
+    "dimensions": "2048x2048",
+    "file_size_bytes": 3085186
+  },
+  "file_info": {
+    "path": "/Users/minwoo/Documents/repo/novel-to-toon/poc/phase5_generation/scene_02_storytelling/panels/s2_p03.png",
+    "size_bytes": 3085186,
+    "dimensions": "2048x2048"
+  }
+}
