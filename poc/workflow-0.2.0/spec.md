@@ -2113,14 +2113,25 @@ Use a hybrid approach to balance quality and cost:
 
 ### Resolution Strategy
 
+**⚠️ CRITICAL FINDING: 1K and 2K cost THE SAME price**
+
+Both resolutions consume 1,120 tokens = $0.134 (Pro) or $0.039 (Flash). Changing resolution does NOT save money.
+
 | Asset Type | Resolution | Rationale |
 |------------|-----------|-----------|
-| Character references | 2K (2048px) | High detail needed for consistency |
-| Artifact references | 2K (2048px) | Detail preservation |
-| Panel generation | 1K (1024px) | Sufficient for mobile webtoon viewing |
-| Backgrounds | 1K (1024px) | Will be composited, not focal point |
+| Character references | 2K (2048px) | High detail for consistency (no extra cost vs 1K) |
+| Artifact references | 2K (2048px) | Detail preservation (no extra cost vs 1K) |
+| Panel generation | 1K (1024px) | Sufficient for mobile webtoon (could use 2K at same cost) |
+| Backgrounds | 1K (1024px) | Adequate quality (could use 2K at same cost) |
 
-Webtoon platforms require max 800x1280px for upload. 1K resolution provides adequate quality margin.
+**Key Points:**
+- Webtoon platforms require max 800x1280px for upload
+- 1K (1024px) provides adequate quality margin
+- 2K gives better quality at **zero extra cost**
+- Only 4K costs more ($0.240 vs $0.134) - never use unless critical
+- **Resolution is a quality choice, not a cost choice** (for 1K-2K range)
+
+See `RESOLUTION_PRICING.md` for detailed pricing breakdown.
 
 ### Batch Processing
 
@@ -2168,13 +2179,69 @@ response = client.models.generate_content(
 )
 ```
 
-### Cost Targets
+### Cost Targets - REALITY CHECK
 
-| Metric | v1 Actual | v2 Target | Savings |
-|--------|-----------|-----------|---------|
-| Cost per panel | $0.134 | $0.03-0.05 | 63-78% |
-| Cost per chapter (20 panels) | $2.68 | $0.60-1.00 | 63-78% |
-| POC total (~90 images) | $12.00 | $2.70-4.50 | 63-78% |
+**v0.1.0 Actual Results (What Really Happened):**
+- Panels: 18
+- Cost: $2.70
+- **Cost per panel: $0.15** (3x over target!)
+- Model: gemini-3-pro-image-preview (100% usage)
+- Optimizations: None
+
+**Why v0.1.0 Was Expensive:**
+1. ❌ Used Pro model for everything (should be 80% Flash)
+2. ❌ No batch processing (missed 50% discount)
+3. ❌ No context caching
+4. ❌ Small sample size (18 panels, no asset reuse)
+
+**v0.2.0 Honest Projections:**
+
+| Scenario | Description | Cost | Cost/Panel | Achievable? |
+|----------|-------------|------|------------|-------------|
+| **Naive** | Like v0.1.0, no optimizations | ~$10.20 (68 panels × $0.15) | $0.15 | ❌ Too expensive |
+| **Optimized** | All v0.2.0 optimizations | ~$4.50-6.00 | **$0.066-0.088** | ✅ Realistic |
+| **Aggressive** | Max optimization, some quality trade-offs | ~$3.00-4.00 | $0.044-0.059 | ✅ Possible |
+
+**Optimized Breakdown (68-panel PoC):**
+```
+Asset Creation (one-time overhead):
+├─ Characters (3 base @ Pro, 12 var @ Flash):  $0.63
+├─ Artifacts (5 base @ Pro, 15 var @ Flash):   $0.96  
+├─ Backgrounds (5 @ Pro):                       $0.67
+└─ Subtotal:                                    $2.26
+
+Panel Generation (68 panels):
+├─ Critical panels (14 @ Pro, batch):           $0.94
+├─ Standard panels (54 @ Flash, batch):         $1.05
+└─ Subtotal:                                    $1.99
+
+Iteration/Regen (~10%):                         $0.20
+
+TOTAL: $4.45 for 68 panels = $0.065/panel ✅
+```
+
+**Key Insight - Multi-Episode Economics:**
+
+The $0.05/panel target is achievable **at scale**, not in a single PoC:
+
+| Episode | Asset Overhead | Panel Cost | Total | Cost/Panel |
+|---------|---------------|------------|-------|------------|
+| **PoC (Episode 1)** | $2.26 | $1.99 | **$4.45** | **$0.065** |
+| Episode 2 | $0.20 | $2.10 | $2.30 | $0.034 |
+| Episode 3 | $0 | $2.10 | $2.10 | $0.031 |
+| Episodes 4-10 | ~$0.10 avg | $2.10 | $2.20 | $0.032 |
+| | | | | |
+| **10-Episode Avg** | | | | **$0.040** ✅ |
+
+**The Honest Target for v0.2.0:**
+- PoC (Episode 1): **$4.50-6.00** ($0.066-0.088/panel) ← Accept asset creation overhead
+- Future episodes: **$2.10-2.50** ($0.031-0.037/panel) ← Asset reuse
+- **At scale (10+ episodes): $0.04/panel** ← Sustainable target
+
+**Success Criteria:**
+- ✅ PoC cost < $6.00 (proves optimizations work)
+- ✅ Asset library enables Episode 2 at < $2.50 (proves reusability)
+- ✅ Quality acceptable (70-80% panels pass QA on first try)
 
 ---
 
