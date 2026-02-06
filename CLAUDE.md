@@ -6,7 +6,7 @@ This document contains Claude-specific configuration and guidelines for the Nove
 
 This is an agentic workflow application that combines:
 - **Claude Agent SDK**: For building intelligent agent behaviors and orchestrating tasks
-- **Google Gemini API**: For generating images from text descriptions
+- **Image Generation APIs**: fal.ai (FLUX Kontext/FLUX 2), Google Gemini, and potentially others — the workflow selects the best platform per task
 
 ## Architecture
 
@@ -14,14 +14,15 @@ The application follows an agent-based architecture where:
 1. Claude acts as the orchestration layer, managing the workflow
 2. The agent receives novel text descriptions as input
 3. The agent processes and structures the request
-4. Google's Gemini API generates images based on the processed descriptions
+4. Image generation APIs (fal.ai, Gemini, etc.) generate images based on the processed descriptions
 
 ## Environment Configuration
 
-The application requires two environment variables:
+The application requires these environment variables:
 
-- `CLAUDE_CODE_OAUTH_TOKEN`: Authentication token for Claude Code access
-- `GOOGLE_API_KEY`: API key for Google's Gemini image generation service
+- `ANTHROPIC_API_KEY`: API key for Claude Agent SDK access
+- `FAL_KEY`: API key for fal.ai image generation service
+- `GOOGLE_API_KEY`: API key for Google Gemini image generation service
 
 ## Agent SDK Integration
 
@@ -44,12 +45,13 @@ When working with Claude on this project:
 ## Key Integration Points
 
 - **Input Processing**: Agent interprets and structures novel descriptions
-- **API Coordination**: Manages the flow between Claude and Gemini APIs
+- **API Coordination**: Manages the flow between Claude and image generation APIs (fal.ai, Gemini, etc.)
 - **Output Handling**: Processes and presents generated images
 - **State Management**: Maintains context throughout the workflow
 
 ## Resources
 
 - [Claude Agent SDK Documentation](https://platform.claude.com/docs/en/agent-sdk/python)
+- [fal.ai Documentation](https://fal.ai/docs)
 - [Google Gemini API Documentation](https://ai.google.dev/gemini-api/docs/image-generation)
 - Project guides in `docs/` directory

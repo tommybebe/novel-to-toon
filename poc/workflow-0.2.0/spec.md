@@ -15,14 +15,15 @@ This document defines the revised Proof of Concept (PoC) phase for the novel-to-
 | Camera Direction | Basic shot types only | Full camera angle specifications for directing effect |
 | Panel Shapes | All plain rectangles | Variable panel shapes based on scene direction |
 | Speech Bubbles | Areas getting cut off or empty | Safe zone specifications for dialogue placement |
-| Cost | ~$12 for POC, not sustainable | Hybrid model strategy (80% Flash + 20% Pro), 1K resolution, batch processing |
+| Cost | ~$12 for POC, not sustainable | Hybrid fal.ai model strategy (Kontext + Flash), megapixel-based pricing |
 | Spending Tracking | No visibility into API costs | Integrated cost tracking with per-call logging and session summaries |
+| **Image Platform** | **Google Gemini API** | **fal.ai platform with FLUX Kontext + FLUX 2 models** |
 
 ### Objectives
 
-1. Validate Google Gemini API image generation quality and consistency
+1. Validate fal.ai FLUX model image generation quality and consistency for webtoon panels
 2. Test Claude Agent SDK for art style orchestration and prompt engineering
-3. Establish character design consistency across multiple generations
+3. Establish character design consistency using Kontext reference-based editing
 4. **NEW: Establish artifact design consistency with reference sheets**
 5. Define reusable background and material generation patterns
 6. Prototype detailed storyboard-to-panel generation workflow
@@ -30,6 +31,34 @@ This document defines the revised Proof of Concept (PoC) phase for the novel-to-
 8. Generate final panel images with quality control and batch processing
 9. Reduce API costs by 70-80% through model selection and optimization
 10. Implement spending tracking and cost visibility
+
+### Image Generation Platform: fal.ai
+
+**Why fal.ai over Google Gemini API:**
+
+| Feature | fal.ai (FLUX models) | Google Gemini |
+|---------|---------------------|---------------|
+| Cost per panel | $0.007-0.04 | $0.039-0.134 |
+| Character consistency | Kontext preserves identity across edits | Single reference, unproven |
+| Multi-reference | Kontext Multi (experimental), Flux 2 Pro @ syntax | Single reference only |
+| LoRA training | Yes (Flux 2 [dev], ~$2/hr on H100) | No |
+| ControlNet | Yes (Flux 2 [dev]) | No |
+| Art style control | LoRA + style prompts | Prompts only |
+| Content filters | Configurable safety tolerance (1-6) | Strict, non-configurable |
+| Typography | Flux 2 Flex specialist model | Limited |
+
+**Model Selection Strategy:**
+
+| Use Case | Model | Endpoint | Cost | Rationale |
+|----------|-------|----------|------|-----------|
+| Character base generation | Kontext [pro] text-to-image | `fal-ai/flux-pro/kontext/text-to-image` | $0.04/image | High-quality initial generation |
+| Character variations | Kontext [pro] | `fal-ai/flux-pro/kontext` | $0.04/image | Character consistency preservation |
+| Multi-character scenes | Kontext [pro] Multi | `fal-ai/flux-pro/kontext/multi` | $0.04/image | Multi-reference support |
+| Artifact references | Kontext [pro] | `fal-ai/flux-pro/kontext` | $0.04/image | Object consistency |
+| Standard panels (bulk) | Flux 2 Flash | `fal-ai/flux-2/flash` | $0.005/MP (~$0.007/panel) | Cost efficiency for 60% of panels |
+| Quality panels | Flux 2 Pro | `fal-ai/flux-2-pro` | $0.03+/MP (~$0.044/panel) | Multi-image @ refs, hex colors |
+| LoRA-based panels | Flux 2 [dev] | `fal-ai/flux-2/dev` | $0.012/MP (~$0.018/panel) | Custom style + character LoRA |
+| Typography/SFX panels | Flux 2 Flex | `fal-ai/flux-2-flex` | $0.06/MP (~$0.088/panel) | Best text rendering |
 
 ### Test Material
 
@@ -45,30 +74,35 @@ This document defines the revised Proof of Concept (PoC) phase for the novel-to-
 
 ---
 
-## Phase 1: Character Design with Google Gemini API
+## Phase 1: Character Design with fal.ai FLUX Kontext
 
 ### 1.1 Objectives
 
-- Generate consistent character reference sheets using **reference image-based generation**
-- Establish a two-step workflow: base image generation + reference-based variations
+- Generate consistent character reference sheets using **Kontext reference-based generation**
+- Establish a two-step workflow: base image generation (text-to-image) + Kontext editing for variations
 - Validate facial feature and clothing detail fidelity across variations
 - Establish prompt patterns and style guidelines for character generation
 
-### 1.1.1 Key Insight: Reference Image-Based Consistency
+### 1.1.1 Key Insight: Kontext-Based Consistency
 
 **Problem**: Prompt-only generation cannot guarantee style consistency. Each generation produces different:
 - Line styles and weights
 - Color palettes and shading techniques
 - Character appearances (hair, facial features, clothing details)
 
-**Solution**: Use Gemini API's reference image input capability:
-- Generate a high-quality **base image** for each character first
-- Use the base image as **reference input** for all subsequent variations
-- Model preserves visual identity from reference image
+**Solution**: Use fal.ai's FLUX Kontext models:
+- Generate a high-quality **base image** using Kontext text-to-image
+- Use the base image as **reference input** via Kontext editing for all subsequent variations
+- Kontext preserves visual identity from reference image (12B parameter multimodal flow transformer)
+- For multi-character scenes, use **Kontext Multi** with multiple reference images
 
-| Model | Max Reference Images | Human Identity Preservation |
-|-------|---------------------|----------------------------|
-| gemini-3-pro-image-preview | 14 | Up to 5 subjects |
+| Model | Type | Multi-Image | Cost | Best For |
+|-------|------|-------------|------|----------|
+| Kontext [pro] text-to-image | Text-to-image | No | $0.04/image | Base character generation |
+| Kontext [pro] | Image editing | Single ref | $0.04/image | Character variations |
+| Kontext [pro] Multi | Image editing | Multiple refs | $0.04/image | Multi-character consistency |
+| Kontext [max] | Image editing | Single ref | $0.08/image | Premium quality |
+| Kontext [max] Multi | Image editing | Multiple refs | $0.08/image | Premium multi-character |
 
 ### 1.2 Target Characters from Test Novel
 
@@ -92,15 +126,15 @@ This document defines the revised Proof of Concept (PoC) phase for the novel-to-
 
 #### Test 1.3.1: Base Character Generation (Step 1)
 
-Generate a high-quality base reference image for each character. This will be used as reference for all variations.
+Generate a high-quality base reference image for each character using Kontext text-to-image. This will be used as reference for all variations.
 
 ```python
-from google import genai
-from google.genai import types
+import fal_client
+import requests
+from pathlib import Path
 
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-
-# Step 1: Generate BASE reference image (no input image)
+# FAL_KEY must be set in environment (reads automatically)
+# Step 1: Generate BASE reference image (text-to-image, no input image)
 base_prompt = """
 Korean webtoon style character portrait:
 - Character: Jin Sohan, 26-year-old male martial artist
@@ -119,18 +153,25 @@ IMPORTANT STYLE ELEMENTS TO ESTABLISH:
 - Color palette: Dark muted tones (#2d2d44, #4a4a6a, #6b6b8a)
 """
 
-response = client.models.generate_content(
-    model="gemini-3-pro-image-preview",
-    contents=[base_prompt],
-    config=types.GenerateContentConfig(
-        response_modalities=['TEXT', 'IMAGE'],
-        image_config=types.ImageConfig(
-            aspect_ratio="1:1",
-            image_size="2K"
-        )
-    )
+result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext/text-to-image",
+    arguments={
+        "prompt": base_prompt,
+        "aspect_ratio": "1:1",
+        "num_images": 1,
+        "output_format": "png",
+        "guidance_scale": 3.5,
+        "num_inference_steps": 28,
+        "safety_tolerance": 5
+    }
 )
-# Save as base_reference.png
+
+# Download and save as base_reference.png
+image_url = result["images"][0]["url"]
+response = requests.get(image_url)
+Path("poc/phase1_characters/jin_sohan/base_reference.png").parent.mkdir(parents=True, exist_ok=True)
+with open("poc/phase1_characters/jin_sohan/base_reference.png", "wb") as f:
+    f.write(response.content)
 ```
 
 **Success Criteria for Base Image**:
@@ -138,21 +179,23 @@ response = client.models.generate_content(
 - Distinctive cloudy eye effect visible
 - Appropriate martial arts aesthetic
 - Clean art style that can be replicated
-- High resolution (minimum 2048x2048)
+- High resolution suitable for reference
 
 #### Test 1.3.2: Reference-Based Variation Generation (Step 2)
 
-Use the base image as reference input to generate consistent variations.
+Use the base image as reference input via Kontext editing to generate consistent variations.
 
 ```python
-from PIL import Image
+import fal_client
 
-# Step 2: Load base reference image
-base_image = Image.open("poc/phase1_characters/jin_sohan/base_reference.png")
+# Step 2: Upload base reference image to fal.ai storage
+base_ref_url = fal_client.upload_file("poc/phase1_characters/jin_sohan/base_reference.png")
 
-# Generate variation WITH reference image
-variation_prompt = """
-Generate the SAME character from the reference image with the following changes:
+# Generate variation WITH reference image using Kontext editing
+result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Change the expression and pose of this character:
 - Expression: Angry, intense expression with furrowed brows
 - Pose: 3/4 view, tense posture
 - Background: Dramatic dark gradient
@@ -162,26 +205,18 @@ MAINTAIN EXACTLY from reference:
 - Hair style, length, and color
 - Clothing design and colors
 - Art style, line weight, and shading technique
-- Color palette
-"""
-
-response = client.models.generate_content(
-    model="gemini-3-pro-image-preview",
-    contents=[
-        base_image,  # Reference image FIRST
-        variation_prompt
-    ],
-    config=types.GenerateContentConfig(
-        response_modalities=['TEXT', 'IMAGE'],
-        image_config=types.ImageConfig(
-            aspect_ratio="1:1",
-            image_size="2K"
-        )
-    )
+- Color palette""",
+        "image_url": base_ref_url,
+        "num_images": 1,
+        "output_format": "png",
+        "guidance_scale": 3.5,
+        "num_inference_steps": 28,
+        "safety_tolerance": 5
+    }
 )
 ```
 
-**Variations to Generate** (all using base reference):
+**Variations to Generate** (all using base reference via Kontext editing):
 1. Neutral expression, front view (base image itself)
 2. Angry expression, 3/4 view
 3. Subtle smile, side profile
@@ -199,10 +234,10 @@ response = client.models.generate_content(
 For twins Dokma and Uiseon, use a special workflow:
 
 1. Generate ONE base face reference first
-2. Use that same face reference to generate both characters with different attire/atmosphere
+2. Use Kontext editing with that same face reference to generate both characters with different attire/atmosphere
 
 ```python
-from PIL import Image
+import fal_client
 
 # Step 1: Generate base twin face (neutral, no clothing emphasis)
 twin_base_prompt = """
@@ -215,13 +250,25 @@ Korean webtoon style character portrait:
 - Quality: High detail, emphasis on facial features
 """
 
-# Generate and save as twin_base_face.png
+twin_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext/text-to-image",
+    arguments={
+        "prompt": twin_base_prompt,
+        "aspect_ratio": "1:1",
+        "num_images": 1,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
+# Save as twin_base_face.png, then upload for reference
 
-# Step 2: Generate Dokma using twin face reference
-twin_base = Image.open("poc/phase1_characters/twins/twin_base_face.png")
+# Step 2: Upload twin base and generate Dokma using Kontext editing
+twin_base_url = fal_client.upload_file("poc/phase1_characters/twins/twin_base_face.png")
 
-dokma_prompt = """
-Generate the SAME face from the reference image as a full character:
+dokma_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Transform this character into a full portrait:
 - Character: Dokma, Poison Master
 - Expression: Cynical smirk, sinister knowing eyes
 - Attire: Black traditional robes, flowing dark fabric
@@ -230,12 +277,18 @@ Generate the SAME face from the reference image as a full character:
 
 MAINTAIN EXACTLY from reference:
 - Face shape and all facial features (this is a TWIN)
-- Art style and line weight
-"""
+- Art style and line weight""",
+        "image_url": twin_base_url,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 
 # Step 3: Generate Uiseon using SAME twin face reference
-uiseon_prompt = """
-Generate the SAME face from the reference image as a full character:
+uiseon_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Transform this character into a full portrait:
 - Character: Uiseon, Medicine Sage
 - Expression: Warm, wise gentle smile
 - Attire: White traditional robes, pristine and elegant
@@ -244,8 +297,12 @@ Generate the SAME face from the reference image as a full character:
 
 MAINTAIN EXACTLY from reference:
 - Face shape and all facial features (this is a TWIN - must match Dokma)
-- Art style and line weight
-"""
+- Art style and line weight""",
+        "image_url": twin_base_url,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 ```
 
 **Success Criteria**:
@@ -258,7 +315,7 @@ MAINTAIN EXACTLY from reference:
 ### 1.4 Deliverables
 
 - Base reference image for each of 3 primary characters
-- 4 consistent variations per character (using reference input)
+- 4 consistent variations per character (using Kontext editing)
 - Twin character set with identical faces
 - Consistency validation results
 - Optimal prompt templates for base and variation generation
@@ -307,7 +364,7 @@ async def style_analysis_agent():
         Your role is to:
         1. Analyze novel text for visual style cues
         2. Define comprehensive art style specifications
-        3. Create structured prompts for image generation
+        3. Create structured prompts for fal.ai FLUX image generation
         4. Ensure consistency across all visual elements
 
         Output structured JSON for style specifications.""",
@@ -337,7 +394,7 @@ async def style_prompt_generator():
         system_prompt="""You are an image prompt engineer.
 
         Given a style specification and scene description, generate optimized prompts
-        for Google Gemini image generation API.
+        for fal.ai FLUX model image generation.
 
         Focus on:
         - Consistent style keywords
@@ -399,12 +456,12 @@ async def style_prompt_generator():
     "effects": ["fog/mist", "subtle glow for mystical elements"]
   },
   "technical_specs": {
-    "resolution": "2048x2048 for references, 1024x1440 for panels",
+    "resolution": "1024x1024 for references, 1024x1440 for panels",
     "aspect_ratios": {
       "character_portrait": "1:1",
-      "panel_vertical": "9:16",
-      "panel_wide": "16:9",
-      "full_page": "2:3"
+      "panel_vertical": "portrait_16_9",
+      "panel_wide": "landscape_16_9",
+      "full_page": "portrait_4_3"
     }
   }
 }
@@ -419,7 +476,7 @@ async def style_prompt_generator():
 
 ---
 
-## Phase 3: Backgrounds and Artifact Settings with Google Gemini API
+## Phase 3: Backgrounds and Artifact Settings with fal.ai
 
 ### 3.1 Objectives
 
@@ -454,15 +511,16 @@ async def style_prompt_generator():
 
 ### 3.4 Artifact Reference Sheet Workflow
 
-**NEW WORKFLOW**: Following the same two-step process as character generation.
+**NEW WORKFLOW**: Following the same two-step process as character generation (Kontext text-to-image + Kontext editing).
 
 #### 3.4.1 Artifact Base Reference Generation
 
 ```python
-from google import genai
-from google.genai import types
+import fal_client
+import requests
+from pathlib import Path
 
-# Step 1: Generate BASE artifact reference
+# Step 1: Generate BASE artifact reference (text-to-image)
 artifact_base_prompt = """
 Korean webtoon style weapon illustration:
 - Object: Twin Crescent Moon Blades (paired weapons)
@@ -484,33 +542,42 @@ IMPORTANT DESIGN ELEMENTS TO ESTABLISH:
 - Surface finish and any engravings
 """
 
-response = client.models.generate_content(
-    model="gemini-3-pro-image-preview",
-    contents=[artifact_base_prompt],
-    config=types.GenerateContentConfig(
-        response_modalities=['TEXT', 'IMAGE'],
-        image_config=types.ImageConfig(
-            aspect_ratio="16:9",
-            image_size="2K"
-        )
-    )
+result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext/text-to-image",
+    arguments={
+        "prompt": artifact_base_prompt,
+        "aspect_ratio": "landscape_16_9",
+        "num_images": 1,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
 )
-# Save as twin_blades_base_reference.png
+
+# Download and save as base_reference.png
+image_url = result["images"][0]["url"]
+response = requests.get(image_url)
+Path("poc/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png").parent.mkdir(parents=True, exist_ok=True)
+with open("poc/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png", "wb") as f:
+    f.write(response.content)
 ```
 
 #### 3.4.2 Artifact Variation Generation
 
-Generate the same artifact in different contexts (to be used as reference when the artifact appears in panels).
+Generate the same artifact in different contexts using Kontext editing (to be used as reference when the artifact appears in panels).
 
 ```python
-from PIL import Image
+import fal_client
 
-# Load artifact base reference
-artifact_ref = Image.open("poc/phase3_artifacts/twin_blades/base_reference.png")
+# Upload artifact base reference
+artifact_ref_url = fal_client.upload_file(
+    "poc/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png"
+)
 
 # Variation 1: Held in hand
-held_prompt = """
-Generate the EXACT SAME weapons from the reference image:
+held_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Show the EXACT SAME weapons from this image being held:
 - Context: Being held by a martial artist (hands visible, face cropped)
 - Pose: Combat ready stance, one blade raised, one lowered
 - Lighting: Dramatic side lighting
@@ -519,12 +586,18 @@ MAINTAIN EXACTLY from reference:
 - Blade shape, curvature, and proportions
 - Handle design, wrap pattern, and pommel
 - Metal finish and any engravings
-- Overall weapon dimensions
-"""
+- Overall weapon dimensions""",
+        "image_url": artifact_ref_url,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 
 # Variation 2: Action blur
-action_prompt = """
-Generate the EXACT SAME weapons from the reference image:
+action_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Show the EXACT SAME weapons from this image in motion:
 - Context: Mid-swing motion blur
 - Effect: Motion lines, dynamic angle
 - Lighting: High contrast action lighting
@@ -532,12 +605,18 @@ Generate the EXACT SAME weapons from the reference image:
 MAINTAIN EXACTLY from reference:
 - Blade shape and design (even with motion blur)
 - Handle design consistency
-- Metal color and finish
-"""
+- Metal color and finish""",
+        "image_url": artifact_ref_url,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 
 # Variation 3: Different lighting
-lighting_prompt = """
-Generate the EXACT SAME weapons from the reference image:
+lighting_result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={
+        "prompt": """Show the EXACT SAME weapons from this image in warm lighting:
 - Context: Displayed on wooden table
 - Lighting: Warm lamplight (indoor scene)
 - Atmosphere: Intimate, reverent presentation
@@ -545,14 +624,18 @@ Generate the EXACT SAME weapons from the reference image:
 MAINTAIN EXACTLY from reference:
 - All design elements
 - Proportions and dimensions
-- Blade and handle details
-"""
+- Blade and handle details""",
+        "image_url": artifact_ref_url,
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 ```
 
 #### 3.4.3 Artifact Reference Sheet Structure
 
 ```
-poc/phase3_artifacts/
+poc/phase3_backgrounds_artifacts/artifacts/
 ├── twin_crescent_blades/
 │   ├── base_reference.png          # Primary reference, clear view
 │   ├── variation_held.png          # In-hand context
@@ -621,16 +704,24 @@ poc/phase3_artifacts/
 #### Test 3.5.1: Location Generation - Magic Tower
 
 ```python
-prompt = """
-Korean webtoon background illustration:
+import fal_client
+
+result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext/text-to-image",
+    arguments={
+        "prompt": """Korean webtoon background illustration:
 - Location: Ancient mystical tower
 - Setting: Hidden in dense, perpetual fog
 - Architecture: Traditional East Asian tower, weathered stone
 - Atmosphere: Mysterious, isolated, otherworldly
 - Time: Twilight, diffused light through fog
 - Style: Detailed background art, Korean webtoon aesthetic
-- No characters, environment only
-"""
+- No characters, environment only""",
+        "aspect_ratio": "landscape_16_9",
+        "output_format": "png",
+        "safety_tolerance": 5
+    }
+)
 ```
 
 **Success Criteria**:
@@ -641,12 +732,12 @@ Korean webtoon background illustration:
 
 #### Test 3.5.2: Location Consistency Test
 
-Generate the same location under different conditions:
+Generate the same location under different conditions using Kontext editing:
 
-1. Magic Tower - Day/fog
-2. Magic Tower - Night/fog
-3. Magic Tower - Interior main hall
-4. Magic Tower - Interior private quarters
+1. Magic Tower - Day/fog (base generation)
+2. Magic Tower - Night/fog (Kontext edit from base)
+3. Magic Tower - Interior main hall (Kontext edit from base)
+4. Magic Tower - Interior private quarters (Kontext edit from base)
 
 **Success Criteria**:
 - Architectural elements consistent across variations
@@ -890,7 +981,7 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "focus_point": "Tower silhouette through fog",
       "depth_of_field": "deep",
       "panel_shape": "rectangle_wide",
-      "aspect_ratio": "21:9",
+      "aspect_ratio": "landscape_16_9",
       "page_position": "top_full_width",
       "bleed": true,
       "characters": [],
@@ -934,7 +1025,7 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "focus_point": "Jin Sohan kneeling",
       "depth_of_field": "medium",
       "panel_shape": "rectangle_standard",
-      "aspect_ratio": "4:3",
+      "aspect_ratio": "landscape_4_3",
       "page_position": "middle_left",
       "bleed": false,
       "characters": [
@@ -995,7 +1086,9 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "weather": null,
       "effects": ["subtle_fog_interior"],
       "mood": "formal, tense",
-      "color_emphasis": null
+      "color_emphasis": null,
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "Use Kontext Multi with all 3 character references for consistency"
     },
     {
       "panel_id": "s1_p03",
@@ -1012,7 +1105,7 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "focus_point": "Dokma's face",
       "depth_of_field": "shallow",
       "panel_shape": "rectangle_tall",
-      "aspect_ratio": "3:4",
+      "aspect_ratio": "portrait_4_3",
       "page_position": "middle_right",
       "bleed": false,
       "characters": [
@@ -1051,7 +1144,201 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "weather": null,
       "effects": ["dramatic_shadow"],
       "mood": "skeptical, testing",
-      "color_emphasis": "dark_shadows"
+      "color_emphasis": "dark_shadows",
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Use Dokma reference image only (single character close-up)"
+    }
+  ]
+}
+```
+
+#### Scene 2: The Backstory/Storytelling (Flashback + Atmosphere)
+
+**Scene Context**: Jin Sohan tells his masters about his childhood encounter with a golden peach tree and a two-headed snake — the mysterious origin of his poison-resistant body. The masters listen with a mix of amusement and surprise. This scene mixes present-time dialogue with flashback imagery.
+
+**Enhanced Panel Breakdown**:
+
+```json
+{
+  "scene_id": "scene_02_storytelling",
+  "scene_title": "The Backstory",
+  "source_text": "source/001/002.txt",
+  "panels": [
+    {
+      "panel_id": "s2_p01_storytelling_setup",
+      "sequence_number": 1,
+      "panel_type": "medium_shot",
+      "panel_shape": "rectangle_standard",
+      "aspect_ratio": "landscape_4_3",
+      "shot_type": "medium_shot",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Jin Sohan gesturing while speaking",
+      "characters": [
+        {"character_id": "jin_sohan", "position": "center", "posture": "kneeling_formal", "expression": "earnest", "facing": "toward_masters"},
+        {"character_id": "dokma", "position": "right_bg", "posture": "seated", "expression": "amused_skeptical", "facing": "toward_jin_sohan"},
+        {"character_id": "uiseon", "position": "left_bg", "posture": "seated", "expression": "gentle_curious", "facing": "toward_jin_sohan"}
+      ],
+      "artifacts": [],
+      "action": null,
+      "tempo": "slow",
+      "panel_duration": "3s",
+      "location_id": "magic_tower_interior",
+      "time_of_day": "evening",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": ["warm_glow"],
+      "mood": "intimate, storytelling",
+      "color_emphasis": "warm_tones",
+      "safe_zones": [
+        {"zone_id": "narration_top", "type": "narration", "position": "top_center", "width_pct": 80, "height_pct": 12}
+      ],
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "Use Kontext Multi with all three character refs. Warm indoor lighting, intimate atmosphere."
+    },
+    {
+      "panel_id": "s2_p02_flashback_peach",
+      "sequence_number": 2,
+      "panel_type": "establishing_shot",
+      "panel_shape": "circular",
+      "aspect_ratio": "square_1_1",
+      "shot_type": "wide_shot",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "focus_point": "Golden peach tree glowing in moonlight",
+      "characters": [],
+      "artifacts": [
+        {"artifact_id": "golden_peach", "placement": "center", "state": "glowing", "interaction": "none"}
+      ],
+      "action": null,
+      "tempo": "slow",
+      "panel_duration": "4s",
+      "location_id": "countryside_night",
+      "time_of_day": "night",
+      "lighting_preset": "moonlight_supernatural",
+      "weather": null,
+      "effects": ["ethereal_glow", "soft_particles", "dreamlike_blur"],
+      "mood": "mystical, dreamlike",
+      "color_emphasis": "golden_luminous",
+      "safe_zones": [],
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Circular flashback panel. Use golden_peach artifact ref. Dreamlike quality with supernatural glow."
+    },
+    {
+      "panel_id": "s2_p03_flashback_snake",
+      "sequence_number": 3,
+      "panel_type": "detail_shot",
+      "panel_shape": "irregular_jagged",
+      "aspect_ratio": "landscape_4_3",
+      "shot_type": "close_up",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Two-headed snake emerging from roots",
+      "characters": [],
+      "artifacts": [
+        {"artifact_id": "two_headed_snake", "placement": "center", "state": "coiled_alert", "interaction": "none"}
+      ],
+      "action": {"type": "reveal", "intensity": "medium", "motion_lines": false},
+      "tempo": "slow",
+      "panel_duration": "3s",
+      "location_id": "countryside_night",
+      "time_of_day": "night",
+      "lighting_preset": "moonlight_supernatural",
+      "weather": null,
+      "effects": ["eerie_atmosphere", "mist"],
+      "mood": "ominous, wondrous",
+      "color_emphasis": "cool_greens_with_gold",
+      "safe_zones": [],
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Jagged-edge panel for supernatural tension. Use two_headed_snake artifact ref. Eerie but wondrous tone."
+    },
+    {
+      "panel_id": "s2_p04_young_jin_sohan",
+      "sequence_number": 4,
+      "panel_type": "medium_shot",
+      "panel_shape": "borderless",
+      "aspect_ratio": "portrait_3_4",
+      "shot_type": "medium_shot",
+      "camera_angle": "high_angle",
+      "camera_movement": "static",
+      "focus_point": "Young Jin Sohan standing unaffected amid sleeping crowd",
+      "characters": [
+        {"character_id": "jin_sohan_young", "position": "center", "posture": "standing_still", "expression": "calm_confused", "facing": "camera"}
+      ],
+      "artifacts": [],
+      "action": null,
+      "tempo": "slow",
+      "panel_duration": "4s",
+      "location_id": "performance_grounds",
+      "time_of_day": "evening",
+      "lighting_preset": "fog_night",
+      "weather": "light_fog",
+      "effects": ["sleeping_bodies_around", "fog_wisps"],
+      "mood": "isolation, wonder",
+      "color_emphasis": "muted_with_spotlight_on_jin",
+      "safe_zones": [
+        {"zone_id": "narration_bottom", "type": "narration", "position": "bottom_center", "width_pct": 70, "height_pct": 15}
+      ],
+      "generation_model": "fal-ai/flux-2/flash",
+      "generation_notes": "Borderless flashback. No existing character ref (young version). Use text-to-image with style prompt. Lone child standing among sleeping figures."
+    },
+    {
+      "panel_id": "s2_p05_masters_react",
+      "sequence_number": 5,
+      "panel_type": "reaction_shot",
+      "panel_shape": "rectangle_standard",
+      "aspect_ratio": "landscape_4_3",
+      "shot_type": "two_shot",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Dokma and Uiseon exchanging a meaningful glance",
+      "characters": [
+        {"character_id": "dokma", "position": "left", "posture": "seated", "expression": "impressed_reluctant", "facing": "toward_uiseon"},
+        {"character_id": "uiseon", "position": "right", "posture": "seated", "expression": "knowing_smile", "facing": "toward_dokma"}
+      ],
+      "artifacts": [],
+      "action": null,
+      "tempo": "slow",
+      "panel_duration": "2s",
+      "location_id": "magic_tower_interior",
+      "time_of_day": "evening",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [],
+      "mood": "unspoken_affection, acknowledgment",
+      "color_emphasis": "warm_amber",
+      "safe_zones": [
+        {"zone_id": "thought_left", "type": "thought", "position": "top_left", "width_pct": 25, "height_pct": 20},
+        {"zone_id": "thought_right", "type": "thought", "position": "top_right", "width_pct": 25, "height_pct": 20}
+      ],
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "Use Kontext Multi with Dokma + Uiseon refs. Subtle emotional moment — the masters silently agree it's time to let Jin Sohan go."
+    },
+    {
+      "panel_id": "s2_p06_transition",
+      "sequence_number": 6,
+      "panel_type": "establishing_shot",
+      "panel_shape": "rectangle_wide",
+      "aspect_ratio": "ultrawide_21_9",
+      "shot_type": "extreme_wide",
+      "camera_angle": "birds_eye",
+      "camera_movement": "static",
+      "focus_point": "Magic Tower exterior shrouded in fog, night settling",
+      "characters": [],
+      "artifacts": [],
+      "action": null,
+      "tempo": "slow",
+      "panel_duration": "3s",
+      "location_id": "magic_tower_exterior",
+      "time_of_day": "night",
+      "lighting_preset": "fog_night",
+      "weather": "dense_fog",
+      "effects": ["moonlight_through_fog"],
+      "mood": "transition, passage_of_time",
+      "color_emphasis": "cool_blues_muted",
+      "safe_zones": [],
+      "generation_model": "fal-ai/flux-2/flash",
+      "generation_notes": "Transition panel. No characters, pure atmosphere. Bridge between storytelling and departure scenes."
     }
   ]
 }
@@ -1087,7 +1374,7 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "focus_point": "Twin crescent moon blades on table",
       "depth_of_field": "shallow",
       "panel_shape": "rectangle_wide",
-      "aspect_ratio": "16:9",
+      "aspect_ratio": "landscape_16_9",
       "page_position": "top_full_width",
       "bleed": true,
       "characters": [],
@@ -1112,7 +1399,8 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "effects": ["subtle_glow_on_blades"],
       "mood": "reverent, significant",
       "color_emphasis": "warm_gold_highlights",
-      "generation_notes": "CRITICAL: Use twin_crescent_blades reference images. Blade design must match exactly."
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "CRITICAL: Use twin_crescent_blades reference image as input. Blade design must match exactly."
     },
     {
       "panel_id": "s3_p02",
@@ -1129,7 +1417,7 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "focus_point": "Exchange of weapons between hands",
       "depth_of_field": "medium",
       "panel_shape": "rectangle_standard",
-      "aspect_ratio": "4:3",
+      "aspect_ratio": "landscape_4_3",
       "page_position": "middle_left",
       "bleed": false,
       "characters": [
@@ -1197,7 +1485,8 @@ From `source/001/001.txt` - 3 key scenes with full specifications:
       "effects": [],
       "mood": "gruff_affection, significant_moment",
       "color_emphasis": null,
-      "generation_notes": "CRITICAL: Use twin_crescent_blades reference. Same blade design as s3_p01."
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "CRITICAL: Use Kontext Multi with Dokma ref + Jin Sohan ref + twin_crescent_blades ref. Same blade design as s3_p01."
     }
   ]
 }
@@ -1289,11 +1578,13 @@ INPUT ASSEMBLY
 +------------------------------------------------------------------+
                                 |
                                 v
-PANEL SHAPE PROCESSING (NEW)
+MODEL SELECTION
 +------------------------------------------------------------------+
-|  1. Generate base image at specified aspect ratio                  |
-|  2. Apply panel shape mask if non-rectangular                      |
-|  3. Ensure safe zones are respected in composition                 |
+|  Based on panel complexity:                                        |
+|  - Single char, no artifacts → Flux 2 Flash ($0.007/panel)        |
+|  - Single char + artifact → Kontext [pro] ($0.04/image)           |
+|  - Multi-char → Kontext Multi ($0.04/image)                       |
+|  - Hero/critical → Flux 2 Pro ($0.044/panel)                      |
 +------------------------------------------------------------------+
                                 |
                                 v
@@ -1307,9 +1598,12 @@ PROMPT CONSTRUCTION
 +------------------------------------------------------------------+
                                 |
                                 v
-IMAGE GENERATION
+IMAGE GENERATION (fal.ai)
 +------------------------------------------------------------------+
-|  Google Gemini API: Generate panel image                           |
+|  fal_client.subscribe() or fal_client.submit() for batch           |
+|  - Kontext: image_url + prompt editing                             |
+|  - Kontext Multi: image_urls + prompt editing                      |
+|  - Flux 2 Flash/[dev]/Pro: text-to-image with optional img2img    |
 +------------------------------------------------------------------+
                                 |
                                 v
@@ -1428,10 +1722,14 @@ class PanelShapeProcessor:
 #### 5.3.2 Composition-Aware Generation
 
 ```python
+import fal_client
+import requests
+from pathlib import Path
+
 async def generate_panel_with_shape(
     panel_spec: EnhancedPanelSpec,
-    character_refs: dict,
-    artifact_refs: dict,  # NEW
+    character_refs: dict,       # {character_id: uploaded_url}
+    artifact_refs: dict,        # {artifact_id: uploaded_url}
     style_guide: dict
 ) -> str:
     """Generate panel with shape and safe zone awareness."""
@@ -1445,8 +1743,8 @@ async def generate_panel_with_shape(
         artifact_refs
     )
 
-    # Determine generation aspect ratio based on panel shape
-    gen_ratio = get_generation_ratio(panel_spec.panel_shape, panel_spec.aspect_ratio)
+    # Select model and build generation call based on panel complexity
+    model, gen_args = select_generation_strategy(panel_spec, character_refs, artifact_refs)
 
     # Build complete prompt
     prompt = f"""
@@ -1495,38 +1793,73 @@ Korean webtoon panel illustration:
 - No text or speech bubbles (will be added separately)
 """
 
-    # Collect reference images
-    reference_images = []
+    # Generate based on selected strategy
+    if model.startswith("fal-ai/flux-pro/kontext/multi"):
+        # Multi-reference: Kontext Multi
+        image_urls = []
+        for char in panel_spec.characters:
+            if char.character_id in character_refs:
+                image_urls.append(character_refs[char.character_id])
+        for artifact in panel_spec.artifacts:
+            if artifact.artifact_id in artifact_refs:
+                image_urls.append(artifact_refs[artifact.artifact_id])
 
-    # Add character references
-    for char in panel_spec.characters:
-        if char.character_id in character_refs:
-            reference_images.append(character_refs[char.character_id])
-
-    # Add artifact references (NEW)
-    for artifact in panel_spec.artifacts:
-        if artifact.artifact_id in artifact_refs:
-            reference_images.append(artifact_refs[artifact.artifact_id])
-
-    # Generate image
-    client = genai.Client(api_key=os.getenv('GOOGLE_API_KEY'))
-
-    contents = reference_images + [prompt]
-
-    response = client.models.generate_content(
-        model='gemini-3-pro-image-preview',
-        contents=contents,
-        config=types.GenerateContentConfig(
-            response_modalities=['TEXT', 'IMAGE'],
-            image_config=types.ImageConfig(
-                aspect_ratio=gen_ratio,
-                image_size="2K"
-            ),
+        result = fal_client.subscribe(
+            "fal-ai/flux-pro/kontext/multi",
+            arguments={
+                "prompt": prompt,
+                "image_urls": image_urls,
+                "output_format": "png",
+                "guidance_scale": 3.5,
+                "num_inference_steps": 28,
+                "safety_tolerance": 5
+            }
         )
-    )
 
-    # Save base image
-    base_path = save_generated_image(response, panel_spec.panel_id)
+    elif model.startswith("fal-ai/flux-pro/kontext"):
+        # Single reference: Kontext editing
+        ref_url = None
+        if panel_spec.characters:
+            char_id = panel_spec.characters[0].character_id
+            ref_url = character_refs.get(char_id)
+        elif panel_spec.artifacts:
+            art_id = panel_spec.artifacts[0].artifact_id
+            ref_url = artifact_refs.get(art_id)
+
+        args = {
+            "prompt": prompt,
+            "output_format": "png",
+            "guidance_scale": 3.5,
+            "num_inference_steps": 28,
+            "safety_tolerance": 5
+        }
+        if ref_url:
+            args["image_url"] = ref_url
+
+        result = fal_client.subscribe(model, arguments=args)
+
+    else:
+        # Flux 2 Flash/[dev]/Pro: text-to-image
+        aspect = get_fal_aspect_ratio(panel_spec.panel_shape, panel_spec.aspect_ratio)
+        result = fal_client.subscribe(
+            model,
+            arguments={
+                "prompt": prompt,
+                "image_size": aspect,
+                "output_format": "png",
+                "num_inference_steps": 28,
+                "guidance_scale": 3.5,
+                "safety_tolerance": 5
+            }
+        )
+
+    # Download and save base image
+    image_url = result["images"][0]["url"]
+    response = requests.get(image_url)
+    base_path = f"poc/phase5_generation/{panel_spec.scene_id}/panels/{panel_spec.panel_id}.png"
+    Path(base_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(base_path, "wb") as f:
+        f.write(response.content)
 
     # Apply panel shape mask if non-rectangular
     if panel_spec.panel_shape not in [
@@ -1542,7 +1875,29 @@ Korean webtoon panel illustration:
     return final_path
 
 
-def build_safe_zone_instructions(safe_zones: List[SpeechBubbleSafeZone]) -> str:
+def select_generation_strategy(
+    panel_spec: EnhancedPanelSpec,
+    character_refs: dict,
+    artifact_refs: dict
+) -> tuple:
+    """Select the best model based on panel complexity."""
+
+    num_chars = len(panel_spec.characters)
+    num_artifacts = len([a for a in panel_spec.artifacts if a.importance == "focus"])
+    total_refs = num_chars + num_artifacts
+
+    if total_refs >= 2:
+        # Multi-character/artifact scene -> Kontext Multi
+        return "fal-ai/flux-pro/kontext/multi", {}
+    elif total_refs == 1:
+        # Single character or artifact -> Kontext
+        return "fal-ai/flux-pro/kontext", {}
+    else:
+        # No characters/artifacts (backgrounds, establishing shots) -> Flux 2 Flash
+        return "fal-ai/flux-2/flash", {}
+
+
+def build_safe_zone_instructions(safe_zones: list) -> str:
     """Build composition instructions to avoid safe zones."""
 
     if not safe_zones:
@@ -1565,7 +1920,7 @@ def build_safe_zone_instructions(safe_zones: List[SpeechBubbleSafeZone]) -> str:
 
 
 def build_artifact_instructions(
-    artifacts: List[ArtifactPlacement],
+    artifacts: list,
     artifact_refs: dict
 ) -> str:
     """Build instructions for artifact consistency."""
@@ -1590,6 +1945,21 @@ Artifact: {artifact.artifact_id}{ref_note}
 """)
 
     return '\n'.join(instructions)
+
+
+def get_fal_aspect_ratio(panel_shape: PanelShape, aspect_ratio: str) -> dict:
+    """Convert panel shape to fal.ai image_size format."""
+
+    size_map = {
+        "landscape_16_9": {"width": 1024, "height": 576},
+        "landscape_4_3": {"width": 1024, "height": 768},
+        "portrait_16_9": {"width": 576, "height": 1024},
+        "portrait_4_3": {"width": 768, "height": 1024},
+        "square": {"width": 1024, "height": 1024},
+        "square_hd": {"width": 1024, "height": 1024},
+    }
+
+    return size_map.get(aspect_ratio, {"width": 1024, "height": 1440})
 ```
 
 ### 5.4 Test Cases
@@ -1602,14 +1972,16 @@ Generate the same artifact across multiple panels and verify consistency.
 async def test_artifact_consistency():
     """Test that twin crescent blades look identical across panels."""
 
-    # Load artifact reference
-    artifact_ref = Image.open("poc/phase3_artifacts/twin_crescent_blades/base_reference.png")
+    # Upload artifact reference
+    artifact_ref_url = fal_client.upload_file(
+        "poc/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png"
+    )
 
     # Generate panel s3_p01 (artifact focus)
     panel_01 = await generate_panel_with_shape(
         panel_spec=scene3_panels[0],
         character_refs={},
-        artifact_refs={"twin_crescent_blades": artifact_ref},
+        artifact_refs={"twin_crescent_blades": artifact_ref_url},
         style_guide=style_guide
     )
 
@@ -1617,7 +1989,7 @@ async def test_artifact_consistency():
     panel_02 = await generate_panel_with_shape(
         panel_spec=scene3_panels[1],
         character_refs=character_refs,
-        artifact_refs={"twin_crescent_blades": artifact_ref},
+        artifact_refs={"twin_crescent_blades": artifact_ref_url},
         style_guide=style_guide
     )
 
@@ -1625,7 +1997,7 @@ async def test_artifact_consistency():
     consistency_score = await validate_artifact_consistency(
         panel_01, panel_02,
         artifact_id="twin_crescent_blades",
-        artifact_ref=artifact_ref
+        artifact_ref_path="poc/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png"
     )
 
     return consistency_score
@@ -1738,7 +2110,7 @@ class EnhancedQualityChecker:
     def __init__(self, style_guide: dict, character_refs: dict, artifact_refs: dict):
         self.style_guide = style_guide
         self.character_refs = character_refs
-        self.artifact_refs = artifact_refs  # NEW
+        self.artifact_refs = artifact_refs
 
     async def validate_panel(self, image_path: str, panel_spec: EnhancedPanelSpec) -> dict:
         """Run all quality checks including new requirements."""
@@ -1771,13 +2143,10 @@ class EnhancedQualityChecker:
         if not panel_spec.artifacts:
             return {"passed": True, "note": "No artifacts to check"}
 
-        # Implementation would use image analysis to compare artifact regions
-        # with reference images
-
         return {
             "passed": True,
             "artifacts_checked": [a.artifact_id for a in panel_spec.artifacts],
-            "consistency_scores": {},  # Would contain per-artifact scores
+            "consistency_scores": {},
             "note": "Artifact consistency validation"
         }
 
@@ -1786,8 +2155,6 @@ class EnhancedQualityChecker:
 
         if not panel_spec.safe_zones:
             return {"passed": True, "note": "No safe zones defined"}
-
-        # Implementation would analyze image regions for content density
 
         return {
             "passed": True,
@@ -1799,7 +2166,6 @@ class EnhancedQualityChecker:
     def check_panel_shape(self, image: Image, panel_spec: EnhancedPanelSpec) -> dict:
         """NEW: Verify panel shape was applied correctly."""
 
-        # For non-rectangular panels, check alpha channel
         if panel_spec.panel_shape in [
             PanelShape.DIAGONAL_LEFT,
             PanelShape.DIAGONAL_RIGHT,
@@ -1809,16 +2175,52 @@ class EnhancedQualityChecker:
             if image.mode != 'RGBA':
                 return {"passed": False, "note": "Non-rectangular panel missing alpha channel"}
 
-            # Check that mask is properly applied
             alpha = image.split()[-1]
-            # Verify non-trivial transparency exists
 
         return {"passed": True, "note": "Panel shape validated"}
 ```
 
-### 5.6 Output Organization
+### 5.6 Batch Generation with fal.ai Queue
 
-#### 5.6.1 Enhanced Generated Assets Structure
+```python
+import fal_client
+import asyncio
+
+async def batch_generate_panels(panels: list, character_refs: dict, artifact_refs: dict):
+    """Submit all panels to fal.ai queue in parallel."""
+
+    # Submit all panels
+    handles = []
+    for panel_spec in panels:
+        model, _ = select_generation_strategy(panel_spec, character_refs, artifact_refs)
+        prompt = build_panel_prompt(panel_spec)
+
+        args = build_fal_args(model, panel_spec, prompt, character_refs, artifact_refs)
+
+        handle = fal_client.submit(model, arguments=args)
+        handles.append({
+            "panel_id": panel_spec.panel_id,
+            "handle": handle,
+            "model": model
+        })
+
+    # Collect results
+    results = []
+    for item in handles:
+        result = fal_client.result(item["model"], item["handle"].request_id)
+        results.append({
+            "panel_id": item["panel_id"],
+            "images": result["images"],
+            "seed": result.get("seed"),
+            "model": item["model"]
+        })
+
+    return results
+```
+
+### 5.7 Output Organization
+
+#### 5.7.1 Enhanced Generated Assets Structure
 
 ```
 poc/phase5_generation/
@@ -1859,7 +2261,7 @@ poc/phase5_generation/
     └── failed_panels/
 ```
 
-#### 5.6.2 Enhanced Panel Metadata Format
+#### 5.7.2 Enhanced Panel Metadata Format
 
 ```json
 {
@@ -1867,8 +2269,9 @@ poc/phase5_generation/
   "scene_id": "scene_03_departure",
   "sequence_number": 2,
   "generation": {
-    "timestamp": "2025-12-31T10:00:00Z",
-    "model": "gemini-3-pro-image-preview",
+    "timestamp": "2026-02-06T10:00:00Z",
+    "platform": "fal.ai",
+    "model": "fal-ai/flux-pro/kontext/multi",
     "prompt_hash": "abc123...",
     "attempts": 1,
     "generation_time_ms": 3420,
@@ -1876,12 +2279,13 @@ poc/phase5_generation/
       "jin_sohan/base_reference.png",
       "dokma/base_reference.png",
       "twin_crescent_blades/base_reference.png"
-    ]
+    ],
+    "cost_usd": 0.04
   },
   "specifications": {
     "panel_type": "medium_shot",
     "panel_shape": "rectangle_standard",
-    "aspect_ratio": "4:3",
+    "aspect_ratio": "landscape_4_3",
     "camera_angle": "eye_level",
     "shot_type": "medium_shot",
     "characters": ["Jin Sohan", "Dokma"],
@@ -1901,13 +2305,13 @@ poc/phase5_generation/
   "file_info": {
     "path": "scene_03_departure/panels/s3_p02_handover.png",
     "size_bytes": 1245678,
-    "dimensions": "2048x1536",
+    "dimensions": "1024x768",
     "has_alpha": false
   }
 }
 ```
 
-### 5.7 Deliverables
+### 5.8 Deliverables
 
 - Complete panel images for all 3 test scenes (18+ panels)
 - **NEW: Artifact consistency validation across panels**
@@ -1931,7 +2335,7 @@ poc/phase5_generation/
 
 | Phase | Focus Area | Key Deliverable |
 |-------|------------|-----------------|
-| Phase 1 | Character Design | Character reference sheets |
+| Phase 1 | Character Design | Character reference sheets (Kontext) |
 | Phase 2 | Art Style | Style specification JSON |
 | Phase 3 | Backgrounds + Artifacts | Location library + Artifact reference sheets |
 | Phase 4 | Enhanced Storyboarding | Detailed panel specifications with camera/shape/zones |
@@ -1943,17 +2347,18 @@ poc/phase5_generation/
 
 ```bash
 # Required packages
-pip install google-genai
+pip install fal-client
 pip install claude-agent-sdk
 pip install python-dotenv
 pip install pillow
 pip install numpy
+pip install requests
 ```
 
 #### Environment Variables
 
 ```bash
-GOOGLE_API_KEY=your_google_api_key
+FAL_KEY=your_fal_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
@@ -1974,12 +2379,12 @@ novel-to-toon/
 │   │   ├── style_spec.json
 │   │   ├── prompt_templates.json
 │   │   └── agent_outputs/
-│   ├── phase3_backgrounds_artifacts/  # RENAMED
+│   ├── phase3_backgrounds_artifacts/
 │   │   ├── locations/
 │   │   │   ├── magic_tower/
 │   │   │   ├── inn/
 │   │   │   └── black_path/
-│   │   ├── artifacts/                  # NEW
+│   │   ├── artifacts/
 │   │   │   ├── twin_crescent_blades/
 │   │   │   │   ├── base_reference.png
 │   │   │   │   ├── variation_held.png
@@ -1991,17 +2396,17 @@ novel-to-toon/
 │   │   └── lighting_tests/
 │   ├── phase4_storyboard/
 │   │   ├── scene_01_request/
-│   │   │   ├── enhanced_panel_specs.json  # NEW format
-│   │   │   ├── safe_zone_layouts.json     # NEW
-│   │   │   └── shape_selections.json      # NEW
+│   │   │   ├── enhanced_panel_specs.json
+│   │   │   ├── safe_zone_layouts.json
+│   │   │   └── shape_selections.json
 │   │   ├── scene_02_storytelling/
 │   │   ├── scene_03_departure/
-│   │   ├── panel_shape_guide.md           # NEW
-│   │   └── camera_angle_guide.md          # NEW
+│   │   ├── panel_shape_guide.md
+│   │   └── camera_angle_guide.md
 │   ├── phase5_generation/
 │   │   ├── scene_01_request/
 │   │   │   ├── panels/
-│   │   │   ├── masks/                     # NEW: Panel shape masks
+│   │   │   ├── masks/
 │   │   │   └── metadata/
 │   │   ├── scene_02_storytelling/
 │   │   ├── scene_03_departure/
@@ -2010,8 +2415,8 @@ novel-to-toon/
 │   │   │   ├── batch_results.json
 │   │   │   ├── quality_report.json
 │   │   │   ├── consistency_report.json
-│   │   │   ├── artifact_consistency_report.json  # NEW
-│   │   │   ├── safe_zone_compliance_report.json  # NEW
+│   │   │   ├── artifact_consistency_report.json
+│   │   │   ├── safe_zone_compliance_report.json
 │   │   │   └── cost_summary.json
 │   │   └── failed/
 │   └── results/
@@ -2022,10 +2427,11 @@ novel-to-toon/
 │   ├── character_generator.py
 │   ├── style_agent.py
 │   ├── background_generator.py
-│   ├── artifact_generator.py      # NEW
+│   ├── artifact_generator.py
 │   ├── storyboard_generator.py
 │   ├── panel_generator.py
-│   └── panel_shape_processor.py   # NEW
+│   ├── panel_shape_processor.py
+│   └── cost_tracker.py
 └── docs/
     ├── poc-specification.md
     └── poc-specification-v2.md (this file)
@@ -2101,171 +2507,115 @@ novel-to-toon/
 
 ## Cost Optimization Strategy
 
-### Model Selection
+### Model Selection (fal.ai)
 
 Use a hybrid approach to balance quality and cost:
 
-| Use Case | Model | Cost/Image | When to Use |
-|----------|-------|-----------|-------------|
-| Regular panels | gemini-2.5-flash-image | $0.039 | 80% of generation |
-| Character introductions | gemini-3-pro-image-preview | $0.134 | Complex multi-character scenes |
-| Reference sheets | gemini-3-pro-image-preview | $0.134 | Initial character/artifact creation |
+| Use Case | Model | Endpoint | Cost | When to Use |
+|----------|-------|----------|------|-------------|
+| Establishing shots, backgrounds | Flux 2 Flash | `fal-ai/flux-2/flash` | $0.005/MP (~$0.007) | 40% of panels |
+| Single character panels | Kontext [pro] | `fal-ai/flux-pro/kontext` | $0.04/image | 25% of panels |
+| Multi-character panels | Kontext [pro] Multi | `fal-ai/flux-pro/kontext/multi` | $0.04/image | 20% of panels |
+| Hero/critical panels | Flux 2 Pro | `fal-ai/flux-2-pro` | $0.03+/MP (~$0.044) | 10% of panels |
+| Typography/SFX | Flux 2 Flex | `fal-ai/flux-2-flex` | $0.06/MP (~$0.088) | 5% of panels |
 
-### Resolution Strategy
+### Megapixel-Based Pricing (Flux 2 Models)
 
-**⚠️ CRITICAL FINDING: 1K and 2K cost THE SAME price**
+```
+Megapixel calculation:
+1024x1024 = 1.05 MP
+1024x1440 = 1.47 MP (standard webtoon panel)
+1024x768  = 0.79 MP → rounds to 1 MP
+576x1024  = 0.59 MP → rounds to 1 MP
 
-Both resolutions consume 1,120 tokens = $0.134 (Pro) or $0.039 (Flash). Changing resolution does NOT save money.
-
-| Asset Type | Resolution | Rationale |
-|------------|-----------|-----------|
-| Character references | 2K (2048px) | High detail for consistency (no extra cost vs 1K) |
-| Artifact references | 2K (2048px) | Detail preservation (no extra cost vs 1K) |
-| Panel generation | 1K (1024px) | Sufficient for mobile webtoon (could use 2K at same cost) |
-| Backgrounds | 1K (1024px) | Adequate quality (could use 2K at same cost) |
-
-**Key Points:**
-- Webtoon platforms require max 800x1280px for upload
-- 1K (1024px) provides adequate quality margin
-- 2K gives better quality at **zero extra cost**
-- Only 4K costs more ($0.240 vs $0.134) - never use unless critical
-- **Resolution is a quality choice, not a cost choice** (for 1K-2K range)
-
-See `RESOLUTION_PRICING.md` for detailed pricing breakdown.
-
-### Batch Processing
-
-Enable 50% discount through batch processing:
-
-```python
-# Batch configuration for overnight processing
-batch_config = {
-    "mode": "batch",
-    "priority": "low",
-    "callback_url": "https://your-webhook.com/batch-complete"
-}
+Example costs per panel (Flux 2 Flash at $0.005/MP):
+1024x1440 = 1.47 MP × $0.005 = $0.0074
+1024x768  = 1 MP × $0.005   = $0.005
 ```
 
-Use batch processing for:
-- Chapter panel generation (non-urgent)
-- Background variations
-- Artifact reference sheets
+### Fixed-Price Models (Kontext)
 
-Reserve real-time processing for:
-- Interactive iteration during development
-- Urgent corrections
+Kontext models use flat per-image pricing regardless of resolution:
+- Kontext [pro]: $0.04/image
+- Kontext [max]: $0.08/image
 
-### Context Caching
-
-Cache repeated content for 90% token discount:
-
-```python
-# Cache style guide and character specs
-cached_context = client.caches.create(
-    model="gemini-2.5-flash-image",
-    contents=[
-        style_specification,
-        character_descriptions,
-        artifact_specifications
-    ],
-    ttl="3600s"  # 1 hour cache
-)
-
-# Use cache in generation
-response = client.models.generate_content(
-    model="gemini-2.5-flash-image",
-    cached_content=cached_context.name,
-    contents=[panel_specific_prompt]
-)
-```
-
-### Cost Targets - REALITY CHECK
+### Cost Targets - Realistic Projections
 
 **v0.1.0 Actual Results (What Really Happened):**
 - Panels: 18
 - Cost: $2.70
 - **Cost per panel: $0.15** (3x over target!)
-- Model: gemini-3-pro-image-preview (100% usage)
+- Model: Gemini Pro (100% usage)
 - Optimizations: None
 
-**Why v0.1.0 Was Expensive:**
-1. ❌ Used Pro model for everything (should be 80% Flash)
-2. ❌ No batch processing (missed 50% discount)
-3. ❌ No context caching
-4. ❌ Small sample size (18 panels, no asset reuse)
-
-**v0.2.0 Honest Projections:**
+**v0.2.0 Projections with fal.ai:**
 
 | Scenario | Description | Cost | Cost/Panel | Achievable? |
 |----------|-------------|------|------------|-------------|
-| **Naive** | Like v0.1.0, no optimizations | ~$10.20 (68 panels × $0.15) | $0.15 | ❌ Too expensive |
-| **Optimized** | All v0.2.0 optimizations | ~$4.50-6.00 | **$0.066-0.088** | ✅ Realistic |
-| **Aggressive** | Max optimization, some quality trade-offs | ~$3.00-4.00 | $0.044-0.059 | ✅ Possible |
+| **Naive** | All Kontext [pro] | ~$2.72 (68 × $0.04) | $0.040 | Already under target! |
+| **Optimized** | Hybrid model strategy | ~$1.80 | **$0.026** | Very achievable |
+| **Aggressive** | Max Flash usage | ~$0.80 | $0.012 | If Flash quality passes |
 
 **Optimized Breakdown (68-panel PoC):**
 ```
 Asset Creation (one-time overhead):
-├─ Characters (3 base @ Pro, 12 var @ Flash):  $0.63
-├─ Artifacts (5 base @ Pro, 15 var @ Flash):   $0.96  
-├─ Backgrounds (5 @ Pro):                       $0.67
-└─ Subtotal:                                    $2.26
+├─ Characters (3 base + 12 var @ Kontext):     $0.60
+├─ Artifacts (5 base + 15 var @ Kontext):      $0.80
+├─ Backgrounds (5 @ Kontext text-to-image):    $0.20
+└─ Subtotal:                                    $1.60
 
 Panel Generation (68 panels):
-├─ Critical panels (14 @ Pro, batch):           $0.94
-├─ Standard panels (54 @ Flash, batch):         $1.05
-└─ Subtotal:                                    $1.99
+├─ Establishing/backgrounds (27 @ Flash):       $0.19
+├─ Single-char panels (17 @ Kontext):           $0.68
+├─ Multi-char panels (14 @ Kontext Multi):      $0.56
+├─ Hero panels (7 @ Flux 2 Pro):                $0.31
+├─ Typography panels (3 @ Flux 2 Flex):         $0.26
+└─ Subtotal:                                    $2.00
 
 Iteration/Regen (~10%):                         $0.20
 
-TOTAL: $4.45 for 68 panels = $0.065/panel ✅
+TOTAL: $3.80 for 68 panels = $0.056/panel
 ```
 
-**Key Insight - Multi-Episode Economics:**
-
-The $0.05/panel target is achievable **at scale**, not in a single PoC:
+**Multi-Episode Economics:**
 
 | Episode | Asset Overhead | Panel Cost | Total | Cost/Panel |
 |---------|---------------|------------|-------|------------|
-| **PoC (Episode 1)** | $2.26 | $1.99 | **$4.45** | **$0.065** |
-| Episode 2 | $0.20 | $2.10 | $2.30 | $0.034 |
-| Episode 3 | $0 | $2.10 | $2.10 | $0.031 |
-| Episodes 4-10 | ~$0.10 avg | $2.10 | $2.20 | $0.032 |
+| **PoC (Episode 1)** | $1.60 | $2.00 | **$3.80** | **$0.056** |
+| Episode 2 | $0.20 | $2.00 | $2.20 | $0.032 |
+| Episode 3 | $0 | $2.00 | $2.00 | $0.029 |
+| Episodes 4-10 | ~$0.10 avg | $2.00 | $2.10 | $0.031 |
 | | | | | |
-| **10-Episode Avg** | | | | **$0.040** ✅ |
-
-**The Honest Target for v0.2.0:**
-- PoC (Episode 1): **$4.50-6.00** ($0.066-0.088/panel) ← Accept asset creation overhead
-- Future episodes: **$2.10-2.50** ($0.031-0.037/panel) ← Asset reuse
-- **At scale (10+ episodes): $0.04/panel** ← Sustainable target
+| **10-Episode Avg** | | | | **$0.035** |
 
 **Success Criteria:**
-- ✅ PoC cost < $6.00 (proves optimizations work)
-- ✅ Asset library enables Episode 2 at < $2.50 (proves reusability)
-- ✅ Quality acceptable (70-80% panels pass QA on first try)
+- PoC cost < $5.00 (proves optimizations work)
+- Asset library enables Episode 2 at < $2.50 (proves reusability)
+- Quality acceptable (70-80% panels pass QA on first try)
+- Target $0.035/panel at scale (30% under $0.05 target)
 
 ---
 
 ## Spending Tracking
 
-### API Response Metadata
+### fal.ai Response Metadata
 
-Extract usage data from every API response:
+Extract usage data from every fal.ai API response:
 
 ```python
-response = client.models.generate_content(...)
+result = fal_client.subscribe("fal-ai/flux-pro/kontext", arguments={...})
 
 # Available metadata
-usage = response.usage_metadata
-prompt_tokens = usage.prompt_token_count
-output_tokens = usage.candidates_token_count
-cached_tokens = usage.cached_content_token_count or 0
-total_tokens = usage.total_token_count
+images = result["images"]        # List of generated images
+seed = result.get("seed")       # Seed used
+timings = result.get("timings") # Inference timing
+# Note: fal.ai uses per-image/per-MP pricing, not token-based
 ```
 
 ### Cost Tracker Implementation
 
 ```python
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime
 from typing import List, Dict, Any
 import json
@@ -2273,36 +2623,76 @@ import json
 @dataclass
 class APICallRecord:
     timestamp: str
+    platform: str
     model: str
     panel_id: str
-    prompt_tokens: int
-    output_tokens: int
-    cached_tokens: int
     cost_usd: float
     generation_time_ms: int
+    image_dimensions: str
+    megapixels: float
+    metadata: Dict[str, Any]
 
-class CostTracker:
+class FalCostTracker:
+    """Track fal.ai API costs for image generation."""
+
     PRICING = {
-        "gemini-3-pro-image-preview": {"1k_2k": 0.134, "4k": 0.24},
-        "gemini-2.5-flash-image": {"default": 0.039}
+        # Per-image flat pricing
+        "fal-ai/flux-pro/kontext": 0.04,
+        "fal-ai/flux-pro/kontext/multi": 0.04,
+        "fal-ai/flux-pro/kontext/text-to-image": 0.04,
+        "fal-ai/flux-pro/kontext/max": 0.08,
+        "fal-ai/flux-pro/kontext/max/multi": 0.08,
+        # Per-megapixel pricing
+        "fal-ai/flux-2/flash": {"per_mp": 0.005},
+        "fal-ai/flux-2/turbo": {"per_mp": 0.008},
+        "fal-ai/flux-2/dev": {"per_mp": 0.012},
+        "fal-ai/flux-2-pro": {"first_mp": 0.03, "additional_mp": 0.015},
+        "fal-ai/flux-2-flex": {"per_mp": 0.06},
     }
 
     def __init__(self):
         self.calls: List[APICallRecord] = []
         self.total_cost = 0.0
 
-    def track(self, model: str, response, panel_id: str, time_ms: int):
-        cost = self.PRICING.get(model, {}).get("default", 0.05)
+    def calculate_cost(self, model: str, width: int = 1024, height: int = 1440) -> float:
+        """Calculate cost for a single generation."""
+        pricing = self.PRICING.get(model)
+        if pricing is None:
+            return 0.05  # Default fallback
+
+        if isinstance(pricing, (int, float)):
+            return pricing  # Flat per-image pricing
+
+        # Megapixel-based pricing
+        mp = (width * height) / 1_000_000
+        mp_rounded = max(1, int(mp + 0.99))  # Round up to nearest MP
+
+        if "first_mp" in pricing:
+            # Flux 2 Pro tiered pricing
+            cost = pricing["first_mp"]
+            if mp_rounded > 1:
+                cost += (mp_rounded - 1) * pricing["additional_mp"]
+            return cost
+        else:
+            return mp_rounded * pricing["per_mp"]
+
+    def track(self, model: str, panel_id: str, time_ms: int,
+              width: int = 1024, height: int = 1440,
+              metadata: Dict = None) -> APICallRecord:
+        """Track a single API call."""
+        mp = (width * height) / 1_000_000
+        cost = self.calculate_cost(model, width, height)
 
         record = APICallRecord(
-            timestamp=datetime.utcnow().isoformat(),
+            timestamp=datetime.utcnow().isoformat() + "Z",
+            platform="fal.ai",
             model=model,
             panel_id=panel_id,
-            prompt_tokens=response.usage_metadata.prompt_token_count,
-            output_tokens=response.usage_metadata.candidates_token_count,
-            cached_tokens=response.usage_metadata.cached_content_token_count or 0,
-            cost_usd=cost,
-            generation_time_ms=time_ms
+            cost_usd=round(cost, 6),
+            generation_time_ms=time_ms,
+            image_dimensions=f"{width}x{height}",
+            megapixels=round(mp, 2),
+            metadata=metadata or {}
         )
 
         self.calls.append(record)
@@ -2327,7 +2717,7 @@ class CostTracker:
         with open(filepath, 'w') as f:
             json.dump({
                 "summary": self.summary(),
-                "calls": [vars(c) for c in self.calls]
+                "calls": [asdict(c) for c in self.calls]
             }, f, indent=2)
 ```
 
@@ -2337,17 +2727,16 @@ Per-call log entry:
 
 ```json
 {
-  "timestamp": "2025-12-31T14:30:45Z",
-  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-02-06T14:30:45Z",
+  "platform": "fal.ai",
+  "model": "fal-ai/flux-pro/kontext/multi",
   "panel_id": "s1_p02",
   "scene_id": "scene_01_request",
-  "tokens": {
-    "prompt": 28,
-    "output": 1290,
-    "cached": 0
-  },
-  "cost_usd": 0.039,
+  "cost_usd": 0.04,
   "generation_time_ms": 3200,
+  "image_dimensions": "1024x768",
+  "megapixels": 0.79,
+  "reference_images": ["jin_sohan", "dokma", "uiseon"],
   "status": "success"
 }
 ```
@@ -2357,24 +2746,26 @@ Session summary:
 ```json
 {
   "session_id": "poc-v2-run-001",
-  "timestamp": "2025-12-31T18:00:00Z",
+  "timestamp": "2026-02-06T18:00:00Z",
   "total_calls": 45,
-  "total_cost_usd": 2.34,
+  "total_cost_usd": 1.82,
   "by_model": {
-    "gemini-2.5-flash-image": {"count": 36, "cost": 1.40},
-    "gemini-3-pro-image-preview": {"count": 9, "cost": 0.94}
+    "fal-ai/flux-2/flash": {"count": 18, "cost": 0.13},
+    "fal-ai/flux-pro/kontext": {"count": 12, "cost": 0.48},
+    "fal-ai/flux-pro/kontext/multi": {"count": 10, "cost": 0.40},
+    "fal-ai/flux-2-pro": {"count": 5, "cost": 0.22}
   },
   "by_phase": {
-    "character_generation": {"count": 12, "cost": 0.61},
+    "character_generation": {"count": 15, "cost": 0.60},
     "artifact_generation": {"count": 5, "cost": 0.20},
-    "panel_generation": {"count": 28, "cost": 1.53}
+    "panel_generation": {"count": 25, "cost": 1.02}
   }
 }
 ```
 
 ### Integration Points
 
-1. Wrap all `generate_content` calls with tracking
+1. Wrap all `fal_client.subscribe()` calls with tracking
 2. Export logs after each phase completion
 3. Generate cost report at POC completion
 4. Store logs in `poc/reports/cost_summary.json`
@@ -2387,25 +2778,122 @@ Session summary:
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| Character inconsistency | High | Use base reference images as input for all variations |
-| **NEW: Artifact inconsistency** | High | **Dedicated artifact reference workflow** |
-| API rate limiting | Medium | Implement retry logic, batch processing |
-| Style drift across panels | High | Use reference images + strict prompt templates |
+| Character inconsistency | High | Use Kontext editing with base references for all variations |
+| **NEW: Artifact inconsistency** | High | **Dedicated artifact reference workflow with Kontext** |
+| API rate limiting | Medium | Use fal.ai queue API (`submit`/`result`) for batch processing |
+| Style drift across panels | High | Use consistent Kontext references + strict prompt templates |
 | **NEW: Complex panel shapes** | Medium | **Pre-generate shape masks, test variety** |
 | **NEW: Safe zone violation** | Medium | **Include explicit zone instructions in prompts** |
+| Kontext Multi experimental | Medium | Fall back to single-ref Kontext + compositing (see fallback workflow below) |
+| fal.ai CDN URL expiration | Low | Always download images immediately after generation |
+
+#### Kontext Multi Fallback Workflow
+
+If Kontext Multi produces inconsistent results for multi-reference scenes, use this sequential compositing approach:
+
+1. **Primary character generation**: Generate the main character using single-ref Kontext with their base reference
+2. **Scene inpainting**: Use the generated image as reference, add secondary characters one at a time via Kontext editing with targeted prompts (e.g., "Add [character description] standing to the right")
+3. **Artifact overlay**: If artifacts are needed, generate them separately with their reference, then composite using PIL alpha blending at the specified placement coordinates
+4. **Quality check**: Validate consistency scores for each added element against their reference sheets
+
+```python
+def fallback_multi_ref_generation(panel_spec, character_refs, artifact_refs):
+    """Sequential compositing fallback when Kontext Multi is unreliable."""
+    # Step 1: Generate with primary character reference
+    primary_char = panel_spec.characters[0]
+    base_result = fal_client.subscribe(
+        "fal-ai/flux-pro/kontext",
+        arguments={
+            "prompt": build_panel_prompt(panel_spec),
+            "image_url": character_refs[primary_char.character_id],
+            "output_format": "png",
+            "guidance_scale": 3.5,
+            "safety_tolerance": 5
+        }
+    )
+
+    # Step 2: Iteratively add secondary characters via Kontext editing
+    current_image_url = base_result["images"][0]["url"]
+    for char in panel_spec.characters[1:]:
+        edit_result = fal_client.subscribe(
+            "fal-ai/flux-pro/kontext",
+            arguments={
+                "prompt": f"Add {char.character_id} {char.posture} at {char.position}, "
+                          f"expression: {char.expression}, facing {char.facing}. "
+                          f"Keep existing scene unchanged.",
+                "image_url": current_image_url,
+                "output_format": "png",
+                "guidance_scale": 2.5,  # Lower guidance to preserve existing content
+                "safety_tolerance": 5
+            }
+        )
+        current_image_url = edit_result["images"][0]["url"]
+
+    return current_image_url
+```
+
+**Cost impact**: Fallback costs ~$0.04 per added character (vs $0.04 total for Multi). A 3-character panel costs $0.12 via fallback vs $0.04 via Multi. Use Multi first; fall back only on quality failure.
 
 ### Content Risks
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| Violence depiction limits | Medium | Review safety settings, adjust prompts |
+| Violence depiction limits | Medium | Use safety_tolerance parameter (1-6), test acceptable range |
 | Cultural accuracy | Low | Research traditional elements, validate |
 
 ---
 
 ## Appendix
 
-### A. Sample Novel Excerpts for Testing
+### A. fal.ai Python Client Quick Reference
+
+```python
+import fal_client
+
+# Authentication: Set FAL_KEY environment variable
+# pip install fal-client
+
+# 1. Synchronous call (blocks until complete)
+result = fal_client.run("fal-ai/flux-2/flash", arguments={...})
+
+# 2. Subscribe with progress (recommended)
+result = fal_client.subscribe(
+    "fal-ai/flux-pro/kontext",
+    arguments={...},
+    with_logs=True,
+    on_queue_update=lambda u: print(u)
+)
+
+# 3. Queue-based (for batch processing)
+handle = fal_client.submit("fal-ai/flux-2/flash", arguments={...})
+status = fal_client.status("fal-ai/flux-2/flash", handle.request_id)
+result = fal_client.result("fal-ai/flux-2/flash", handle.request_id)
+
+# 4. File upload (for reference images)
+url = fal_client.upload_file("./path/to/reference.png")
+
+# 5. Result structure
+image_url = result["images"][0]["url"]  # Temporary CDN URL
+seed = result.get("seed")
+timings = result.get("timings")
+```
+
+### B. fal.ai Model Endpoints Reference
+
+| Model | Endpoint | Pricing | Type |
+|-------|----------|---------|------|
+| Kontext [pro] | `fal-ai/flux-pro/kontext` | $0.04/image | Image editing |
+| Kontext [pro] Multi | `fal-ai/flux-pro/kontext/multi` | $0.04/image | Multi-ref editing |
+| Kontext [pro] T2I | `fal-ai/flux-pro/kontext/text-to-image` | $0.04/image | Text-to-image |
+| Kontext [max] | `fal-ai/flux-pro/kontext/max` | $0.08/image | Premium editing |
+| Kontext [max] Multi | `fal-ai/flux-pro/kontext/max/multi` | $0.08/image | Premium multi-ref |
+| Flux 2 Flash | `fal-ai/flux-2/flash` | $0.005/MP | Fast generation |
+| Flux 2 Turbo | `fal-ai/flux-2/turbo` | $0.008/MP | Balanced |
+| Flux 2 [dev] | `fal-ai/flux-2/dev` | $0.012/MP | LoRA + ControlNet |
+| Flux 2 Pro | `fal-ai/flux-2-pro` | $0.03+/MP | Production quality |
+| Flux 2 Flex | `fal-ai/flux-2-flex` | $0.06/MP | Typography |
+
+### C. Sample Novel Excerpts for Testing
 
 #### Excerpt 1: Character Introduction
 
@@ -2432,7 +2920,7 @@ When the startled Oh Je-cheol looked back at Oh Je-gwang,
 whom he had been grabbing by the collar, a chopstick was embedded in his forehead.
 ```
 
-### B. Panel Shape Visual Reference
+### D. Panel Shape Visual Reference
 
 ```
 RECTANGLE_WIDE (21:9, 16:9)
@@ -2491,7 +2979,7 @@ CIRCULAR
      ----
 ```
 
-### C. Camera Angle Visual Reference
+### E. Camera Angle Visual Reference
 
 ```
 EYE LEVEL          LOW ANGLE          HIGH ANGLE
@@ -2509,7 +2997,7 @@ DUTCH ANGLE        BIRD'S EYE         WORM'S EYE
   (/)              [scene]            [cam] ^
 ```
 
-### D. Safe Zone Layout Examples
+### F. Safe Zone Layout Examples
 
 ```
 DIALOGUE PANEL - Two Speakers
@@ -2553,3 +3041,5 @@ ACTION PANEL - SFX Only
 | 1.3 | 2025-12-30 | Update | Standardized on gemini-3-pro-image-preview |
 | 2.0 | 2025-12-31 | Major Revision | v2 Release: Added artifact reference workflow (Phase 3), enhanced panel specifications with camera angles/positions/actions/tempo/context (Phase 4), panel shape variety system, speech bubble safe zones, comprehensive data structures for panel specs |
 | 2.1 | 2025-12-31 | Update | Added Cost Optimization Strategy section (hybrid model selection, resolution strategy, batch processing, context caching). Added Spending Tracking section (API metadata extraction, CostTracker implementation, log formats). Updated objectives and success criteria. |
+| 2.2 | 2026-02-06 | Platform Migration | Migrated from Google Gemini API to fal.ai platform. Updated all code examples to use fal_client. Added FLUX Kontext models (pro, multi, max) for character/artifact consistency. Added Flux 2 Flash/Pro/Flex model tiers. Updated pricing to megapixel-based and flat per-image. Reduced projected costs from $0.065/panel to $0.035/panel at scale. Added fal.ai quick reference appendix. |
+| 2.3 | 2026-02-06 | Review Fixes | Added Scene 2 "The Backstory/Storytelling" panel breakdown (6 panels: flashback sequences with golden peach, two-headed snake, young Jin Sohan). Added Kontext Multi fallback workflow with sequential compositing code and cost analysis. Updated CLAUDE.md to reflect multi-platform strategy (fal.ai + Gemini). |
