@@ -1,0 +1,166 @@
+{
+  "phase": "Phase 3a: Background and Material Settings",
+  "platform": "fal.ai",
+  "timestamp": "2026-02-09T22:41:41.849715",
+  "locations": {
+    "magic_tower": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/magic_tower/base_reference.png",
+        "size_bytes": 1707977
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "exterior_night",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/magic_tower/exterior_night.png"
+        },
+        {
+          "success": true,
+          "variation": "interior_hall",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/magic_tower/interior_hall.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 2,
+      "total_variations": 2
+    },
+    "black_path": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/black_path/base_reference.png",
+        "size_bytes": 1662465
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "tavern_interior",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/black_path/tavern_interior.png"
+        },
+        {
+          "success": true,
+          "variation": "market_street",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/black_path/market_street.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 2,
+      "total_variations": 2
+    },
+    "sword_dance_troupe": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/sword_dance_troupe/base_reference.png",
+        "size_bytes": 2199730
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "training_ground",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/sword_dance_troupe/training_ground.png"
+        },
+        {
+          "success": true,
+          "variation": "living_quarters",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/sword_dance_troupe/living_quarters.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 2,
+      "total_variations": 2
+    },
+    "inn": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/inn/base_reference.png",
+        "size_bytes": 1920182
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "dining_area",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/inn/dining_area.png"
+        },
+        {
+          "success": true,
+          "variation": "private_room",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/inn/private_room.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 2,
+      "total_variations": 2
+    },
+    "wolya_pavilion": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/wolya_pavilion/base_reference.png",
+        "size_bytes": 1948536
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "main_hall",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/wolya_pavilion/main_hall.png"
+        },
+        {
+          "success": true,
+          "variation": "garden_courtyard",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/locations/wolya_pavilion/garden_courtyard.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 2,
+      "total_variations": 2
+    }
+  },
+  "materials": {
+    "black_silk_robe": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/materials/black_silk_robe.png",
+      "size_bytes": 1585664
+    },
+    "white_silk_robe": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/materials/white_silk_robe.png",
+      "size_bytes": 1602654
+    },
+    "weathered_stone": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/materials/weathered_stone.png",
+      "size_bytes": 2258709
+    },
+    "aged_wood": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/materials/aged_wood.png",
+      "size_bytes": 1920957
+    },
+    "fog_atmosphere": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/materials/fog_atmosphere.png",
+      "size_bytes": 1215748
+    }
+  },
+  "lighting_tests": {
+    "magic_tower_fog_day": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/lighting_tests/magic_tower_fog_day.png"
+    },
+    "magic_tower_fog_night": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/lighting_tests/magic_tower_fog_night.png"
+    },
+    "inn_indoor_lamp": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/lighting_tests/inn_indoor_lamp.png"
+    },
+    "black_path_combat_intense": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/lighting_tests/black_path_combat_intense.png"
+    },
+    "sword_dance_troupe_emotional_soft": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/lighting_tests/sword_dance_troupe_emotional_soft.png"
+    }
+  }
+}

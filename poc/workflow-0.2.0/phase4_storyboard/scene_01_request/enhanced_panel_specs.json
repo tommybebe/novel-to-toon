@@ -1,0 +1,387 @@
+{
+  "scene_id": "scene_01_request",
+  "total_panels": 6,
+  "panels": [
+    {
+      "panel_id": "s1_p01",
+      "scene_id": "scene_01_request",
+      "sequence_number": 1,
+      "context": {
+        "previous_panel_summary": "Chapter opening - no previous panel",
+        "scene_context": "Jin Sohan approaches his masters to make a formal request",
+        "emotional_state": "Tense formality, respectful determination",
+        "narrative_purpose": "Establish setting and atmosphere"
+      },
+      "shot_type": "establishing",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "focus_point": "Tower silhouette through fog",
+      "depth_of_field": "deep",
+      "panel_shape": "rectangle_wide",
+      "aspect_ratio": "landscape_16_9",
+      "page_position": "top_full_width",
+      "bleed": true,
+      "characters": [],
+      "action": null,
+      "artifacts": [],
+      "tempo": "slow",
+      "panel_duration": "extended",
+      "safe_zones": [
+        {
+          "zone_id": "narration_top",
+          "position": "top_center",
+          "x_percent": 30,
+          "y_percent": 5,
+          "width_percent": 40,
+          "height_percent": 15,
+          "speaker_id": null,
+          "bubble_type": "narration",
+          "text_preview": "The fog-shrouded Magic Tower..."
+        }
+      ],
+      "location_id": "magic_tower_exterior",
+      "time_of_day": "twilight",
+      "lighting_preset": "fog_day",
+      "weather": "heavy_fog",
+      "effects": [
+        "atmospheric_fog",
+        "subtle_glow"
+      ],
+      "mood": "mysterious, isolated",
+      "color_emphasis": "cool_blues_grays",
+      "generation_model": "fal-ai/flux-pro/kontext/text-to-image",
+      "generation_notes": "No character refs needed. Pure environment establishing shot.",
+      "source_text": "안개가 자욱한 마선루(魔仙樓)."
+    },
+    {
+      "panel_id": "s1_p02",
+      "scene_id": "scene_01_request",
+      "sequence_number": 2,
+      "context": {
+        "previous_panel_summary": "Establishing shot of Magic Tower exterior",
+        "scene_context": "Moving inside to the main hall",
+        "emotional_state": "Formal, respectful tension",
+        "narrative_purpose": "Show Jin Sohan's humble request posture"
+      },
+      "shot_type": "medium_wide",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Jin Sohan kneeling",
+      "depth_of_field": "medium",
+      "panel_shape": "rectangle_standard",
+      "aspect_ratio": "landscape_4_3",
+      "page_position": "middle_left",
+      "bleed": false,
+      "characters": [
+        {
+          "character_id": "jin_sohan",
+          "frame_position": "center",
+          "x_percent": 50,
+          "y_percent": 70,
+          "scale": 1.0,
+          "posture": "kneeling",
+          "pose_description": "Formal kneeling position, hands on thighs, head slightly bowed",
+          "expression": "determined_but_respectful",
+          "facing": "away"
+        },
+        {
+          "character_id": "dokma",
+          "frame_position": "background_left",
+          "x_percent": 25,
+          "y_percent": 30,
+          "scale": 0.7,
+          "posture": "sitting",
+          "pose_description": "Seated on elevated platform, leaning back casually",
+          "expression": "skeptical_smirk",
+          "facing": "camera"
+        },
+        {
+          "character_id": "uiseon",
+          "frame_position": "background_right",
+          "x_percent": 75,
+          "y_percent": 30,
+          "scale": 0.7,
+          "posture": "sitting",
+          "pose_description": "Seated on elevated platform, leaning forward",
+          "expression": "thoughtful_concern",
+          "facing": "camera"
+        }
+      ],
+      "action": null,
+      "artifacts": [],
+      "tempo": "normal",
+      "panel_duration": "moment",
+      "safe_zones": [
+        {
+          "zone_id": "jin_speech",
+          "position": "bottom_center",
+          "x_percent": 25,
+          "y_percent": 80,
+          "width_percent": 50,
+          "height_percent": 18,
+          "speaker_id": "jin_sohan",
+          "bubble_type": "speech",
+          "text_preview": "Masters, I wish to request leave..."
+        }
+      ],
+      "location_id": "magic_tower_interior",
+      "time_of_day": "twilight",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [
+        "subtle_fog_interior"
+      ],
+      "mood": "formal, tense",
+      "color_emphasis": null,
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "Use Kontext Multi with all 3 character references.",
+      "source_text": "'하산?' '예.'"
+    },
+    {
+      "panel_id": "s1_p03",
+      "scene_id": "scene_01_request",
+      "sequence_number": 3,
+      "context": {
+        "previous_panel_summary": "Wide shot showing Jin Sohan kneeling before both masters",
+        "scene_context": "Dokma responds with characteristic cynicism",
+        "emotional_state": "Skeptical, testing",
+        "narrative_purpose": "Show Dokma's reaction and personality"
+      },
+      "shot_type": "close_up",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "focus_point": "Dokma's face",
+      "depth_of_field": "shallow",
+      "panel_shape": "rectangle_tall",
+      "aspect_ratio": "portrait_4_3",
+      "page_position": "middle_right",
+      "bleed": false,
+      "characters": [
+        {
+          "character_id": "dokma",
+          "frame_position": "center",
+          "x_percent": 50,
+          "y_percent": 50,
+          "scale": 1.2,
+          "posture": "sitting",
+          "pose_description": "Upper body and face, chin slightly raised",
+          "expression": "cynical_smirk, raised_eyebrow",
+          "facing": "camera_slight_left"
+        }
+      ],
+      "action": null,
+      "artifacts": [],
+      "tempo": "normal",
+      "panel_duration": "moment",
+      "safe_zones": [
+        {
+          "zone_id": "dokma_speech",
+          "position": "top_right",
+          "x_percent": 50,
+          "y_percent": 5,
+          "width_percent": 45,
+          "height_percent": 25,
+          "speaker_id": "dokma",
+          "bubble_type": "speech",
+          "text_preview": "After all these years, you finally want to leave?"
+        }
+      ],
+      "location_id": "magic_tower_interior",
+      "time_of_day": "twilight",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [
+        "dramatic_shadow"
+      ],
+      "mood": "skeptical, testing",
+      "color_emphasis": "dark_shadows",
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Single character close-up with Dokma reference.",
+      "source_text": "'자신만만하구나. 고작 십이 년을 수련해놓고……'"
+    },
+    {
+      "panel_id": "s1_p04",
+      "scene_id": "scene_01_request",
+      "sequence_number": 4,
+      "context": {
+        "previous_panel_summary": "Dokma's cynical close-up response",
+        "scene_context": "Uiseon adds his perspective with gentle concern",
+        "emotional_state": "Wise concern, gentle warning",
+        "narrative_purpose": "Show contrast between twin masters"
+      },
+      "shot_type": "close_up",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Uiseon's face",
+      "depth_of_field": "shallow",
+      "panel_shape": "square",
+      "aspect_ratio": "square_1_1",
+      "page_position": "bottom_left",
+      "bleed": false,
+      "characters": [
+        {
+          "character_id": "uiseon",
+          "frame_position": "center",
+          "x_percent": 50,
+          "y_percent": 50,
+          "scale": 1.2,
+          "posture": "sitting",
+          "pose_description": "Face close-up, gentle expression",
+          "expression": "thoughtful_concern, gentle_warning",
+          "facing": "camera"
+        }
+      ],
+      "action": null,
+      "artifacts": [],
+      "tempo": "normal",
+      "panel_duration": "moment",
+      "safe_zones": [
+        {
+          "zone_id": "uiseon_speech",
+          "position": "bottom_center",
+          "x_percent": 15,
+          "y_percent": 75,
+          "width_percent": 70,
+          "height_percent": 20,
+          "speaker_id": "uiseon",
+          "bubble_type": "speech",
+          "text_preview": "If it were a proper faction's territory, we would let you go..."
+        }
+      ],
+      "location_id": "magic_tower_interior",
+      "time_of_day": "twilight",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [
+        "soft_light"
+      ],
+      "mood": "wise, concerned",
+      "color_emphasis": "warm_tones",
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Single character close-up with Uiseon reference.",
+      "source_text": "'차라리 명문정파가 지배하는 지역이라면 보내주겠다만...'"
+    },
+    {
+      "panel_id": "s1_p05",
+      "scene_id": "scene_01_request",
+      "sequence_number": 5,
+      "context": {
+        "previous_panel_summary": "Uiseon's concerned close-up",
+        "scene_context": "The twins share a meaningful look",
+        "emotional_state": "Unspoken understanding, reluctant acceptance",
+        "narrative_purpose": "Show twin bond and silent communication"
+      },
+      "shot_type": "medium_close_up",
+      "camera_angle": "eye_level",
+      "camera_movement": "static",
+      "focus_point": "Eye contact between the twins",
+      "depth_of_field": "medium",
+      "panel_shape": "rectangle_wide",
+      "aspect_ratio": "landscape_16_9",
+      "page_position": "bottom_center",
+      "bleed": false,
+      "characters": [
+        {
+          "character_id": "dokma",
+          "frame_position": "left",
+          "x_percent": 30,
+          "y_percent": 50,
+          "scale": 1.0,
+          "posture": "sitting",
+          "pose_description": "Slight turn toward brother",
+          "expression": "subtle_acknowledgment",
+          "facing": "right"
+        },
+        {
+          "character_id": "uiseon",
+          "frame_position": "right",
+          "x_percent": 70,
+          "y_percent": 50,
+          "scale": 1.0,
+          "posture": "sitting",
+          "pose_description": "Slight turn toward brother",
+          "expression": "knowing_look",
+          "facing": "left"
+        }
+      ],
+      "action": null,
+      "artifacts": [],
+      "tempo": "slow",
+      "panel_duration": "moment",
+      "safe_zones": [],
+      "location_id": "magic_tower_interior",
+      "time_of_day": "twilight",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [],
+      "mood": "unspoken understanding",
+      "color_emphasis": null,
+      "generation_model": "fal-ai/flux-pro/kontext/multi",
+      "generation_notes": "Use Kontext Multi with Dokma + Uiseon refs.",
+      "source_text": "독마와 의선이 동시에 혀를 찼다. '쯧……'"
+    },
+    {
+      "panel_id": "s1_p06",
+      "scene_id": "scene_01_request",
+      "sequence_number": 6,
+      "context": {
+        "previous_panel_summary": "Masters exchange a meaningful silent glance",
+        "scene_context": "Jin Sohan's resolve is clear",
+        "emotional_state": "Unwavering determination",
+        "narrative_purpose": "Establish protagonist's resolve"
+      },
+      "shot_type": "medium_close_up",
+      "camera_angle": "low_angle",
+      "camera_movement": "static",
+      "focus_point": "Jin Sohan's determined expression",
+      "depth_of_field": "shallow",
+      "panel_shape": "rectangle_standard",
+      "aspect_ratio": "portrait_4_3",
+      "page_position": "bottom_right",
+      "bleed": false,
+      "characters": [
+        {
+          "character_id": "jin_sohan",
+          "frame_position": "center",
+          "x_percent": 50,
+          "y_percent": 50,
+          "scale": 1.0,
+          "posture": "kneeling",
+          "pose_description": "Looking up at masters with resolve",
+          "expression": "determined_calm",
+          "facing": "camera"
+        }
+      ],
+      "action": null,
+      "artifacts": [],
+      "tempo": "slow",
+      "panel_duration": "extended",
+      "safe_zones": [
+        {
+          "zone_id": "jin_speech",
+          "position": "bottom_center",
+          "x_percent": 15,
+          "y_percent": 78,
+          "width_percent": 70,
+          "height_percent": 18,
+          "speaker_id": "jin_sohan",
+          "bubble_type": "speech",
+          "text_preview": "Even if just one person remains, I will repay the debt I owe."
+        }
+      ],
+      "location_id": "magic_tower_interior",
+      "time_of_day": "twilight",
+      "lighting_preset": "indoor_lamp",
+      "weather": null,
+      "effects": [
+        "dramatic_lighting"
+      ],
+      "mood": "determined, resolute",
+      "color_emphasis": null,
+      "generation_model": "fal-ai/flux-pro/kontext",
+      "generation_notes": "Single character with Jin Sohan reference.",
+      "source_text": "'한 명이라도 있다면 제자가 받았던 은혜, 갚겠습니다.'"
+    }
+  ],
+  "generated_at": "2026-02-09T22:17:41.962818"
+}

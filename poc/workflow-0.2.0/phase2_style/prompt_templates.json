@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-02-09T22:36:01.494970",
+  "style_name": "Disciple of the Villain - Wuxia Dark",
+  "platform": "fal.ai",
+  "templates": [
+    {
+      "prompt_name": "character_closeup_emotional",
+      "scene_type": "character_close_up_emotional",
+      "prompt_text": "Korean webtoon manhwa style, close-up portrait of a young male martial artist with sharp features and weary eyes, wuxia genre. Expression of quiet anguish, tears forming but not falling. Cel-shaded with gradient accents, dramatic side lighting casting deep shadows in dark indigo (#1a1a2e). Muted color palette of steel blue and slate gray (#4a4a6a, #8b8ba3). Traditional hanbok collar visible. Subtle fog drifting in background. High detail, publication ready, dark mature tone.",
+      "aspect_ratio": "square_1_1",
+      "recommended_model": "kontext_text_to_image"
+    },
+    {
+      "prompt_name": "character_closeup_action",
+      "scene_type": "character_close_up_action",
+      "prompt_text": "Korean webtoon manhwa style, intense close-up of a male warrior mid-strike, teeth gritted, eyes blazing with killing intent. Wuxia genre. Hair and robes whipping from motion. Speed lines radiating outward. Cel-shaded with sharp highlights on cheekbones and jawline. Dark indigo shadows (#1a1a2e), crimson accent (#8b0000) reflected in eyes. Thicker linework on foreground face, intentional roughness conveying explosive energy. Dramatic lighting from below, high contrast. Publication ready.",
+      "aspect_ratio": "square_1_1",
+      "recommended_model": "kontext_text_to_image"
+    },
+    {
+      "prompt_name": "action_sequence_attack",
+      "scene_type": "action_attack",
+      "prompt_text": "Korean webtoon manhwa style, dynamic full-body action shot. A dark-robed swordsman lunging forward with a devastating diagonal slash, blade trailing golden qi energy (#c9a227). Wuxia martial arts genre. Dust and debris exploding from footwork. Cel-shaded with gradient accents on the energy trail. Dark palette (#2d2d44, #6b6b8a) for the figure, dramatic high-contrast lighting. Motion blur on blade edge, clean thick foreground lines. Mysterious fog parting from the force of the strike. Dark mature tone, high detail.",
+      "aspect_ratio": "portrait_4_3",
+      "recommended_model": "kontext_text_to_image"
+    },
+    {
+      "prompt_name": "action_sequence_impact",
+      "scene_type": "action_impact",
+      "prompt_text": "Korean webtoon manhwa style, moment of devastating impact. A palm strike connecting with a stone pillar, massive cracks radiating outward in a spider-web pattern. Wuxia genre. Shockwave ripples visible in the air, debris frozen mid-explosion. Dark crimson (#8b0000) qi energy bursting from the point of contact. Cel-shaded, extreme high contrast lighting — bright flash at impact center fading to deep indigo (#1a1a2e) at edges. Rough dynamic linework conveying raw power. Ground shattering beneath the fighter's feet. Publication ready, high detail.",
+      "aspect_ratio": "landscape_16_9",
+      "recommended_model": "flux_2_flash"
+    },
+    {
+      "prompt_name": "dialogue_two_characters",
+      "scene_type": "dialogue_duo",
+      "prompt_text": "Korean webtoon manhwa style, medium shot of two figures facing each other in tense conversation. On the left, a young man in dark navy robes (#2d2d44) with a guarded expression. On the right, an older figure draped entirely in black (#0d0d0d, #1a1a1a), face half-hidden in shadow, faint menacing smile. Wuxia genre. Cel-shaded with gradient accents, dramatic side lighting from a single lantern casting long shadows. Mist curling at their feet. Dark mature tone, mysterious atmosphere. Clean linework, high detail, publication ready.",
+      "aspect_ratio": "landscape_16_9",
+      "recommended_model": "kontext_text_to_image"
+    },
+    {
+      "prompt_name": "dialogue_group_scene",
+      "scene_type": "dialogue_group",
+      "prompt_text": "Korean webtoon manhwa style, wide medium shot of four martial artists seated around a low wooden table in a dimly lit room. Wuxia genre. Each figure in distinct robes — dark navy, pure black, pale white (#f5f5f5), and muted gray. Tense atmosphere, no one touching their tea. Cel-shaded with gradient accents, warm golden (#c9a227) candlelight illuminating faces from the center, deep indigo (#1a1a2e) shadows filling the corners. Clean varied linework, thicker lines on foreground figures. Dark mature tone, mysterious, high detail.",
+      "aspect_ratio": "landscape_16_9",
+      "recommended_model": "flux_2_flash"
+    },
+    {
+      "prompt_name": "environment_fog_mysterious",
+      "scene_type": "environment_atmospheric",
+      "prompt_text": "Korean webtoon manhwa style, wide establishing shot of a narrow mountain path winding through dense fog. Wuxia genre. Ancient twisted pine trees emerging from the mist like grasping hands. Faint golden glow (#c9a227) from an unseen source deep in the fog suggesting something mystical. Color palette dominated by dark indigo (#1a1a2e) and muted steel blue (#4a4a6a, #8b8ba3). Cel-shaded with soft gradient fog layers. No characters visible, only a single set of footprints in the dirt. Mysterious, tense atmosphere. Dramatic lighting, high detail, publication ready.",
+      "aspect_ratio": "portrait_4_3",
+      "recommended_model": "flux_2_flash"
+    },
+    {
+      "prompt_name": "environment_interior_tavern",
+      "scene_type": "environment_interior",
+      "prompt_text": "Korean webtoon manhwa style, interior of a rundown wuxia-era tavern. Wooden beams and pillars, paper lanterns casting warm amber light. Scattered tables with ceramic bowls and wine jars. Haze of incense smoke drifting through the air. A worn counter at the back with shelves of clay pots. Cel-shaded with gradient accents, warm golden highlights (#c9a227) contrasting with deep indigo shadows (#1a1a2e) in the corners. Slate gray and muted blue mid-tones (#4a4a6a, #8b8ba3). Clean linework with high detail on wood grain textures. Dark mature tone, atmospheric, publication ready.",
+      "aspect_ratio": "landscape_16_9",
+      "recommended_model": "flux_2_flash"
+    },
+    {
+      "prompt_name": "emotional_farewell",
+      "scene_type": "emotional_moment",
+      "prompt_text": "Korean webtoon manhwa style, emotionally charged farewell scene. A young martial artist in dark navy robes (#2d2d44) standing with his back to the viewer, looking over his shoulder one last time. A figure in pure white robes (#f5f5f5, #e0e0e0) stands distant and blurred in the background, one hand slightly raised. Wuxia genre. Autumn leaves drifting between them. Cel-shaded with soft gradient accents, melancholic golden hour lighting filtering through trees. Long dramatic shadows. Mist rising from the ground. Color palette shifting from warm gold (#c9a227) near the distant figure to cold indigo (#1a1a2e) around the foreground figure. High detail, publication ready, dark mature tone.",
+      "aspect_ratio": "portrait_4_3",
+      "recommended_model": "kontext_text_to_image"
+    },
+    {
+      "prompt_name": "establishing_shot_tower",
+      "scene_type": "establishing_shot",
+      "prompt_text": "Korean webtoon manhwa style, dramatic low-angle establishing shot of a towering dark pagoda rising into a stormy sky. Wuxia genre. The structure is ancient and imposing, seven tiers of curved eaves silhouetted against churning clouds. Faint crimson light (#8b0000) glowing from the topmost window. Lightning illuminating the scene in flashes of stark white. Fog swirling around the base, obscuring a stone stairway leading up. Color palette of deep indigo (#1a1a2e) and dark slate (#4a4a6a) with selective golden (#c9a227) accent on ornamental roof details. Cel-shaded with gradient accents on the clouds. Mysterious, tense atmosphere. High detail, publication ready.",
+      "aspect_ratio": "portrait_4_3",
+      "recommended_model": "flux_2_flash"
+    }
+  ]
+}

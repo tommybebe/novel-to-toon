@@ -1,0 +1,83 @@
+{
+  "twin_crescent_blades": {
+    "artifact_id": "twin_crescent_blades",
+    "name": "Twin Crescent Moon Blades",
+    "korean_name": "쌍월 (雙月)",
+    "owner": "Jin Sohan",
+    "significance": "Signature weapons, gift from master Dokma",
+    "base_reference": "twin_crescent_blades/base_reference.png",
+    "variations": [
+      "twin_crescent_blades/variation_held_combat.png",
+      "twin_crescent_blades/variation_action_blur.png",
+      "twin_crescent_blades/variation_warm_display.png"
+    ],
+    "scenes_appearing": [
+      "scene_03"
+    ]
+  },
+  "white_fan": {
+    "artifact_id": "white_fan",
+    "name": "White Fan (Baekseon)",
+    "korean_name": "백선 (白扇)",
+    "owner": "Jin Sohan (gift from Uiseon)",
+    "significance": "Elegant weapon/accessory, gift from master Uiseon",
+    "base_reference": "white_fan/base_reference.png",
+    "variations": [
+      "white_fan/variation_open_held.png",
+      "white_fan/variation_closed.png",
+      "white_fan/variation_action_swing.png"
+    ],
+    "scenes_appearing": [
+      "scene_03"
+    ]
+  },
+  "poison_pouch": {
+    "artifact_id": "poison_pouch",
+    "name": "Poison Pouch",
+    "korean_name": "독낭 (毒囊)",
+    "owner": "Dokma",
+    "significance": "Contains poisons and medicines, symbol of Dokma's craft",
+    "base_reference": "poison_pouch/base_reference.png",
+    "variations": [
+      "poison_pouch/variation_held.png",
+      "poison_pouch/variation_on_belt.png",
+      "poison_pouch/variation_contents_spilled.png"
+    ],
+    "scenes_appearing": [
+      "scene_02",
+      "scene_03"
+    ]
+  },
+  "golden_peach": {
+    "artifact_id": "golden_peach",
+    "name": "Golden Peach",
+    "korean_name": "황금 복숭아",
+    "owner": "None (mystical fruit)",
+    "significance": "Supernatural fruit that gave Jin Sohan his poison resistance",
+    "base_reference": "golden_peach/base_reference.png",
+    "variations": [
+      "golden_peach/variation_close_up_glow.png",
+      "golden_peach/variation_held_by_child.png",
+      "golden_peach/variation_on_tree.png"
+    ],
+    "scenes_appearing": [
+      "scene_02"
+    ]
+  },
+  "two_headed_snake": {
+    "artifact_id": "two_headed_snake",
+    "name": "Two-Headed Snake",
+    "korean_name": "쌍두사 (雙頭蛇)",
+    "owner": "None (mystical creature)",
+    "significance": "Mythical creature whose inner cores gave Jin Sohan poison/medicine duality",
+    "base_reference": "two_headed_snake/base_reference.png",
+    "variations": [
+      "two_headed_snake/variation_coiled_peach.png",
+      "two_headed_snake/variation_alert.png",
+      "two_headed_snake/variation_inner_cores.png"
+    ],
+    "scenes_appearing": [
+      "scene_02"
+    ]
+  }
+}

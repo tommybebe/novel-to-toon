@@ -1,0 +1,84 @@
+{
+  "panel_id": "s3_p05",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 5,
+  "context": {
+    "previous_panel_summary": "Jin Sohan bows deeply in farewell",
+    "scene_context": "The masters hide their sadness",
+    "emotional_state": "Restrained emotion, bittersweet",
+    "narrative_purpose": "Show depth of the bond"
+  },
+  "shot_type": "close_up",
+  "camera_angle": "eye_level",
+  "camera_movement": "static",
+  "focus_point": "Both masters' faces showing hidden emotion",
+  "depth_of_field": "shallow",
+  "panel_shape": "rectangle_wide",
+  "aspect_ratio": "landscape_16_9",
+  "page_position": "bottom_center",
+  "bleed": false,
+  "characters": [
+    {
+      "character_id": "dokma",
+      "frame_position": "left",
+      "x_percent": 30,
+      "y_percent": 50,
+      "scale": 1.0,
+      "posture": "standing",
+      "pose_description": "Face forward, stoic exterior",
+      "expression": "stoic_but_eyes_betray_emotion",
+      "facing": "camera"
+    },
+    {
+      "character_id": "uiseon",
+      "frame_position": "right",
+      "x_percent": 70,
+      "y_percent": 50,
+      "scale": 1.0,
+      "posture": "standing",
+      "pose_description": "Face forward, gentle sadness",
+      "expression": "gentle_sadness_in_eyes",
+      "facing": "camera"
+    }
+  ],
+  "action": null,
+  "artifacts": [],
+  "tempo": "slow",
+  "panel_duration": "extended",
+  "safe_zones": [
+    {
+      "zone_id": "dokma_speech",
+      "position": "bottom_left",
+      "x_percent": 5,
+      "y_percent": 75,
+      "width_percent": 40,
+      "height_percent": 20,
+      "speaker_id": "dokma",
+      "bubble_type": "speech",
+      "text_preview": "Go, and do well. Guard your neck."
+    },
+    {
+      "zone_id": "uiseon_speech",
+      "position": "bottom_right",
+      "x_percent": 55,
+      "y_percent": 75,
+      "width_percent": 40,
+      "height_percent": 20,
+      "speaker_id": "uiseon",
+      "bubble_type": "speech",
+      "text_preview": "We'll hear your news through the fame that spreads."
+    }
+  ],
+  "location_id": "magic_tower_interior",
+  "time_of_day": "evening",
+  "lighting_preset": "indoor_lamp",
+  "weather": null,
+  "effects": [
+    "subtle_vignette"
+  ],
+  "mood": "restrained emotion, bittersweet",
+  "color_emphasis": null,
+  "generation_model": "fal-ai/flux-pro/kontext/multi",
+  "generation_notes": "Use Kontext Multi with Dokma + Uiseon refs. Emotional close-up.",
+  "source_text": "'가서, 잘해라. 목덜미 잘 간수하고.'"
+}

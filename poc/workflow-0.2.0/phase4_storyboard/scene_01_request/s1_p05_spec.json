@@ -1,0 +1,59 @@
+{
+  "panel_id": "s1_p05",
+  "scene_id": "scene_01_request",
+  "sequence_number": 5,
+  "context": {
+    "previous_panel_summary": "Uiseon's concerned close-up",
+    "scene_context": "The twins share a meaningful look",
+    "emotional_state": "Unspoken understanding, reluctant acceptance",
+    "narrative_purpose": "Show twin bond and silent communication"
+  },
+  "shot_type": "medium_close_up",
+  "camera_angle": "eye_level",
+  "camera_movement": "static",
+  "focus_point": "Eye contact between the twins",
+  "depth_of_field": "medium",
+  "panel_shape": "rectangle_wide",
+  "aspect_ratio": "landscape_16_9",
+  "page_position": "bottom_center",
+  "bleed": false,
+  "characters": [
+    {
+      "character_id": "dokma",
+      "frame_position": "left",
+      "x_percent": 30,
+      "y_percent": 50,
+      "scale": 1.0,
+      "posture": "sitting",
+      "pose_description": "Slight turn toward brother",
+      "expression": "subtle_acknowledgment",
+      "facing": "right"
+    },
+    {
+      "character_id": "uiseon",
+      "frame_position": "right",
+      "x_percent": 70,
+      "y_percent": 50,
+      "scale": 1.0,
+      "posture": "sitting",
+      "pose_description": "Slight turn toward brother",
+      "expression": "knowing_look",
+      "facing": "left"
+    }
+  ],
+  "action": null,
+  "artifacts": [],
+  "tempo": "slow",
+  "panel_duration": "moment",
+  "safe_zones": [],
+  "location_id": "magic_tower_interior",
+  "time_of_day": "twilight",
+  "lighting_preset": "indoor_lamp",
+  "weather": null,
+  "effects": [],
+  "mood": "unspoken understanding",
+  "color_emphasis": null,
+  "generation_model": "fal-ai/flux-pro/kontext/multi",
+  "generation_notes": "Use Kontext Multi with Dokma + Uiseon refs.",
+  "source_text": "독마와 의선이 동시에 혀를 찼다. '쯧……'"
+}

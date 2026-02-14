@@ -1,0 +1,146 @@
+{
+  "panel_id": "s2_p01",
+  "scene_id": "scene_02_storytelling",
+  "timestamp": "2026-02-09T22:54:52.726065",
+  "result": {
+    "success": true,
+    "panel_id": "s2_p01",
+    "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p01.png",
+    "size_bytes": 1278221,
+    "generation_time_ms": 11160,
+    "model": "fal-ai/flux-pro/kontext/multi",
+    "attempt": 1,
+    "ref_count": 3,
+    "mask_applied": false,
+    "panel_shape": "rectangle_standard",
+    "quality_validation": {
+      "passed": true,
+      "checks": {
+        "file_valid": {
+          "passed": true,
+          "details": "Image file loads successfully"
+        },
+        "resolution": {
+          "passed": true,
+          "actual": "1184x880",
+          "minimum": "512px"
+        },
+        "aspect_ratio": {
+          "passed": true,
+          "target": "landscape_4_3",
+          "actual_ratio": "1.35"
+        },
+        "min_file_size": {
+          "passed": true,
+          "size_bytes": 1278221,
+          "minimum": 10000
+        },
+        "color_depth": {
+          "passed": true,
+          "mode": "RGB"
+        },
+        "not_blank": {
+          "passed": true,
+          "extrema": "((0, 255), (0, 255), (0, 255))"
+        },
+        "dimensions_match": {
+          "passed": true,
+          "width": 1184,
+          "height": 880
+        },
+        "format_valid": {
+          "passed": true,
+          "format": ".png"
+        }
+      },
+      "dimensions": "1184x880",
+      "file_size_bytes": 1278221,
+      "checks_passed": 8,
+      "total_checks": 8
+    }
+  },
+  "panel_spec": {
+    "panel_id": "s2_p01",
+    "scene_id": "scene_02_storytelling",
+    "sequence_number": 1,
+    "context": {
+      "previous_panel_summary": "Scene transition from the request scene",
+      "scene_context": "Jin Sohan begins telling his masters a story",
+      "emotional_state": "Intimate, storytelling warmth",
+      "narrative_purpose": "Set up the storytelling frame"
+    },
+    "shot_type": "medium_shot",
+    "camera_angle": "eye_level",
+    "camera_movement": "static",
+    "focus_point": "Jin Sohan gesturing while speaking",
+    "depth_of_field": "medium",
+    "panel_shape": "rectangle_standard",
+    "aspect_ratio": "landscape_4_3",
+    "page_position": "top",
+    "bleed": false,
+    "characters": [
+      {
+        "character_id": "jin_sohan",
+        "frame_position": "center",
+        "x_percent": 50,
+        "y_percent": 60,
+        "scale": 1.0,
+        "posture": "kneeling",
+        "pose_description": "Formal kneeling, gesturing expressively",
+        "expression": "earnest",
+        "facing": "toward_masters"
+      },
+      {
+        "character_id": "dokma",
+        "frame_position": "right_bg",
+        "x_percent": 75,
+        "y_percent": 30,
+        "scale": 0.7,
+        "posture": "sitting",
+        "pose_description": "Seated, leaning forward slightly",
+        "expression": "amused_skeptical",
+        "facing": "toward_jin_sohan"
+      },
+      {
+        "character_id": "uiseon",
+        "frame_position": "left_bg",
+        "x_percent": 25,
+        "y_percent": 30,
+        "scale": 0.7,
+        "posture": "sitting",
+        "pose_description": "Seated, gentle attention",
+        "expression": "gentle_curious",
+        "facing": "toward_jin_sohan"
+      }
+    ],
+    "action": null,
+    "artifacts": [],
+    "tempo": "slow",
+    "panel_duration": "moment",
+    "safe_zones": [
+      {
+        "zone_id": "narration_top",
+        "position": "top_center",
+        "x_percent": 10,
+        "y_percent": 3,
+        "width_percent": 80,
+        "height_percent": 12,
+        "speaker_id": null,
+        "bubble_type": "narration",
+        "text_preview": "Jin Sohan began his tale..."
+      }
+    ],
+    "location_id": "magic_tower_interior",
+    "time_of_day": "evening",
+    "lighting_preset": "indoor_lamp",
+    "weather": null,
+    "effects": [
+      "warm_glow"
+    ],
+    "mood": "intimate, storytelling",
+    "color_emphasis": "warm_tones",
+    "generation_model": "fal-ai/flux-pro/kontext/multi",
+    "generation_notes": "Use Kontext Multi with all three character refs. Warm indoor lighting.",
+    "source_text": "'예, 그럼 이제부터 제자가 허언신공을 한 번 펼쳐보겠습니다.'"
+  }
+}

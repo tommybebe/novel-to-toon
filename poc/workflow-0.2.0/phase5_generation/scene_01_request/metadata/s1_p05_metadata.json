@@ -1,0 +1,121 @@
+{
+  "panel_id": "s1_p05",
+  "scene_id": "scene_01_request",
+  "timestamp": "2026-02-09T22:54:26.518500",
+  "result": {
+    "success": true,
+    "panel_id": "s1_p05",
+    "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p05.png",
+    "size_bytes": 1412811,
+    "generation_time_ms": 11632,
+    "model": "fal-ai/flux-pro/kontext/multi",
+    "attempt": 1,
+    "ref_count": 2,
+    "mask_applied": false,
+    "panel_shape": "rectangle_wide",
+    "quality_validation": {
+      "passed": true,
+      "checks": {
+        "file_valid": {
+          "passed": true,
+          "details": "Image file loads successfully"
+        },
+        "resolution": {
+          "passed": true,
+          "actual": "1392x752",
+          "minimum": "512px"
+        },
+        "aspect_ratio": {
+          "passed": true,
+          "target": "landscape_16_9",
+          "actual_ratio": "1.85"
+        },
+        "min_file_size": {
+          "passed": true,
+          "size_bytes": 1412811,
+          "minimum": 10000
+        },
+        "color_depth": {
+          "passed": true,
+          "mode": "RGB"
+        },
+        "not_blank": {
+          "passed": true,
+          "extrema": "((0, 255), (0, 237), (0, 208))"
+        },
+        "dimensions_match": {
+          "passed": true,
+          "width": 1392,
+          "height": 752
+        },
+        "format_valid": {
+          "passed": true,
+          "format": ".png"
+        }
+      },
+      "dimensions": "1392x752",
+      "file_size_bytes": 1412811,
+      "checks_passed": 8,
+      "total_checks": 8
+    }
+  },
+  "panel_spec": {
+    "panel_id": "s1_p05",
+    "scene_id": "scene_01_request",
+    "sequence_number": 5,
+    "context": {
+      "previous_panel_summary": "Uiseon's concerned close-up",
+      "scene_context": "The twins share a meaningful look",
+      "emotional_state": "Unspoken understanding, reluctant acceptance",
+      "narrative_purpose": "Show twin bond and silent communication"
+    },
+    "shot_type": "medium_close_up",
+    "camera_angle": "eye_level",
+    "camera_movement": "static",
+    "focus_point": "Eye contact between the twins",
+    "depth_of_field": "medium",
+    "panel_shape": "rectangle_wide",
+    "aspect_ratio": "landscape_16_9",
+    "page_position": "bottom_center",
+    "bleed": false,
+    "characters": [
+      {
+        "character_id": "dokma",
+        "frame_position": "left",
+        "x_percent": 30,
+        "y_percent": 50,
+        "scale": 1.0,
+        "posture": "sitting",
+        "pose_description": "Slight turn toward brother",
+        "expression": "subtle_acknowledgment",
+        "facing": "right"
+      },
+      {
+        "character_id": "uiseon",
+        "frame_position": "right",
+        "x_percent": 70,
+        "y_percent": 50,
+        "scale": 1.0,
+        "posture": "sitting",
+        "pose_description": "Slight turn toward brother",
+        "expression": "knowing_look",
+        "facing": "left"
+      }
+    ],
+    "action": null,
+    "artifacts": [],
+    "tempo": "slow",
+    "panel_duration": "moment",
+    "safe_zones": [],
+    "location_id": "magic_tower_interior",
+    "time_of_day": "twilight",
+    "lighting_preset": "indoor_lamp",
+    "weather": null,
+    "effects": [],
+    "mood": "unspoken understanding",
+    "color_emphasis": null,
+    "generation_model": "fal-ai/flux-pro/kontext/multi",
+    "generation_notes": "Use Kontext Multi with Dokma + Uiseon refs.",
+    "source_text": "독마와 의선이 동시에 혀를 찼다. '쯧……'"
+  }
+}

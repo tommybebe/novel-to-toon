@@ -1,0 +1,98 @@
+{
+  "phase": "Phase 1: Character Design",
+  "workflow": "fal_ai_kontext_reference_based",
+  "timestamp": "2026-02-09T22:36:25.477750",
+  "characters": {
+    "jin_sohan": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/base_reference.png",
+        "size_bytes": 1555072
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "angry",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_angry.png"
+        },
+        {
+          "success": true,
+          "variation": "smile",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_smile.png"
+        },
+        {
+          "success": true,
+          "variation": "action",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_action.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "dokma": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/base_reference.png",
+        "size_bytes": 1501196
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "angry",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_angry.png"
+        },
+        {
+          "success": true,
+          "variation": "smile",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_smile.png"
+        },
+        {
+          "success": true,
+          "variation": "action",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_action.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "uiseon": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/uiseon/base_reference.png",
+        "size_bytes": 1509220
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "angry",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/uiseon/variation_angry.png"
+        },
+        {
+          "success": true,
+          "variation": "smile",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/uiseon/variation_smile.png"
+        },
+        {
+          "success": true,
+          "variation": "action",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/uiseon/variation_action.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    }
+  },
+  "twin_differentiation": {
+    "dokma": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/twins/dokma_from_twin_face.png"
+    },
+    "uiseon": {
+      "success": true,
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/twins/uiseon_from_twin_face.png"
+    }
+  }
+}

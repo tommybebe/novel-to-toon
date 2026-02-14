@@ -1,0 +1,49 @@
+{
+  "panel_id": "s2_p02",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 2,
+  "context": {
+    "previous_panel_summary": "Jin Sohan begins telling his childhood story",
+    "scene_context": "Flashback to the golden peach tree at night",
+    "emotional_state": "Mystical wonder",
+    "narrative_purpose": "Introduce the supernatural element"
+  },
+  "shot_type": "wide_shot",
+  "camera_angle": "low_angle",
+  "camera_movement": "static",
+  "focus_point": "Golden peach tree glowing in moonlight",
+  "depth_of_field": "medium",
+  "panel_shape": "circular",
+  "aspect_ratio": "square_1_1",
+  "page_position": "middle",
+  "bleed": false,
+  "characters": [],
+  "action": null,
+  "artifacts": [
+    {
+      "artifact_id": "golden_peach",
+      "position": "center",
+      "visibility": "full",
+      "state": "glowing",
+      "lighting_context": "moonlight_supernatural",
+      "importance": "focus"
+    }
+  ],
+  "tempo": "slow",
+  "panel_duration": "extended",
+  "safe_zones": [],
+  "location_id": "countryside_night",
+  "time_of_day": "night",
+  "lighting_preset": "fog_night",
+  "weather": null,
+  "effects": [
+    "ethereal_glow",
+    "soft_particles",
+    "dreamlike_blur"
+  ],
+  "mood": "mystical, dreamlike",
+  "color_emphasis": "golden_luminous",
+  "generation_model": "fal-ai/flux-pro/kontext",
+  "generation_notes": "CIRCULAR flashback panel. Use golden_peach artifact ref. Dreamlike quality.",
+  "source_text": "그 나무에 다른 복숭아와 빛깔이 전혀 다른 황금 복숭아가 높은 곳에 달려있었는데..."
+}

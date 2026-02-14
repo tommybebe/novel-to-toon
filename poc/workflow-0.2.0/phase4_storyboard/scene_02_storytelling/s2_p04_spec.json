@@ -1,0 +1,63 @@
+{
+  "panel_id": "s2_p04",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 4,
+  "context": {
+    "previous_panel_summary": "The two-headed snake revealed",
+    "scene_context": "Young Jin Sohan stands unaffected among sleeping crowd",
+    "emotional_state": "Isolation, wonder",
+    "narrative_purpose": "Show Jin Sohan's unique nature"
+  },
+  "shot_type": "medium_shot",
+  "camera_angle": "high_angle",
+  "camera_movement": "static",
+  "focus_point": "Young Jin Sohan standing amid sleeping figures",
+  "depth_of_field": "medium",
+  "panel_shape": "borderless",
+  "aspect_ratio": "portrait_3_4",
+  "page_position": "middle",
+  "bleed": true,
+  "characters": [
+    {
+      "character_id": "jin_sohan_young",
+      "frame_position": "center",
+      "x_percent": 50,
+      "y_percent": 50,
+      "scale": 1.0,
+      "posture": "standing",
+      "pose_description": "Standing still among sleeping bodies around",
+      "expression": "calm_confused",
+      "facing": "camera"
+    }
+  ],
+  "action": null,
+  "artifacts": [],
+  "tempo": "slow",
+  "panel_duration": "extended",
+  "safe_zones": [
+    {
+      "zone_id": "narration_bottom",
+      "position": "bottom_center",
+      "x_percent": 15,
+      "y_percent": 82,
+      "width_percent": 70,
+      "height_percent": 15,
+      "speaker_id": null,
+      "bubble_type": "narration",
+      "text_preview": "Everyone had collapsed... except the boy."
+    }
+  ],
+  "location_id": "performance_grounds",
+  "time_of_day": "evening",
+  "lighting_preset": "fog_night",
+  "weather": "light_fog",
+  "effects": [
+    "sleeping_bodies_around",
+    "fog_wisps"
+  ],
+  "mood": "isolation, wonder",
+  "color_emphasis": "muted_with_spotlight_on_jin",
+  "generation_model": "fal-ai/flux-2/flash",
+  "generation_notes": "BORDERLESS flashback. No existing ref (young version). Text-to-image with style prompt.",
+  "source_text": "모든 사람이 쓰러졌는데 저만 멀쩡했습니다."
+}

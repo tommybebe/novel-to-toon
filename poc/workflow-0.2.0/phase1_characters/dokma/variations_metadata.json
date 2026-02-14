@@ -1,0 +1,24 @@
+{
+  "character": "dokma",
+  "step": "2_reference_variations",
+  "base_reference_used": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/base_reference.png",
+  "timestamp": "2026-02-09T22:38:36.049143",
+  "variations": [
+    {
+      "success": true,
+      "variation": "angry",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_angry.png"
+    },
+    {
+      "success": true,
+      "variation": "smile",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_smile.png"
+    },
+    {
+      "success": true,
+      "variation": "action",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/dokma/variation_action.png"
+    }
+  ],
+  "success_rate": 100.0
+}

@@ -1,0 +1,71 @@
+{
+  "panel_id": "s3_p03",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 3,
+  "context": {
+    "previous_panel_summary": "Dokma handed the twin blades to Jin Sohan",
+    "scene_context": "Uiseon offers his white fan",
+    "emotional_state": "Gentle, meaningful",
+    "narrative_purpose": "Second gift - contrasting gentle personality"
+  },
+  "shot_type": "close_up",
+  "camera_angle": "eye_level",
+  "camera_movement": "static",
+  "focus_point": "White fan being offered",
+  "depth_of_field": "shallow",
+  "panel_shape": "rectangle_standard",
+  "aspect_ratio": "portrait_4_3",
+  "page_position": "middle_right",
+  "bleed": false,
+  "characters": [
+    {
+      "character_id": "uiseon",
+      "frame_position": "left",
+      "x_percent": 20,
+      "y_percent": 50,
+      "scale": 0.6,
+      "posture": "standing",
+      "pose_description": "Hands extending fan, only hands and lower arms visible",
+      "expression": "gentle_offering",
+      "facing": "right"
+    }
+  ],
+  "action": null,
+  "artifacts": [
+    {
+      "artifact_id": "white_fan",
+      "position": "center",
+      "visibility": "full",
+      "state": "held",
+      "lighting_context": "warm_lamp_gentle",
+      "importance": "focus"
+    }
+  ],
+  "tempo": "slow",
+  "panel_duration": "moment",
+  "safe_zones": [
+    {
+      "zone_id": "uiseon_speech",
+      "position": "bottom_center",
+      "x_percent": 10,
+      "y_percent": 75,
+      "width_percent": 80,
+      "height_percent": 20,
+      "speaker_id": "uiseon",
+      "bubble_type": "speech",
+      "text_preview": "Take the White Fan as well."
+    }
+  ],
+  "location_id": "magic_tower_interior",
+  "time_of_day": "evening",
+  "lighting_preset": "indoor_lamp",
+  "weather": null,
+  "effects": [
+    "soft_light"
+  ],
+  "mood": "gentle, meaningful",
+  "color_emphasis": "white_highlight",
+  "generation_model": "fal-ai/flux-pro/kontext",
+  "generation_notes": "Use white_fan artifact ref. Uiseon hands partially visible.",
+  "source_text": "의선이 자신의 쥘부채를 내밀면서 말했다. '백선(白扇)도 챙겨라.'"
+}

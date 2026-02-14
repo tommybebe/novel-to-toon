@@ -1,0 +1,280 @@
+{
+  "mood_analysis": {
+    "overall_tone": "dark_melancholic_with_tension",
+    "atmosphere_layers": [
+      {
+        "layer": "opening",
+        "mood": "mysterious_isolation",
+        "description": "Dense fog (짙은 안개) shrouding the Magic Immortal Tower (魔仙樓), so thick that no one outside can see people within. A sense of hidden power and seclusion.",
+        "visual_weight": "heavy, oppressive, ethereal"
+      },
+      {
+        "layer": "master_disciple_dynamic",
+        "mood": "sardonic_warmth",
+        "description": "Dark humor between masters and disciple. The Poison Demon drinks mysterious black tea, speaks gruffly. Playful verbal sparring masks genuine affection. Jin Sohan performs 'Heoun Singong' (허언신공 - Art of Eloquent Lies) with theatrical sincerity.",
+        "visual_weight": "intimate, candlelit dialogue scenes"
+      },
+      {
+        "layer": "homecoming",
+        "mood": "desolate_nostalgia",
+        "description": "Jin Sohan returns after 12 years to find his Sword Dance Troupe vanished. Empty streets, changed buildings, no familiar faces. The ache of an orphan losing his second family.",
+        "visual_weight": "lonely figure against sprawling dark cityscape"
+      },
+      {
+        "layer": "inn_confrontation",
+        "mood": "escalating_menace",
+        "description": "Hostile gazes in the inn, tension over black clothing taboo, building dread. Casual violence erupts — chopsticks pierce foreheads with terrifying precision. Cold, controlled rage.",
+        "visual_weight": "claustrophobic interior, sharp contrast between calm demeanor and lethal action"
+      }
+    ],
+    "emotional_arc": "isolation → dark humor → melancholy → cold fury → restrained grief",
+    "flux_kontext_mood_keywords": [
+      "dark atmospheric",
+      "moody fog",
+      "candlelit interior",
+      "noir wuxia",
+      "melancholic warrior"
+    ]
+  },
+  "character_visuals": {
+    "jin_sohan": {
+      "name_hanja": "眞昭悍",
+      "alias": "몽아 (夢兒 / Dream Child)",
+      "age": 26,
+      "face": "하얀 피부에 시원하게 생긴 미남 — pale white skin, refreshingly handsome features, strikingly good-looking",
+      "eyes": "옅은 잿빛 — pale ash-grey eyes, described as 'strange' and unsettling to others, turbid (탁한) quality",
+      "build": "implied lean and trained, performer's body from sword dance troupe background",
+      "clothing": {
+        "primary": "백의무복 위에 흑색 장삼 — white martial arts inner robe layered under a black ceremonial overcoat (장삼)",
+        "headwear": "방갓 — traditional wide-brimmed hat worn deep/low to shadow the face",
+        "weapon": "칼 at the waist, emitting a chilling aura (서늘한 분위기)",
+        "visual_contrast": "black over white layering — duality of his two masters' influence"
+      },
+      "demeanor": "침착 (composed), 진중 (grave/earnest), theatrical precision from performer training. Switches between casual speech and formal politeness as social weapon. Kills without changing expression.",
+      "special_trait": "extraordinary regeneration ability (특이한 신체 재생력), immune to most poisons",
+      "flux_kontext_prompt_keywords": "young Korean man, 26 years old, pale skin, ash-grey eyes, handsome sharp features, white martial arts robe under black long overcoat, traditional Korean hat, calm piercing gaze, wuxia style"
+    },
+    "dokma": {
+      "name_meaning": "毒魔 / Poison Demon",
+      "relation": "twin brother (of Uiseon), Jin Sohan's primary master",
+      "face": "identical twin face but with dark/gloomy complexion (낯빛이 어두웠고), shaped by decades of poison work",
+      "clothing": "흑의 (黑衣) — all black robes",
+      "demeanor": "gruff (퉁명스럽게), sardonic smirks (씨익 웃었다), snorts of derision (코웃음), boisterous laughter (너털웃음). Drinks mysterious pitch-black tea (시커먼 찻물).",
+      "personality_visual_cue": "NOT a normal person — casually poisons his own disciple to test toxins, chaotic energy masked by hermit lifestyle",
+      "flux_kontext_prompt_keywords": "middle-aged Korean man, twin, dark complexion, black traditional robes, sinister smirk, wuxia poison master, gloomy aura, sharp eyes"
+    },
+    "uiseon": {
+      "name_meaning": "醫仙 / Medicine Immortal",
+      "relation": "twin brother (of Dokma), Jin Sohan's secondary master",
+      "face": "identical twin face but with scholarly atmosphere (학사 같은 분위기)",
+      "clothing": "백의 (白衣) — all white robes",
+      "demeanor": "gentle-spoken (얌전하게), measured, nurturing. The healer counterpart.",
+      "flux_kontext_prompt_keywords": "middle-aged Korean man, twin, scholarly gentle expression, white traditional robes, serene healer, wuxia physician, warm wise gaze"
+    },
+    "oh_jecheol": {
+      "name_hanja": "吳制鐵 (implied)",
+      "role": "middle-aged mercenary/sellsword leader in the inn",
+      "weapon": "대도 (大刀) — large saber/broadsword, handle wrapped in grimy cloth soaked with dried blood (핏자국이 덕지덕지)",
+      "demeanor": "initially blustering but progressively intimidated by Jin Sohan, shifts from casual speech to honorifics",
+      "flux_kontext_prompt_keywords": "middle-aged rugged Korean man, large build, worn leather armor, large heavy saber with bloodstained handle, mercenary, wuxia bandit"
+    },
+    "dogon": {
+      "role": "inn server (점소이), former acquaintance of Jin Sohan from childhood, age 28",
+      "notable": "carries a sword despite being a server — speaks to the danger of the area",
+      "flux_kontext_prompt_keywords": "young Korean man, late twenties, inn servant clothing, sword at waist, nervous expression"
+    },
+    "chumyeongwi": {
+      "name_meaning": "醜面鬼 / Ugly-Face Ghost",
+      "role": "mentioned ally who tried to save the Sword Dance Troupe women, currently fugitive",
+      "face": "extremely ugly/scarred (implied by alias)",
+      "significance": "unseen character but important — represents unlikely heroism",
+      "flux_kontext_prompt_keywords": "Korean man, heavily scarred ugly face, fierce warrior, wuxia fugitive, determined eyes"
+    },
+    "duhyang": {
+      "name_hanja": "두향",
+      "role": "remembered beautiful elder-sister figure (누님) from the Sword Dance Troupe",
+      "description": "아름다운 누님 — beautiful older woman, sword dancer, fate unknown/tragic (implied sexual violence by 회혈문)",
+      "flux_kontext_prompt_keywords": "beautiful young Korean woman, elegant, traditional dancer clothing, graceful, melancholic, wuxia sword dancer"
+    }
+  },
+  "environment_details": {
+    "maseollu": {
+      "name": "魔仙樓 / Magic Immortal Tower",
+      "type": "secluded hermit dwelling, mountain retreat",
+      "atmosphere": "perpetually shrouded in thick fog (자욱한 안개), invisible from outside",
+      "interior_implied": "tea-drinking setting, intimate space for three people, likely traditional wooden pavilion",
+      "mood": "isolated, otherworldly, dangerous yet domestic",
+      "flux_kontext_prompt": "traditional Korean mountain pavilion shrouded in dense fog, mysterious atmosphere, dark wood architecture, misty peaks, wuxia hermit dwelling, moody lighting"
+    },
+    "seoheullo": {
+      "name": "西黑路 / Western Black Road",
+      "type": "black market district, underworld territory (흑도 영역)",
+      "time": "nighttime (밤거리)",
+      "atmosphere": "buildings packed more densely than before (빽빽), streets once crowded now unusually quiet tonight (한산), every alley building oozes sinister energy (음험한 기운)",
+      "cultural_detail": "black clothing is taboo here — wearing black invites violence. Only the powerful dare wear it.",
+      "commerce": "enormous wealth traded nightly, even orthodox sect members sneak in disguised to buy from black markets (흑점)",
+      "flux_kontext_prompt": "dark narrow Korean traditional street at night, dense buildings, lantern-lit alleyways, black market district, wuxia underworld, ominous atmosphere, few shadowy figures, fog wisps"
+    },
+    "wollyaru": {
+      "name": "月夜樓 / Moonlit Night Tower",
+      "type": "building where the Sword Dance Troupe (검무단) once was — now something else entirely",
+      "mood": "absence and loss — the sign remains but the people are gone",
+      "flux_kontext_prompt": "abandoned traditional Korean performance hall at night, faded signboard, empty courtyard, moonlight, desolate atmosphere"
+    },
+    "gyedu_gaekjan": {
+      "name": "계두객잔 / Rooster Head Inn",
+      "type": "sellsword gathering place (매검하는 자들이 자주 모이는 곳)",
+      "atmosphere": "hostile gazes, armed patrons sheltering from the cold, tense standoff energy, blood on the floor after violence",
+      "details": "old establishment that survived 12 years of change, serves 노주 (aged rice wine) and 계두국수 (rooster head noodles) and 만두 (dumplings)",
+      "flux_kontext_prompt": "dimly lit traditional Korean inn interior, armed mercenaries at wooden tables, oil lamps, weapons leaning against walls, tense atmosphere, wuxia tavern, warm amber lighting against dark shadows"
+    }
+  },
+  "action_style": {
+    "combat_philosophy": "극도의 절제 속 순간적 치명타 — extreme restraint punctuated by instant lethality",
+    "signature_technique": {
+      "weapon": "젓가락 (chopsticks) as throwing weapons",
+      "effect": "pierces foreheads (이마에 젓가락이 박혀), instant death",
+      "sound_design": "푹/푸욱 — soft, muffled puncture sounds, not dramatic slashing",
+      "speed": "so fast others only see something flash past their eyes (눈앞을 스치고 지나갔다)"
+    },
+    "visual_pacing": [
+      "Long dialogue buildup with mounting tension",
+      "Single trigger moment (emotional — remembering 두향)",
+      "Ultra-fast violence with minimal motion",
+      "Immediate return to calm composure",
+      "Psychological dominance through stillness after violence"
+    ],
+    "panel_recommendations": {
+      "buildup": "Slow pacing, close-ups of eyes and hands, speech bubbles dominating panels",
+      "kill_moment": "Speed lines, motion blur on the chopstick trajectory, freeze-frame on impact — wide panel or full-width bleed",
+      "aftermath": "Dead silence panel, no sfx, just Jin Sohan calmly pouring wine while bodies are visible in periphery",
+      "contrast_technique": "Juxtapose the softness of his voice ('앉아' — 'Sit down') with the horror of two fresh corpses"
+    },
+    "flux_kontext_action_keywords": "subtle lethal motion, chopstick projectile, instant kill, calm after violence, wuxia precision strike, minimal movement maximum impact"
+  },
+  "color_implications": {
+    "dominant_palette": {
+      "black": {
+        "hex_range": [
+          "#0a0a0a",
+          "#1a1a2e",
+          "#2d2d3d"
+        ],
+        "significance": "흑의 (black robes) = power, taboo, danger, Poison Demon's identity, the underworld itself",
+        "usage": "Jin Sohan's outer robe, Dokma's robes, night streets, ink-like tea, dried blood on weapons"
+      },
+      "white": {
+        "hex_range": [
+          "#f0ece2",
+          "#e8e0d0",
+          "#ffffff"
+        ],
+        "significance": "백의 (white robes) = healing, scholarly virtue, Medicine Immortal's identity, Jin Sohan's inner robe, his pale skin",
+        "usage": "Inner garments, Uiseon's robes, skin tones, fog"
+      },
+      "ash_grey": {
+        "hex_range": [
+          "#8a8a8a",
+          "#a0a0a0",
+          "#b8b0a8"
+        ],
+        "significance": "Jin Sohan's unique eye color (옅은 잿빛), liminal identity between black and white, between poison and medicine",
+        "usage": "Eyes, fog effects, moral ambiguity visualization"
+      }
+    },
+    "accent_colors": {
+      "deep_amber": {
+        "hex_range": [
+          "#c4760a",
+          "#d4920b"
+        ],
+        "source": "노주 (aged rice wine), oil lamp light in the inn, warm candlelight",
+        "usage": "Interior lighting, liquid in cups, warm spots in otherwise dark scenes"
+      },
+      "dark_crimson": {
+        "hex_range": [
+          "#5c1010",
+          "#8b0000"
+        ],
+        "source": "dried blood on saber handle (핏자국이 덕지덕지), implied violence throughout",
+        "usage": "Weapon details, blood splatter, emotional rage moments"
+      },
+      "mist_blue": {
+        "hex_range": [
+          "#4a5568",
+          "#6b7b8d"
+        ],
+        "source": "moonlit fog, night atmosphere, wind (세차게 불어오는 바람)",
+        "usage": "Exterior night scenes, fog effects, melancholic flashback tinting"
+      },
+      "pitch_black_liquid": {
+        "hex_range": [
+          "#0d0d0d",
+          "#1a0a0a"
+        ],
+        "source": "Dokma's mysterious black tea (시커먼 찻물), poison imagery",
+        "usage": "Close-up props, ominous liquid imagery"
+      }
+    },
+    "color_narrative": "The entire novel operates on a BLACK vs WHITE duality embodied by the twin masters, with Jin Sohan literally wearing both (white inner, black outer). His ash-grey eyes mark him as the synthesis of both worlds. The amber warmth of inn scenes creates isolated pockets of human connection in an otherwise cold, dark world."
+  },
+  "recommended_style": {
+    "overall_direction": "Dark Korean Wuxia Noir — NOT the bright, clean manhwa style typical of modern Korean webtoons. This demands a moodier, more cinematic approach closer to historical jidaigeki or film noir aesthetics.",
+    "art_style_reference": {
+      "primary": "Vagabond (바가본드) by Inoue Takehiko — for its ink-wash atmosphere and emotional face work",
+      "secondary": "Blade of the Immortal — for its gritty, violent-yet-beautiful aesthetic",
+      "tertiary": "The Breaker (브레이커) — for Korean martial arts manhwa panel dynamics",
+      "color_ref": "Vinland Saga colored edition — muted historical palette with dramatic lighting"
+    },
+    "flux_kontext_generation_strategy": {
+      "model_selection": {
+        "character_portraits": "fal-ai/flux-pro/kontext — highest quality for establishing character reference sheets",
+        "scene_backgrounds": "fal-ai/flux-pro/kontext — detailed environments with atmospheric fog/lighting",
+        "action_panels": "fal-ai/flux-pro/kontext/max — for complex multi-element compositions with speed/motion",
+        "editing_passes": "fal-ai/flux-pro/kontext — reference-based editing for consistency across panels"
+      },
+      "reference_image_workflow": {
+        "step_1": "Generate twin masters first (Dokma in black, Uiseon in white) — use same base face with Kontext editing to differentiate aura/complexion",
+        "step_2": "Generate Jin Sohan with ash-grey eyes, layered black-over-white robes, traditional hat",
+        "step_3": "Use character references in all subsequent scene generations for consistency",
+        "step_4": "Generate key environments (魔仙樓 in fog, 西黑路 at night, 계두객잔 interior) as reusable backgrounds"
+      },
+      "prompt_style_guidelines": {
+        "always_include": "Korean wuxia, traditional Korean clothing (hanbok-influenced martial arts robes), East Asian architecture",
+        "atmosphere_tags": "moody, atmospheric, cinematic lighting, fog, dark palette, ink-wash influence",
+        "avoid": "anime style, bright saturated colors, modern clothing, Japanese/Chinese architecture confusion, cute/chibi aesthetics",
+        "quality_tags": "detailed fabric texture, realistic skin, dramatic chiaroscuro lighting"
+      }
+    },
+    "panel_layout_recommendations": {
+      "dialogue_heavy_scenes": {
+        "layout": "Vertical scroll format (webtoon native), 2-3 panels per viewport, generous negative space",
+        "emphasis": "Close-up face shots alternating with medium shots, subtle expression changes carry the drama",
+        "example_scene": "Jin Sohan's 'Heoun Singong' scene — theatrical hand gestures, shifting vocal tones visualized through panel border style changes"
+      },
+      "action_scenes": {
+        "layout": "Full-width bleed panels for kill moments, thin horizontal slices for speed, large gutters for breathing room after violence",
+        "emphasis": "Minimal motion lines — the horror comes from the RESULT not the motion. Show the chopstick already embedded, not in flight.",
+        "example_scene": "Inn killing — one panel shows Jin Sohan's hand near chopstick holder, next panel shows victim with chopstick in forehead, third panel shows Jin Sohan calmly pouring wine"
+      },
+      "atmospheric_scenes": {
+        "layout": "Tall vertical panels for the fog-shrouded tower, wide panoramic panels for 西黑路 night streets",
+        "emphasis": "Environmental storytelling — the changed cityscape reflecting 12 years of loss",
+        "example_scene": "Jin Sohan standing before the 月夜樓 sign, alone in the changed street — single tall panel with heavy negative space above"
+      }
+    },
+    "typography_and_sfx": {
+      "dialogue_style": "Clean Korean text, vary weight for speech patterns — Dokma gets rougher/bolder text, Uiseon gets thinner/elegant text, Jin Sohan shifts between both",
+      "sfx_approach": "Minimal. '푹' and '푸욱' should be small, almost whispered sound effects — NOT the large explosive SFX typical of action manhwa. The quiet of the kill IS the horror.",
+      "narration_boxes": "Thin-bordered, semi-transparent dark boxes for Jin Sohan's internal monologue"
+    },
+    "aspect_ratios": {
+      "character_portraits": "portrait_3_4",
+      "full_body_characters": "portrait_2_3",
+      "environment_establishing": "landscape_16_9",
+      "standard_panels": "square",
+      "action_wide_panels": "landscape_16_9",
+      "vertical_atmosphere": "portrait_9_16"
+    }
+  }
+}

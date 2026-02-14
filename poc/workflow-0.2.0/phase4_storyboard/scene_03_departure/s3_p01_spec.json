@@ -1,0 +1,47 @@
+{
+  "panel_id": "s3_p01",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 1,
+  "context": {
+    "previous_panel_summary": "Masters have agreed to let Jin Sohan leave",
+    "scene_context": "Dokma presents the twin crescent moon blades",
+    "emotional_state": "Reverent, significant moment",
+    "narrative_purpose": "Introduce the signature weapons with proper weight"
+  },
+  "shot_type": "close_up",
+  "camera_angle": "eye_level",
+  "camera_movement": "zoom_in",
+  "focus_point": "Twin crescent moon blades on table",
+  "depth_of_field": "shallow",
+  "panel_shape": "rectangle_wide",
+  "aspect_ratio": "landscape_16_9",
+  "page_position": "top_full_width",
+  "bleed": true,
+  "characters": [],
+  "action": null,
+  "artifacts": [
+    {
+      "artifact_id": "twin_crescent_blades",
+      "position": "center",
+      "visibility": "full",
+      "state": "displayed",
+      "lighting_context": "warm_lamp_reverent",
+      "importance": "focus"
+    }
+  ],
+  "tempo": "slow",
+  "panel_duration": "extended",
+  "safe_zones": [],
+  "location_id": "magic_tower_interior",
+  "time_of_day": "evening",
+  "lighting_preset": "indoor_lamp",
+  "weather": null,
+  "effects": [
+    "subtle_glow_on_blades"
+  ],
+  "mood": "reverent, significant",
+  "color_emphasis": "warm_gold_highlights",
+  "generation_model": "fal-ai/flux-pro/kontext",
+  "generation_notes": "CRITICAL: Use twin_crescent_blades reference. Blade design must match exactly.",
+  "source_text": "독마가 두 자루의 칼을 탁자 위에 내밀었다. '쌍월(雙月)은 네가 앞으로 써라.'"
+}

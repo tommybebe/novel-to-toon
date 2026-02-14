@@ -1,0 +1,46 @@
+{
+  "artifact_id": "twin_crescent_blades",
+  "name": "Twin Crescent Moon Blades",
+  "korean_name": "쌍월 (雙月)",
+  "owner": "Jin Sohan",
+  "significance": "Signature weapons, gift from master Dokma",
+  "design_spec": {
+    "type": "paired_weapons",
+    "blade": {
+      "shape": "crescent_curve",
+      "length_cm": 35,
+      "material": "dark_steel",
+      "finish": "matte_with_subtle_sheen",
+      "engravings": "subtle_cloud_pattern"
+    },
+    "handle": {
+      "length_cm": 20,
+      "wrap_material": "dark_leather",
+      "wrap_pattern": "crossed_diagonal",
+      "pommel": "rounded_cap_with_ring"
+    },
+    "guard": {
+      "style": "minimal_curved",
+      "material": "matching_dark_steel"
+    }
+  },
+  "color_palette": {
+    "blade": "#3a3a4a",
+    "handle_wrap": "#2d2520",
+    "pommel": "#4a4a5a"
+  },
+  "reference_images": [
+    "base_reference.png",
+    "variation_held_combat.png",
+    "variation_action_blur.png",
+    "variation_warm_display.png"
+  ],
+  "scenes_appearing": [
+    "scene_03"
+  ],
+  "generation": {
+    "timestamp": "2026-02-09T22:47:50.737476",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "generation_time_ms": 8631
+  }
+}

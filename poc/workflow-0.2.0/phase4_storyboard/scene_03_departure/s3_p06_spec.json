@@ -1,0 +1,74 @@
+{
+  "panel_id": "s3_p06",
+  "scene_id": "scene_03_departure",
+  "sequence_number": 6,
+  "context": {
+    "previous_panel_summary": "Masters give final words with hidden emotion",
+    "scene_context": "Jin Sohan walks into the fog, leaving the tower",
+    "emotional_state": "Bittersweet hope, new beginning",
+    "narrative_purpose": "The final departure — a new journey begins"
+  },
+  "shot_type": "wide_shot",
+  "camera_angle": "low_angle",
+  "camera_movement": "static",
+  "focus_point": "Jin Sohan's silhouette walking into fog",
+  "depth_of_field": "deep",
+  "panel_shape": "rectangle_tall",
+  "aspect_ratio": "portrait_9_16",
+  "page_position": "right_full_height",
+  "bleed": true,
+  "characters": [
+    {
+      "character_id": "jin_sohan",
+      "frame_position": "center",
+      "x_percent": 50,
+      "y_percent": 60,
+      "scale": 0.8,
+      "posture": "walking",
+      "pose_description": "Silhouette walking into dense fog, back to viewer",
+      "expression": "determined",
+      "facing": "away"
+    },
+    {
+      "character_id": "dokma",
+      "frame_position": "far_left_bg",
+      "x_percent": 15,
+      "y_percent": 85,
+      "scale": 0.3,
+      "posture": "standing",
+      "pose_description": "Small silhouette at tower entrance",
+      "expression": "watching",
+      "facing": "toward_jin_sohan"
+    },
+    {
+      "character_id": "uiseon",
+      "frame_position": "far_right_bg",
+      "x_percent": 25,
+      "y_percent": 85,
+      "scale": 0.3,
+      "posture": "standing",
+      "pose_description": "Small silhouette at tower entrance",
+      "expression": "watching",
+      "facing": "toward_jin_sohan"
+    }
+  ],
+  "action": null,
+  "artifacts": [],
+  "tempo": "slow",
+  "panel_duration": "extended",
+  "safe_zones": [],
+  "location_id": "magic_tower_exterior",
+  "time_of_day": "twilight",
+  "lighting_preset": "fog_day",
+  "weather": "dense_fog",
+  "effects": [
+    "dense_fog",
+    "silhouette_backlight",
+    "atmospheric"
+  ],
+  "mood": "bittersweet, hopeful, new beginning",
+  "color_emphasis": "fog_white_gradient",
+  "generation_model": "fal-ai/flux-pro/kontext/multi",
+  "generation_notes": "Silhouette composition. Use all 3 character refs for consistency even in silhouette.",
+  "source_text": "진소한은 자신의 예상과 다르게 시원섭섭한 감정을 맛보고 있었다."
+}

@@ -1,0 +1,32 @@
+{
+  "artifact_id": "golden_peach",
+  "name": "Golden Peach",
+  "korean_name": "황금 복숭아",
+  "owner": "None (mystical fruit)",
+  "significance": "Supernatural fruit that gave Jin Sohan his poison resistance",
+  "design_spec": {
+    "type": "mystical_fruit",
+    "shape": "oversized_peach",
+    "glow": "golden_emanating",
+    "size": "larger_than_normal_peach"
+  },
+  "color_palette": {
+    "peach": "#ffd700",
+    "glow": "#ffec8b",
+    "branch": "#5a4a3a"
+  },
+  "reference_images": [
+    "base_reference.png",
+    "variation_close_up_glow.png",
+    "variation_held_by_child.png",
+    "variation_on_tree.png"
+  ],
+  "scenes_appearing": [
+    "scene_02"
+  ],
+  "generation": {
+    "timestamp": "2026-02-09T22:50:44.468428",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "generation_time_ms": 13271
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_id": "poison_pouch",
+  "name": "Poison Pouch",
+  "korean_name": "독낭 (毒囊)",
+  "owner": "Dokma",
+  "significance": "Contains poisons and medicines, symbol of Dokma's craft",
+  "design_spec": {
+    "type": "container",
+    "material": "aged_dark_leather",
+    "closure": "drawstring_with_bone_toggle",
+    "compartments": "multiple_internal",
+    "contents_hint": "glass_vials_dried_herbs"
+  },
+  "color_palette": {
+    "leather": "#2a2018",
+    "stitching": "#3a3028",
+    "clasp": "#8a7a60"
+  },
+  "reference_images": [
+    "base_reference.png",
+    "variation_held.png",
+    "variation_on_belt.png",
+    "variation_contents_spilled.png"
+  ],
+  "scenes_appearing": [
+    "scene_02",
+    "scene_03"
+  ],
+  "generation": {
+    "timestamp": "2026-02-09T22:49:42.946655",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "generation_time_ms": 8539
+  }
+}

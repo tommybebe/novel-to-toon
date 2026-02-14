@@ -1,0 +1,42 @@
+{
+  "session_id": "poc-v2-panels",
+  "total_cost_usd": 0.665,
+  "budget_usd": 10.0,
+  "percent_used": 6.7,
+  "total_calls": 18,
+  "last_call": {
+    "model": "fal-ai/flux-pro/kontext/multi",
+    "cost_usd": 0.04,
+    "panel_id": "s3_p06",
+    "status": "success"
+  },
+  "by_phase": {
+    "panel_generation": {
+      "count": 18,
+      "cost_usd": 0.665
+    }
+  },
+  "by_model": {
+    "fal-ai/flux-pro/kontext/text-to-image": {
+      "short_name": "text-to-image",
+      "count": 1,
+      "cost_usd": 0.04
+    },
+    "fal-ai/flux-pro/kontext/multi": {
+      "short_name": "multi",
+      "count": 8,
+      "cost_usd": 0.32
+    },
+    "fal-ai/flux-pro/kontext": {
+      "short_name": "kontext",
+      "count": 7,
+      "cost_usd": 0.28
+    },
+    "fal-ai/flux-2/flash": {
+      "short_name": "flash",
+      "count": 2,
+      "cost_usd": 0.025
+    }
+  },
+  "updated_at": "2026-02-09T13:57:26.858021Z"
+}

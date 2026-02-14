@@ -1,0 +1,33 @@
+{
+  "artifact_id": "white_fan",
+  "name": "White Fan (Baekseon)",
+  "korean_name": "백선 (白扇)",
+  "owner": "Jin Sohan (gift from Uiseon)",
+  "significance": "Elegant weapon/accessory, gift from master Uiseon",
+  "design_spec": {
+    "type": "folding_fan",
+    "material": "silk_on_bamboo",
+    "color": "pristine_white_with_subtle_pattern",
+    "pattern": "faint_cloud_motif",
+    "tassel": "white_silk_cord"
+  },
+  "color_palette": {
+    "fan_surface": "#f8f8f0",
+    "frame": "#e8e0d0",
+    "tassel": "#f0f0e8"
+  },
+  "reference_images": [
+    "base_reference.png",
+    "variation_open_held.png",
+    "variation_closed.png",
+    "variation_action_swing.png"
+  ],
+  "scenes_appearing": [
+    "scene_03"
+  ],
+  "generation": {
+    "timestamp": "2026-02-09T22:48:38.881486",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "generation_time_ms": 7864
+  }
+}

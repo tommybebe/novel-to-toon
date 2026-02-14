@@ -1,0 +1,1068 @@
+{
+  "phase": "Phase 5: Panel Image Generation",
+  "platform": "fal.ai",
+  "timestamp": "2026-02-09T22:53:12.545300",
+  "scenes": {
+    "scene_01_request": {
+      "scene_id": "scene_01_request",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s1_p01",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p01.png",
+          "size_bytes": 1614735,
+          "generation_time_ms": 8855,
+          "model": "fal-ai/flux-pro/kontext/text-to-image",
+          "attempt": 1,
+          "ref_count": 0,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1392x752",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.85"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1614735,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (11, 214), (24, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1392,
+                "height": 752
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1392x752",
+            "file_size_bytes": 1614735,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p02",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p02.png",
+          "size_bytes": 1447713,
+          "generation_time_ms": 17469,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 3,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1184x880",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_4_3",
+                "actual_ratio": "1.35"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1447713,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1184,
+                "height": 880
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1184x880",
+            "file_size_bytes": 1447713,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p03",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p03.png",
+          "size_bytes": 1350371,
+          "generation_time_ms": 16040,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": false,
+          "panel_shape": "rectangle_tall",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "880x1184",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "portrait_4_3",
+                "actual_ratio": "0.74"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1350371,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 880,
+                "height": 1184
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "880x1184",
+            "file_size_bytes": 1350371,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p04",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p04.png",
+          "size_bytes": 1662153,
+          "generation_time_ms": 13173,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": false,
+          "panel_shape": "square",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1024x1024",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "square_1_1",
+                "actual_ratio": "1.00"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1662153,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1024,
+                "height": 1024
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1024x1024",
+            "file_size_bytes": 1662153,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p05",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p05.png",
+          "size_bytes": 1412811,
+          "generation_time_ms": 11632,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 2,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1392x752",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.85"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1412811,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 237), (0, 208))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1392,
+                "height": 752
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1392x752",
+            "file_size_bytes": 1412811,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s1_p06",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p06.png",
+          "size_bytes": 1474596,
+          "generation_time_ms": 12143,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "880x1184",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "portrait_4_3",
+                "actual_ratio": "0.74"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1474596,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 252), (0, 248), (0, 245))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 880,
+                "height": 1184
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "880x1184",
+            "file_size_bytes": 1474596,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        }
+      ]
+    },
+    "scene_02_storytelling": {
+      "scene_id": "scene_02_storytelling",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s2_p01",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p01.png",
+          "size_bytes": 1278221,
+          "generation_time_ms": 11160,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 3,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1184x880",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_4_3",
+                "actual_ratio": "1.35"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1278221,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1184,
+                "height": 880
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1184x880",
+            "file_size_bytes": 1278221,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p02",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p02.png",
+          "size_bytes": 1756342,
+          "generation_time_ms": 9851,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": true,
+          "panel_shape": "circular",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1024x1024",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "square_1_1",
+                "actual_ratio": "1.00"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1756342,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1024,
+                "height": 1024
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1024x1024",
+            "file_size_bytes": 1756342,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p03",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p03.png",
+          "size_bytes": 1459111,
+          "generation_time_ms": 12285,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": true,
+          "panel_shape": "irregular_jagged",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1184x880",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_4_3",
+                "actual_ratio": "1.35"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1459111,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 252), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1184,
+                "height": 880
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1184x880",
+            "file_size_bytes": 1459111,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p04",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p04.png",
+          "size_bytes": 2221437,
+          "generation_time_ms": 7948,
+          "model": "fal-ai/flux-2/flash",
+          "attempt": 1,
+          "ref_count": 0,
+          "mask_applied": false,
+          "panel_shape": "borderless",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1088x1440",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "portrait_3_4",
+                "actual_ratio": "0.76"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 2221437,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1088,
+                "height": 1440
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1088x1440",
+            "file_size_bytes": 2221437,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p05",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p05.png",
+          "size_bytes": 1456093,
+          "generation_time_ms": 13048,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 2,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1184x880",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_4_3",
+                "actual_ratio": "1.35"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1456093,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 229), (0, 203))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1184,
+                "height": 880
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1184x880",
+            "file_size_bytes": 1456093,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s2_p06",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p06.png",
+          "size_bytes": 3134546,
+          "generation_time_ms": 4352,
+          "model": "fal-ai/flux-2/flash",
+          "attempt": 1,
+          "ref_count": 0,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1920x1088",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.76"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 3134546,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1920,
+                "height": 1088
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1920x1088",
+            "file_size_bytes": 3134546,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        }
+      ]
+    },
+    "scene_03_departure": {
+      "scene_id": "scene_03_departure",
+      "total_panels": 6,
+      "generated": 6,
+      "quality_passed": 6,
+      "success_rate": 100.0,
+      "panels": [
+        {
+          "success": true,
+          "panel_id": "s3_p01",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p01.png",
+          "size_bytes": 1179193,
+          "generation_time_ms": 12387,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 1,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1392x752",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.85"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1179193,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((1, 255), (1, 255), (0, 250))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1392,
+                "height": 752
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1392x752",
+            "file_size_bytes": 1179193,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p02",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p02.png",
+          "size_bytes": 1327340,
+          "generation_time_ms": 12981,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 3,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1184x880",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_4_3",
+                "actual_ratio": "1.35"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1327340,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1184,
+                "height": 880
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1184x880",
+            "file_size_bytes": 1327340,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p03",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p03.png",
+          "size_bytes": 1465587,
+          "generation_time_ms": 11817,
+          "model": "fal-ai/flux-pro/kontext",
+          "attempt": 1,
+          "ref_count": 2,
+          "mask_applied": false,
+          "panel_shape": "rectangle_standard",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "880x1184",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "portrait_4_3",
+                "actual_ratio": "0.74"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1465587,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 880,
+                "height": 1184
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "880x1184",
+            "file_size_bytes": 1465587,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p04",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p04.png",
+          "size_bytes": 1404227,
+          "generation_time_ms": 12246,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 3,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1392x752",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.85"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1404227,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1392,
+                "height": 752
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1392x752",
+            "file_size_bytes": 1404227,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p05",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p05.png",
+          "size_bytes": 1512230,
+          "generation_time_ms": 20808,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 2,
+          "mask_applied": false,
+          "panel_shape": "rectangle_wide",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "1392x752",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "landscape_16_9",
+                "actual_ratio": "1.85"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1512230,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 255), (0, 255), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 1392,
+                "height": 752
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "1392x752",
+            "file_size_bytes": 1512230,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        },
+        {
+          "success": true,
+          "panel_id": "s3_p06",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p06.png",
+          "size_bytes": 1368637,
+          "generation_time_ms": 11757,
+          "model": "fal-ai/flux-pro/kontext/multi",
+          "attempt": 1,
+          "ref_count": 3,
+          "mask_applied": false,
+          "panel_shape": "rectangle_tall",
+          "quality_validation": {
+            "passed": true,
+            "checks": {
+              "file_valid": {
+                "passed": true,
+                "details": "Image file loads successfully"
+              },
+              "resolution": {
+                "passed": true,
+                "actual": "752x1392",
+                "minimum": "512px"
+              },
+              "aspect_ratio": {
+                "passed": true,
+                "target": "portrait_9_16",
+                "actual_ratio": "0.54"
+              },
+              "min_file_size": {
+                "passed": true,
+                "size_bytes": 1368637,
+                "minimum": 10000
+              },
+              "color_depth": {
+                "passed": true,
+                "mode": "RGB"
+              },
+              "not_blank": {
+                "passed": true,
+                "extrema": "((0, 254), (0, 254), (0, 255))"
+              },
+              "dimensions_match": {
+                "passed": true,
+                "width": 752,
+                "height": 1392
+              },
+              "format_valid": {
+                "passed": true,
+                "format": ".png"
+              }
+            },
+            "dimensions": "752x1392",
+            "file_size_bytes": 1368637,
+            "checks_passed": 8,
+            "total_checks": 8
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_panels": 18,
+    "generated": 18,
+    "quality_passed": 18,
+    "success_rate": 100.0,
+    "quality_rate": 100.0,
+    "failed_panels": []
+  }
+}

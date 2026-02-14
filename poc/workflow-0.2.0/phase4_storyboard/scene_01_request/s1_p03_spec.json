@@ -1,0 +1,62 @@
+{
+  "panel_id": "s1_p03",
+  "scene_id": "scene_01_request",
+  "sequence_number": 3,
+  "context": {
+    "previous_panel_summary": "Wide shot showing Jin Sohan kneeling before both masters",
+    "scene_context": "Dokma responds with characteristic cynicism",
+    "emotional_state": "Skeptical, testing",
+    "narrative_purpose": "Show Dokma's reaction and personality"
+  },
+  "shot_type": "close_up",
+  "camera_angle": "low_angle",
+  "camera_movement": "static",
+  "focus_point": "Dokma's face",
+  "depth_of_field": "shallow",
+  "panel_shape": "rectangle_tall",
+  "aspect_ratio": "portrait_4_3",
+  "page_position": "middle_right",
+  "bleed": false,
+  "characters": [
+    {
+      "character_id": "dokma",
+      "frame_position": "center",
+      "x_percent": 50,
+      "y_percent": 50,
+      "scale": 1.2,
+      "posture": "sitting",
+      "pose_description": "Upper body and face, chin slightly raised",
+      "expression": "cynical_smirk, raised_eyebrow",
+      "facing": "camera_slight_left"
+    }
+  ],
+  "action": null,
+  "artifacts": [],
+  "tempo": "normal",
+  "panel_duration": "moment",
+  "safe_zones": [
+    {
+      "zone_id": "dokma_speech",
+      "position": "top_right",
+      "x_percent": 50,
+      "y_percent": 5,
+      "width_percent": 45,
+      "height_percent": 25,
+      "speaker_id": "dokma",
+      "bubble_type": "speech",
+      "text_preview": "After all these years, you finally want to leave?"
+    }
+  ],
+  "location_id": "magic_tower_interior",
+  "time_of_day": "twilight",
+  "lighting_preset": "indoor_lamp",
+  "weather": null,
+  "effects": [
+    "dramatic_shadow"
+  ],
+  "mood": "skeptical, testing",
+  "color_emphasis": "dark_shadows",
+  "generation_model": "fal-ai/flux-pro/kontext",
+  "generation_notes": "Single character close-up with Dokma reference.",
+  "source_text": "'자신만만하구나. 고작 십이 년을 수련해놓고……'"
+}

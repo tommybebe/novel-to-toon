@@ -1,0 +1,56 @@
+{
+  "panel_id": "s2_p03",
+  "scene_id": "scene_02_storytelling",
+  "sequence_number": 3,
+  "context": {
+    "previous_panel_summary": "The golden peach glowing on the tree",
+    "scene_context": "The mysterious two-headed snake appears",
+    "emotional_state": "Ominous wonder",
+    "narrative_purpose": "Reveal the supernatural creature"
+  },
+  "shot_type": "close_up",
+  "camera_angle": "eye_level",
+  "camera_movement": "static",
+  "focus_point": "Two-headed snake emerging from roots",
+  "depth_of_field": "shallow",
+  "panel_shape": "irregular_jagged",
+  "aspect_ratio": "landscape_4_3",
+  "page_position": "middle",
+  "bleed": false,
+  "characters": [],
+  "action": {
+    "action_type": "reveal",
+    "motion_description": "Snake slowly emerging",
+    "motion_direction": null,
+    "motion_intensity": 0.3,
+    "requires_speed_lines": false,
+    "requires_motion_blur": false,
+    "impact_point": null
+  },
+  "artifacts": [
+    {
+      "artifact_id": "two_headed_snake",
+      "position": "center",
+      "visibility": "full",
+      "state": "coiled_alert",
+      "lighting_context": "moonlight_supernatural",
+      "importance": "focus"
+    }
+  ],
+  "tempo": "slow",
+  "panel_duration": "moment",
+  "safe_zones": [],
+  "location_id": "countryside_night",
+  "time_of_day": "night",
+  "lighting_preset": "fog_night",
+  "weather": null,
+  "effects": [
+    "eerie_atmosphere",
+    "mist"
+  ],
+  "mood": "ominous, wondrous",
+  "color_emphasis": "cool_greens_with_gold",
+  "generation_model": "fal-ai/flux-pro/kontext",
+  "generation_notes": "JAGGED-edge panel for supernatural tension. Use two_headed_snake artifact ref.",
+  "source_text": "머리가 두 개지 뭡니까?"
+}

@@ -1,0 +1,132 @@
+{
+  "panel_id": "s3_p04",
+  "scene_id": "scene_03_departure",
+  "timestamp": "2026-02-09T22:56:51.500344",
+  "result": {
+    "success": true,
+    "panel_id": "s3_p04",
+    "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p04.png",
+    "size_bytes": 1404227,
+    "generation_time_ms": 12246,
+    "model": "fal-ai/flux-pro/kontext/multi",
+    "attempt": 1,
+    "ref_count": 3,
+    "mask_applied": false,
+    "panel_shape": "rectangle_wide",
+    "quality_validation": {
+      "passed": true,
+      "checks": {
+        "file_valid": {
+          "passed": true,
+          "details": "Image file loads successfully"
+        },
+        "resolution": {
+          "passed": true,
+          "actual": "1392x752",
+          "minimum": "512px"
+        },
+        "aspect_ratio": {
+          "passed": true,
+          "target": "landscape_16_9",
+          "actual_ratio": "1.85"
+        },
+        "min_file_size": {
+          "passed": true,
+          "size_bytes": 1404227,
+          "minimum": 10000
+        },
+        "color_depth": {
+          "passed": true,
+          "mode": "RGB"
+        },
+        "not_blank": {
+          "passed": true,
+          "extrema": "((0, 255), (0, 255), (0, 255))"
+        },
+        "dimensions_match": {
+          "passed": true,
+          "width": 1392,
+          "height": 752
+        },
+        "format_valid": {
+          "passed": true,
+          "format": ".png"
+        }
+      },
+      "dimensions": "1392x752",
+      "file_size_bytes": 1404227,
+      "checks_passed": 8,
+      "total_checks": 8
+    }
+  },
+  "panel_spec": {
+    "panel_id": "s3_p04",
+    "scene_id": "scene_03_departure",
+    "sequence_number": 4,
+    "context": {
+      "previous_panel_summary": "Uiseon offered his white fan",
+      "scene_context": "Jin Sohan performs a deep formal bow of farewell",
+      "emotional_state": "Deep gratitude, solemn farewell",
+      "narrative_purpose": "The formal farewell after 12 years"
+    },
+    "shot_type": "wide_shot",
+    "camera_angle": "eye_level",
+    "camera_movement": "static",
+    "focus_point": "Jin Sohan in deep bow",
+    "depth_of_field": "deep",
+    "panel_shape": "rectangle_wide",
+    "aspect_ratio": "landscape_16_9",
+    "page_position": "bottom_left",
+    "bleed": false,
+    "characters": [
+      {
+        "character_id": "jin_sohan",
+        "frame_position": "center",
+        "x_percent": 50,
+        "y_percent": 70,
+        "scale": 1.0,
+        "posture": "kneeling",
+        "pose_description": "Deep formal bow, forehead to floor",
+        "expression": "deep_gratitude",
+        "facing": "down"
+      },
+      {
+        "character_id": "dokma",
+        "frame_position": "left_bg",
+        "x_percent": 25,
+        "y_percent": 35,
+        "scale": 0.7,
+        "posture": "standing",
+        "pose_description": "Standing stoically",
+        "expression": "stoic_hiding_emotion",
+        "facing": "toward_jin_sohan"
+      },
+      {
+        "character_id": "uiseon",
+        "frame_position": "right_bg",
+        "x_percent": 75,
+        "y_percent": 35,
+        "scale": 0.7,
+        "posture": "standing",
+        "pose_description": "Standing with gentle sadness",
+        "expression": "gentle_sadness",
+        "facing": "toward_jin_sohan"
+      }
+    ],
+    "action": null,
+    "artifacts": [],
+    "tempo": "slow",
+    "panel_duration": "extended",
+    "safe_zones": [],
+    "location_id": "magic_tower_interior",
+    "time_of_day": "evening",
+    "lighting_preset": "indoor_lamp",
+    "weather": null,
+    "effects": [],
+    "mood": "solemn, emotional",
+    "color_emphasis": null,
+    "generation_model": "fal-ai/flux-pro/kontext/multi",
+    "generation_notes": "Use Kontext Multi with all 3 character refs.",
+    "source_text": "얼떨떨한 진소한이 서둘러서 절을 올렸다."
+  }
+}

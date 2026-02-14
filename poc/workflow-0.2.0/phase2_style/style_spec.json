@@ -1,0 +1,92 @@
+{
+  "style_name": "Disciple of the Villain - Wuxia Dark",
+  "base_style": {
+    "genre": "Korean webtoon",
+    "sub_genre": "wuxia/martial arts",
+    "influence": [
+      "manhwa",
+      "traditional ink painting"
+    ]
+  },
+  "visual_elements": {
+    "line_work": {
+      "weight": "varied",
+      "quality": "clean with intentional roughness for action",
+      "emphasis_technique": "thicker lines for foreground elements"
+    },
+    "shading": {
+      "style": "cel-shaded with gradient accents",
+      "shadow_color": "#1a1a2e",
+      "highlight_approach": "selective, dramatic"
+    },
+    "color_palette": {
+      "primary": [
+        "#1a1a2e",
+        "#4a4a6a",
+        "#8b8ba3"
+      ],
+      "accent": [
+        "#c9a227",
+        "#8b0000"
+      ],
+      "character_specific": {
+        "jin_sohan": [
+          "#2d2d44",
+          "#6b6b8a"
+        ],
+        "dokma": [
+          "#0d0d0d",
+          "#1a1a1a",
+          "#333333"
+        ],
+        "uiseon": [
+          "#f5f5f5",
+          "#e0e0e0",
+          "#cccccc"
+        ]
+      }
+    }
+  },
+  "atmosphere": {
+    "lighting": "dramatic, high contrast",
+    "mood": "mysterious, tense, dark",
+    "effects": [
+      "fog/mist",
+      "subtle glow for mystical elements"
+    ]
+  },
+  "technical_specs": {
+    "resolution": "1024x1024 for references, 1024x1440 for panels",
+    "aspect_ratios": {
+      "character_portrait": "square_1_1",
+      "panel_vertical": "portrait_16_9",
+      "panel_wide": "landscape_16_9",
+      "full_page": "portrait_4_3"
+    }
+  },
+  "prompt_keywords": {
+    "style": [
+      "Korean webtoon",
+      "manhwa",
+      "wuxia genre"
+    ],
+    "atmosphere": [
+      "dark mature tone",
+      "mysterious",
+      "dramatic lighting"
+    ],
+    "quality": [
+      "high detail",
+      "publication ready",
+      "cel-shaded with gradient accents"
+    ]
+  },
+  "generation_platform": "fal.ai",
+  "generation_models": {
+    "character_base": "fal-ai/flux-pro/kontext/text-to-image",
+    "character_edit": "fal-ai/flux-pro/kontext",
+    "multi_character": "fal-ai/flux-pro/kontext/multi",
+    "bulk_panels": "fal-ai/flux-2/flash",
+    "quality_panels": "fal-ai/flux-2-pro"
+  }
+}

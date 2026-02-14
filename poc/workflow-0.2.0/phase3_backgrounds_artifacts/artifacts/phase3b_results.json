@@ -1,0 +1,142 @@
+{
+  "phase": "Phase 3b: Artifact Reference Generation",
+  "platform": "fal.ai",
+  "timestamp": "2026-02-09T22:47:40.589403",
+  "artifacts": {
+    "twin_crescent_blades": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/base_reference.png",
+        "size_bytes": 1034812
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "held_combat",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/variation_held_combat.png"
+        },
+        {
+          "success": true,
+          "variation": "action_blur",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/variation_action_blur.png"
+        },
+        {
+          "success": true,
+          "variation": "warm_display",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/twin_crescent_blades/variation_warm_display.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "white_fan": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/white_fan/base_reference.png",
+        "size_bytes": 1332050
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "open_held",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/white_fan/variation_open_held.png"
+        },
+        {
+          "success": true,
+          "variation": "closed",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/white_fan/variation_closed.png"
+        },
+        {
+          "success": true,
+          "variation": "action_swing",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/white_fan/variation_action_swing.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "poison_pouch": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/poison_pouch/base_reference.png",
+        "size_bytes": 2199633
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "held",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/poison_pouch/variation_held.png"
+        },
+        {
+          "success": true,
+          "variation": "on_belt",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/poison_pouch/variation_on_belt.png"
+        },
+        {
+          "success": true,
+          "variation": "contents_spilled",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/poison_pouch/variation_contents_spilled.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "golden_peach": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/golden_peach/base_reference.png",
+        "size_bytes": 1780835
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "close_up_glow",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/golden_peach/variation_close_up_glow.png"
+        },
+        {
+          "success": true,
+          "variation": "held_by_child",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/golden_peach/variation_held_by_child.png"
+        },
+        {
+          "success": true,
+          "variation": "on_tree",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/golden_peach/variation_on_tree.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    },
+    "two_headed_snake": {
+      "base_reference": {
+        "success": true,
+        "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/two_headed_snake/base_reference.png",
+        "size_bytes": 1691110
+      },
+      "variations": [
+        {
+          "success": true,
+          "variation": "coiled_peach",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/two_headed_snake/variation_coiled_peach.png"
+        },
+        {
+          "success": true,
+          "variation": "alert",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/two_headed_snake/variation_alert.png"
+        },
+        {
+          "success": true,
+          "variation": "inner_cores",
+          "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase3_backgrounds_artifacts/artifacts/two_headed_snake/variation_inner_cores.png"
+        }
+      ],
+      "base_success": true,
+      "variations_success_count": 3,
+      "total_variations": 3
+    }
+  }
+}

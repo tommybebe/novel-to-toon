@@ -1,0 +1,24 @@
+{
+  "character": "jin_sohan",
+  "step": "2_reference_variations",
+  "base_reference_used": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/base_reference.png",
+  "timestamp": "2026-02-09T22:37:45.522714",
+  "variations": [
+    {
+      "success": true,
+      "variation": "angry",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_angry.png"
+    },
+    {
+      "success": true,
+      "variation": "smile",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_smile.png"
+    },
+    {
+      "success": true,
+      "variation": "action",
+      "path": "/Users/m/Documents/novel-to-toon/poc/workflow-0.2.0/phase1_characters/jin_sohan/variation_action.png"
+    }
+  ],
+  "success_rate": 100.0
+}

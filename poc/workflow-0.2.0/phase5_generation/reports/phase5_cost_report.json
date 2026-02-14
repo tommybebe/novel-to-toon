@@ -1,0 +1,368 @@
+{
+  "summary": {
+    "session_id": "poc-v2-panels",
+    "start_time": "2026-02-09T13:52:59.803762",
+    "end_time": "2026-02-09T13:57:26.897467",
+    "total_calls": 18,
+    "total_cost_usd": 0.665,
+    "budget_usd": 10.0,
+    "percent_used": 6.7,
+    "by_model": {
+      "fal-ai/flux-pro/kontext/text-to-image": {
+        "count": 1,
+        "cost_usd": 0.04
+      },
+      "fal-ai/flux-pro/kontext/multi": {
+        "count": 8,
+        "cost_usd": 0.32
+      },
+      "fal-ai/flux-pro/kontext": {
+        "count": 7,
+        "cost_usd": 0.28
+      },
+      "fal-ai/flux-2/flash": {
+        "count": 2,
+        "cost_usd": 0.025
+      }
+    },
+    "by_phase": {
+      "panel_generation": {
+        "count": 18,
+        "cost_usd": 0.665
+      }
+    },
+    "by_status": {
+      "success": 18,
+      "failed": 0,
+      "retried": 0
+    },
+    "total_generation_time_ms": 219952,
+    "average_generation_time_ms": 12219.56
+  },
+  "calls": [
+    {
+      "timestamp": "2026-02-09T13:53:22.615819Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/text-to-image",
+      "panel_id": "s1_p01",
+      "cost_usd": 0.04,
+      "generation_time_ms": 8855,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:53:41.488180Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s1_p02",
+      "cost_usd": 0.04,
+      "generation_time_ms": 17469,
+      "image_dimensions": "1440x1080",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:53:58.885652Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s1_p03",
+      "cost_usd": 0.04,
+      "generation_time_ms": 16040,
+      "image_dimensions": "1080x1440",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:54:13.388667Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s1_p04",
+      "cost_usd": 0.04,
+      "generation_time_ms": 13173,
+      "image_dimensions": "1024x1024",
+      "megapixels": 1.05,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:54:26.489311Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s1_p05",
+      "cost_usd": 0.04,
+      "generation_time_ms": 11632,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 2
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:54:39.875604Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s1_p06",
+      "cost_usd": 0.04,
+      "generation_time_ms": 12143,
+      "image_dimensions": "1080x1440",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_01_request",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:54:52.701732Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s2_p01",
+      "cost_usd": 0.04,
+      "generation_time_ms": 11160,
+      "image_dimensions": "1440x1080",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:55:03.808063Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s2_p02",
+      "cost_usd": 0.04,
+      "generation_time_ms": 9851,
+      "image_dimensions": "1024x1024",
+      "megapixels": 1.05,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:55:17.349589Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s2_p03",
+      "cost_usd": 0.04,
+      "generation_time_ms": 12285,
+      "image_dimensions": "1440x1080",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:55:34.830540Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-2/flash",
+      "panel_id": "s2_p04",
+      "cost_usd": 0.01,
+      "generation_time_ms": 7948,
+      "image_dimensions": "1080x1440",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:55:49.235158Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s2_p05",
+      "cost_usd": 0.04,
+      "generation_time_ms": 13048,
+      "image_dimensions": "1440x1080",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 2
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:55:56.413821Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-2/flash",
+      "panel_id": "s2_p06",
+      "cost_usd": 0.015,
+      "generation_time_ms": 4352,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_02_storytelling",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:56:10.198248Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s3_p01",
+      "cost_usd": 0.04,
+      "generation_time_ms": 12387,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 1
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:56:24.457620Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s3_p02",
+      "cost_usd": 0.04,
+      "generation_time_ms": 12981,
+      "image_dimensions": "1440x1080",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:56:37.763868Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext",
+      "panel_id": "s3_p03",
+      "cost_usd": 0.04,
+      "generation_time_ms": 11817,
+      "image_dimensions": "1080x1440",
+      "megapixels": 1.56,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 2
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:56:51.473367Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s3_p04",
+      "cost_usd": 0.04,
+      "generation_time_ms": 12246,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:57:13.652457Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s3_p05",
+      "cost_usd": 0.04,
+      "generation_time_ms": 20808,
+      "image_dimensions": "1920x1080",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 2
+      }
+    },
+    {
+      "timestamp": "2026-02-09T13:57:26.857780Z",
+      "platform": "fal.ai",
+      "model": "fal-ai/flux-pro/kontext/multi",
+      "panel_id": "s3_p06",
+      "cost_usd": 0.04,
+      "generation_time_ms": 11757,
+      "image_dimensions": "1080x1920",
+      "megapixels": 2.07,
+      "status": "success",
+      "phase": "panel_generation",
+      "scene_id": "scene_03_departure",
+      "error_message": null,
+      "metadata": {
+        "attempt": 1,
+        "ref_count": 3
+      }
+    }
+  ]
+}

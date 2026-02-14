@@ -1,0 +1,34 @@
+{
+  "artifact_id": "two_headed_snake",
+  "name": "Two-Headed Snake",
+  "korean_name": "쌍두사 (雙頭蛇)",
+  "owner": "None (mystical creature)",
+  "significance": "Mythical creature whose inner cores gave Jin Sohan poison/medicine duality",
+  "design_spec": {
+    "type": "mystical_creature",
+    "body": "serpentine_dual_tone",
+    "head_1": "darker_venomous",
+    "head_2": "lighter_medicinal",
+    "effect": "translucent_glow"
+  },
+  "color_palette": {
+    "dark_head": "#2a1a2a",
+    "light_head": "#c0d0c0",
+    "body": "#4a5a4a",
+    "glow": "#80c080"
+  },
+  "reference_images": [
+    "base_reference.png",
+    "variation_coiled_peach.png",
+    "variation_alert.png",
+    "variation_inner_cores.png"
+  ],
+  "scenes_appearing": [
+    "scene_02"
+  ],
+  "generation": {
+    "timestamp": "2026-02-09T22:51:30.952533",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "generation_time_ms": 7486
+  }
+}

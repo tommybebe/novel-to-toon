@@ -1,0 +1,36 @@
+{
+  "location": {
+    "name": "Guest House / Inn",
+    "korean_name": "객잔",
+    "description": "Traditional Korean inn serving as a common meeting place for travelers",
+    "visual_elements": [
+      "Traditional Korean inn architecture",
+      "Dining area with low tables",
+      "Wooden interior with warm tones",
+      "Paper screen doors (hanji)",
+      "Lantern lighting",
+      "Kitchen area visible in background"
+    ],
+    "atmosphere": "Busy, tense undercurrent, public space, transient",
+    "lighting_default": "indoor_lamp",
+    "color_emphasis": [
+      "#c9a227",
+      "#8b7355",
+      "#5a4a3a",
+      "#1a1a2e"
+    ]
+  },
+  "variation": {
+    "name": "exterior_day",
+    "time": "day",
+    "view": "exterior",
+    "description": "Inn exterior with traditional signage"
+  },
+  "generation": {
+    "timestamp": "2026-02-09T22:44:04.886582",
+    "model": "fal-ai/flux-pro/kontext/text-to-image",
+    "prompt": "Korean webtoon background illustration:\n- Location: Guest House / Inn (객잔)\n- Setting: Inn exterior with traditional signage\n- View: exterior view\n\nVISUAL ELEMENTS:\nTraditional Korean inn architecture, Dining area with low tables, Wooden interior with warm tones, Paper screen doors (hanji), Lantern lighting, Kitchen area visible in background\n\nATMOSPHERE:\n- Mood: Busy, tense undercurrent, public space, transient\n- Lighting: Warm oil lamp or candle lighting\n- Color Temperature: 2700K (warm)\n- Shadow Intensity: High (dramatic)\n\nSTYLE REQUIREMENTS:\n- Art style: Korean webtoon (manhwa), wuxia genre\n- Clean detailed linework, cel-shaded with gradient accents\n- Color emphasis: #c9a227, #8b7355, #5a4a3a, #1a1a2e\n- High detail environment art, publication ready\n- No characters, environment only\n- No text or UI elements\n\nCOMPOSITION:\n- Wide establishing shot\n- Depth and atmosphere emphasized\n\nQUALITY: High detail, professional illustration",
+    "generation_time_ms": 14101,
+    "size_bytes": 1920182
+  }
+}
