@@ -1,0 +1,2164 @@
+{
+  "version": "0.2.0",
+  "scope": "phase5_only",
+  "evaluated_at": "2026-02-19T23:04:25.780590+00:00",
+  "image_reports": [
+    {
+      "image_id": "s1_p01",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p01.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 7,
+            "setting": 6,
+            "mood": 8,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.0
+    },
+    {
+      "image_id": "s1_p02",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p02.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 3,
+              "hair": 3,
+              "clothing": 3,
+              "build": 3,
+              "identity": 3,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            },
+            {
+              "face": 5,
+              "hair": 7,
+              "clothing": 5,
+              "build": 5,
+              "identity": 5,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 1,
+              "hair": 1,
+              "clothing": 1,
+              "build": 1,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 8,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.75
+    },
+    {
+      "image_id": "s1_p03",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p03.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 6,
+          "threshold": 6,
+          "passed": true,
+          "details": [
+            {
+              "face": 6,
+              "hair": 6,
+              "clothing": 6,
+              "build": 6,
+              "identity": 6,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 6.0
+    },
+    {
+      "image_id": "s1_p04",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p04.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 2,
+              "hair": 1,
+              "clothing": 2,
+              "build": 2,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.75
+    },
+    {
+      "image_id": "s1_p05",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p05.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 6,
+              "hair": 5,
+              "clothing": 6,
+              "build": 6,
+              "identity": 5,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 1,
+              "hair": 1,
+              "clothing": 1,
+              "build": 1,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.0
+    },
+    {
+      "image_id": "s1_p06",
+      "scene_id": "scene_01_request",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_01_request/panels/s1_p06.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 3,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 3,
+              "hair": 4,
+              "clothing": 3,
+              "build": 3,
+              "identity": 3,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.25
+    },
+    {
+      "image_id": "s2_p01",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p01.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 2,
+              "hair": 7,
+              "clothing": 2,
+              "build": 2,
+              "identity": 2,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            },
+            {
+              "face": 5,
+              "hair": 3,
+              "clothing": 5,
+              "build": 5,
+              "identity": 3,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 1,
+              "hair": 9,
+              "clothing": 1,
+              "build": 1,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.75
+    },
+    {
+      "image_id": "s2_p02",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p02.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 6,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 7,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 6,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.67
+    },
+    {
+      "image_id": "s2_p03",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p03.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 6,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 7,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 6,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.67
+    },
+    {
+      "image_id": "s2_p04",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p04.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 6.0
+    },
+    {
+      "image_id": "s2_p05",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p05.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 6,
+              "hair": 5,
+              "clothing": 6,
+              "build": 6,
+              "identity": 5,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 1,
+              "hair": 1,
+              "clothing": 1,
+              "build": 1,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.75
+    },
+    {
+      "image_id": "s2_p06",
+      "scene_id": "scene_02_storytelling",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_02_storytelling/panels/s2_p06.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 6,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 7,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 6,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.67
+    },
+    {
+      "image_id": "s3_p01",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p01.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": null,
+          "threshold": 6,
+          "passed": true,
+          "details": []
+        },
+        "prompt_adherence": {
+          "score": 6,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 7,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 6,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.67
+    },
+    {
+      "image_id": "s3_p02",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p02.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 3,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 6,
+              "hair": 9,
+              "clothing": 6,
+              "build": 6,
+              "identity": 6,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 3,
+              "hair": 5,
+              "clothing": 3,
+              "build": 3,
+              "identity": 3,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.25
+    },
+    {
+      "image_id": "s3_p03",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p03.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 6,
+          "threshold": 6,
+          "passed": true,
+          "details": [
+            {
+              "face": 8,
+              "hair": 6,
+              "clothing": 8,
+              "build": 8,
+              "identity": 6,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 6.0
+    },
+    {
+      "image_id": "s3_p04",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p04.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 1,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 3,
+              "hair": 2,
+              "clothing": 3,
+              "build": 3,
+              "identity": 2,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            },
+            {
+              "face": 6,
+              "hair": 6,
+              "clothing": 6,
+              "build": 6,
+              "identity": 6,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 1,
+              "hair": 1,
+              "clothing": 1,
+              "build": 1,
+              "identity": 1,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 5,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 5,
+            "lines": 4,
+            "coloring": 5,
+            "genre": 4,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 4.0
+    },
+    {
+      "image_id": "s3_p05",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p05.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 2,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 6,
+              "hair": 7,
+              "clothing": 6,
+              "build": 6,
+              "identity": 6,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 2,
+              "hair": 7,
+              "clothing": 2,
+              "build": 2,
+              "identity": 2,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.0
+    },
+    {
+      "image_id": "s3_p06",
+      "scene_id": "scene_03_departure",
+      "image_path": "poc/workflow-0.2.0/phase5_generation/scene_03_departure/panels/s3_p06.png",
+      "tier1": {
+        "passed": true,
+        "checks_passed": 8,
+        "total_checks": 8,
+        "checks": {
+          "file_valid": {
+            "passed": true
+          },
+          "resolution": {
+            "passed": true
+          },
+          "aspect_ratio": {
+            "passed": true
+          },
+          "min_file_size": {
+            "passed": true
+          },
+          "color_depth": {
+            "passed": true
+          },
+          "not_blank": {
+            "passed": true
+          },
+          "dimensions_match": {
+            "passed": true
+          },
+          "format_valid": {
+            "passed": true
+          }
+        }
+      },
+      "tier2": {
+        "identity_match": {
+          "score": 2,
+          "threshold": 6,
+          "passed": false,
+          "details": [
+            {
+              "face": 5,
+              "hair": 8,
+              "clothing": 5,
+              "build": 5,
+              "identity": 5,
+              "notes": "heuristic_jin_sohan",
+              "character_id": "jin_sohan"
+            },
+            {
+              "face": 7,
+              "hair": 8,
+              "clothing": 7,
+              "build": 7,
+              "identity": 7,
+              "notes": "heuristic_dokma",
+              "character_id": "dokma"
+            },
+            {
+              "face": 2,
+              "hair": 5,
+              "clothing": 2,
+              "build": 2,
+              "identity": 2,
+              "notes": "heuristic_uiseon",
+              "character_id": "uiseon"
+            }
+          ]
+        },
+        "prompt_adherence": {
+          "score": 7,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "composition": 6,
+            "characters": 8,
+            "setting": 6,
+            "mood": 7,
+            "adherence": 7,
+            "notes": "heuristic"
+          }
+        },
+        "style_match": {
+          "score": 8,
+          "threshold": 5,
+          "passed": true,
+          "details": {
+            "style": 8,
+            "lines": 7,
+            "coloring": 8,
+            "genre": 7,
+            "notes": "heuristic"
+          }
+        },
+        "technical_defects": {
+          "score": 3,
+          "threshold": 5,
+          "passed": false,
+          "details": {
+            "hands": 8,
+            "face": 8,
+            "anatomy": 8,
+            "artifacts": 7,
+            "text": 3,
+            "defects_found": [
+              "text_likely_garbled"
+            ]
+          }
+        }
+      },
+      "overall_pass": false,
+      "overall_score": 5.0
+    }
+  ],
+  "scene_reports": [
+    {
+      "scene_id": "scene_01_request",
+      "tier3": {
+        "character_consistency": {
+          "jin_sohan": {
+            "score": 3.0,
+            "worst": 3,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s1_p02.png",
+                  "identity": 3,
+                  "style": 3
+                },
+                {
+                  "image": "s1_p06.png",
+                  "identity": 3,
+                  "style": 3
+                }
+              ],
+              "overall_consistency": 3.0,
+              "worst_offender": 3,
+              "notes": "heuristic"
+            }
+          },
+          "dokma": {
+            "score": 5.33,
+            "worst": 5,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s1_p02.png",
+                  "identity": 5,
+                  "style": 5
+                },
+                {
+                  "image": "s1_p03.png",
+                  "identity": 6,
+                  "style": 6
+                },
+                {
+                  "image": "s1_p05.png",
+                  "identity": 5,
+                  "style": 6
+                }
+              ],
+              "overall_consistency": 5.33,
+              "worst_offender": 5,
+              "notes": "heuristic"
+            }
+          },
+          "uiseon": {
+            "score": 1.0,
+            "worst": 1,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s1_p02.png",
+                  "identity": 1,
+                  "style": 1
+                },
+                {
+                  "image": "s1_p04.png",
+                  "identity": 1,
+                  "style": 2
+                },
+                {
+                  "image": "s1_p05.png",
+                  "identity": 1,
+                  "style": 1
+                }
+              ],
+              "overall_consistency": 1.0,
+              "worst_offender": 1,
+              "notes": "heuristic"
+            }
+          }
+        },
+        "style_consistency": {
+          "score": 8,
+          "passed": true,
+          "details": {
+            "uniformity": 8,
+            "color": 8,
+            "lines": 7,
+            "quality": 8,
+            "outlier_panels": [],
+            "notes": "heuristic"
+          }
+        }
+      },
+      "tier4": {
+        "storytelling": {
+          "score": 5,
+          "passed": true,
+          "details": {
+            "narrative_clarity": 5,
+            "sequential_flow": 5,
+            "camera_work": 6,
+            "character_acting": 5,
+            "pacing": 6,
+            "webtoon_quality": 5,
+            "overall_storytelling": 5,
+            "panel_interpretations": [],
+            "notes": "heuristic_offline"
+          }
+        },
+        "emotional_arc": {
+          "score": 4,
+          "passed": true,
+          "details": {
+            "range": 4,
+            "progression": 4,
+            "expression": 4,
+            "atmosphere": 5,
+            "notes": "heuristic_offline"
+          }
+        }
+      }
+    },
+    {
+      "scene_id": "scene_02_storytelling",
+      "tier3": {
+        "character_consistency": {
+          "jin_sohan": {
+            "score": 2.0,
+            "worst": 2,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s2_p01.png",
+                  "identity": 2,
+                  "style": 2
+                }
+              ],
+              "overall_consistency": 2.0,
+              "worst_offender": 2,
+              "notes": "heuristic"
+            }
+          },
+          "dokma": {
+            "score": 4.0,
+            "worst": 3,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s2_p01.png",
+                  "identity": 3,
+                  "style": 5
+                },
+                {
+                  "image": "s2_p05.png",
+                  "identity": 5,
+                  "style": 6
+                }
+              ],
+              "overall_consistency": 4.0,
+              "worst_offender": 3,
+              "notes": "heuristic"
+            }
+          },
+          "uiseon": {
+            "score": 1.0,
+            "worst": 1,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s2_p01.png",
+                  "identity": 1,
+                  "style": 1
+                },
+                {
+                  "image": "s2_p05.png",
+                  "identity": 1,
+                  "style": 1
+                }
+              ],
+              "overall_consistency": 1.0,
+              "worst_offender": 1,
+              "notes": "heuristic"
+            }
+          }
+        },
+        "style_consistency": {
+          "score": 7,
+          "passed": true,
+          "details": {
+            "uniformity": 7,
+            "color": 7,
+            "lines": 6,
+            "quality": 7,
+            "outlier_panels": [],
+            "notes": "heuristic"
+          }
+        }
+      },
+      "tier4": {
+        "storytelling": {
+          "score": 5,
+          "passed": true,
+          "details": {
+            "narrative_clarity": 5,
+            "sequential_flow": 5,
+            "camera_work": 6,
+            "character_acting": 5,
+            "pacing": 6,
+            "webtoon_quality": 5,
+            "overall_storytelling": 5,
+            "panel_interpretations": [],
+            "notes": "heuristic_offline"
+          }
+        },
+        "emotional_arc": {
+          "score": 4,
+          "passed": true,
+          "details": {
+            "range": 4,
+            "progression": 4,
+            "expression": 4,
+            "atmosphere": 5,
+            "notes": "heuristic_offline"
+          }
+        }
+      }
+    },
+    {
+      "scene_id": "scene_03_departure",
+      "tier3": {
+        "character_consistency": {
+          "dokma": {
+            "score": 6.25,
+            "worst": 6,
+            "passed": true,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s3_p02.png",
+                  "identity": 6,
+                  "style": 6
+                },
+                {
+                  "image": "s3_p04.png",
+                  "identity": 6,
+                  "style": 6
+                },
+                {
+                  "image": "s3_p05.png",
+                  "identity": 6,
+                  "style": 6
+                },
+                {
+                  "image": "s3_p06.png",
+                  "identity": 7,
+                  "style": 7
+                }
+              ],
+              "overall_consistency": 6.25,
+              "worst_offender": 6,
+              "notes": "heuristic"
+            }
+          },
+          "jin_sohan": {
+            "score": 3.33,
+            "worst": 2,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s3_p02.png",
+                  "identity": 3,
+                  "style": 3
+                },
+                {
+                  "image": "s3_p04.png",
+                  "identity": 2,
+                  "style": 3
+                },
+                {
+                  "image": "s3_p06.png",
+                  "identity": 5,
+                  "style": 5
+                }
+              ],
+              "overall_consistency": 3.33,
+              "worst_offender": 2,
+              "notes": "heuristic"
+            }
+          },
+          "uiseon": {
+            "score": 2.75,
+            "worst": 1,
+            "passed": false,
+            "details": {
+              "per_image": [
+                {
+                  "image": "s3_p03.png",
+                  "identity": 6,
+                  "style": 8
+                },
+                {
+                  "image": "s3_p04.png",
+                  "identity": 1,
+                  "style": 1
+                },
+                {
+                  "image": "s3_p05.png",
+                  "identity": 2,
+                  "style": 2
+                },
+                {
+                  "image": "s3_p06.png",
+                  "identity": 2,
+                  "style": 2
+                }
+              ],
+              "overall_consistency": 2.75,
+              "worst_offender": 1,
+              "notes": "heuristic"
+            }
+          }
+        },
+        "style_consistency": {
+          "score": 4,
+          "passed": false,
+          "details": {
+            "uniformity": 4,
+            "color": 4,
+            "lines": 3,
+            "quality": 4,
+            "outlier_panels": [],
+            "notes": "heuristic"
+          }
+        }
+      },
+      "tier4": {
+        "storytelling": {
+          "score": 5,
+          "passed": true,
+          "details": {
+            "narrative_clarity": 5,
+            "sequential_flow": 5,
+            "camera_work": 6,
+            "character_acting": 5,
+            "pacing": 6,
+            "webtoon_quality": 5,
+            "overall_storytelling": 5,
+            "panel_interpretations": [],
+            "notes": "heuristic_offline"
+          }
+        },
+        "emotional_arc": {
+          "score": 4,
+          "passed": true,
+          "details": {
+            "range": 4,
+            "progression": 4,
+            "expression": 4,
+            "atmosphere": 5,
+            "notes": "heuristic_offline"
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_panels": 18,
+    "panel_pass_rate": 0.0,
+    "avg_panel_score": 5.01,
+    "avg_identity_score": 2.33,
+    "avg_style_score": 7.0,
+    "avg_adherence_score": 6.78,
+    "avg_storytelling": 5.0
+  },
+  "evaluator_mode": "heuristic_offline"
+}
