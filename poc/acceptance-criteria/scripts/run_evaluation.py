@@ -372,6 +372,43 @@ def evaluate_version(ev: BaseEvaluator, version: str) -> dict[str, Any]:
     }
 
 
+
+
+def _extract_version_key(version: str) -> tuple[int, ...]:
+    nums = [int(x) for x in re.findall(r"\d+", version)]
+    return tuple(nums) if nums else (0,)
+
+
+def load_existing_reports(output_dir: Path) -> dict[str, dict[str, Any]]:
+    reports: dict[str, dict[str, Any]] = {}
+    for path in sorted(output_dir.glob("evaluation_v*.json")):
+        try:
+            payload = json.loads(path.read_text())
+        except Exception:
+            continue
+        version = payload.get("version")
+        if isinstance(version, str):
+            reports[version] = payload
+    return reports
+
+
+def build_comparison(reports_by_version: dict[str, dict[str, Any]], mode: str) -> dict[str, Any]:
+    versions = sorted(reports_by_version.keys(), key=_extract_version_key)
+    reports = [reports_by_version[v] for v in versions]
+    return {
+        "scope": "phase5_only",
+        "evaluator_mode": mode,
+        "versions_compared": versions,
+        "metrics": {
+            "avg_identity_score": {r["version"]: r["summary"].get("avg_identity_score") for r in reports},
+            "avg_style_score": {r["version"]: r["summary"].get("avg_style_score") for r in reports},
+            "avg_adherence_score": {r["version"]: r["summary"].get("avg_adherence_score") for r in reports},
+            "avg_storytelling": {r["version"]: r["summary"].get("avg_storytelling") for r in reports},
+            "panel_pass_rate": {r["version"]: r["summary"].get("panel_pass_rate") for r in reports},
+        },
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+    }
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--versions", nargs="+", default=["0.1.0", "0.2.0"])
@@ -397,20 +434,13 @@ def main() -> None:
         (out_dir / f"evaluation_v{version}.json").write_text(json.dumps(report, indent=2, ensure_ascii=False))
         print(f"wrote evaluation_v{version}.json")
 
-    comparison = {
-        "scope": "phase5_only",
-        "evaluator_mode": mode,
-        "versions_compared": args.versions,
-        "metrics": {
-            "avg_identity_score": {r["version"]: r["summary"]["avg_identity_score"] for r in reports},
-            "avg_style_score": {r["version"]: r["summary"]["avg_style_score"] for r in reports},
-            "avg_adherence_score": {r["version"]: r["summary"]["avg_adherence_score"] for r in reports},
-            "avg_storytelling": {r["version"]: r["summary"]["avg_storytelling"] for r in reports},
-            "panel_pass_rate": {r["version"]: r["summary"]["panel_pass_rate"] for r in reports},
-        },
-    }
+    existing_reports = load_existing_reports(out_dir)
+    for report in reports:
+        existing_reports[report["version"]] = report
+
+    comparison = build_comparison(existing_reports, mode)
     (out_dir / "comparison.json").write_text(json.dumps(comparison, indent=2, ensure_ascii=False))
-    print("wrote comparison.json")
+    print(f"wrote comparison.json (versions: {', '.join(comparison['versions_compared'])})")
 
 
 if __name__ == "__main__":
